@@ -1,0 +1,17 @@
+#!/usr/bin/env php
+
+<?php
+
+set_time_limit( 0 );
+
+require __DIR__ . '/../bootstrap.php';
+
+$commandRegistry = new Wikibot\Console\CommandRegistry();
+
+$bot = $app['console'];
+
+foreach( $commandRegistry->getCommands() as $command ) {
+	$bot->add( $command );
+}
+
+$bot->run();

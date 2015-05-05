@@ -1,0 +1,5 @@
+wikis:
+  wikidatawiki:
+    api-path: 'https://www.wikidata.org/w/api.php'
+    username: 'user'
+    password: 'pass'
