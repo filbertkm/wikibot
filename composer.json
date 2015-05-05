@@ -1,0 +1,17 @@
+{
+  "name": "wikibot/wikibot",
+  "type": "library",
+  "description": "MediaWiki bot library",
+  "require": {
+    "symfony/console": "~2.5",
+    "silex/silex": "~1.2",
+    "knplabs/console-service-provider": "~1.0",
+    "deralex/yaml-config-service-provider": "~1.0",
+    "twig/twig": "~1.18"
+  },
+  "autoload": {
+    "psr-4": {
+      "Wikibot\\": "src"
+    }
+  }
+}

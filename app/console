@@ -1,0 +1,23 @@
+#!/usr/bin/env php
+
+<?php
+
+set_time_limit( 0 );
+
+require __DIR__ . '/../bootstrap.php';
+
+$app->register( new Knp\Provider\ConsoleServiceProvider(), array(
+	'console.name' => 'Wikibot',
+	'console.version' => '1.0.0',
+	'console.project_directory' => __DIR__ . '/src/Console'
+) );
+
+$commandRegistry = new Wikibot\Console\CommandRegistry();
+
+$bot = $app['console'];
+
+foreach( $commandRegistry->getCommands() as $command ) {
+	$bot->add( $command );
+}
+
+$bot->run();
