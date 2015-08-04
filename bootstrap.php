@@ -14,4 +14,8 @@ $app->register( new Silex\Provider\TwigServiceProvider(), array(
     'twig.path' => __DIR__ . '/templates',
 ) );
 
+$app->register( new Silex\Provider\MonologServiceProvider(), array(
+	'monolog.logfile' => __DIR__ . '/log/debug.log'
+) );
+
 //$app->run();

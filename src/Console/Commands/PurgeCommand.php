@@ -38,8 +38,8 @@ class PurgeCommand extends Command {
 
 		$ids = array();
 
-		$start = $input->getArgument( 'start' );
-		$end = $input->getArgument( 'end' );
+		$start = intval( ltrim( $input->getArgument( 'start' ), 'Q' ) );
+		$end = intval( ltrim( $input->getArgument( 'end' ), 'Q' ) );
 
 		foreach( range( $start, $end ) as $id ) {
 			$ids[] = "Q$id";
@@ -60,6 +60,7 @@ class PurgeCommand extends Command {
 				$response = $apiClient->post( $params );
 
 				$output->writeln( "Processed up to " . end( $chunk ) );
+				$app['monolog']->addDebug( "Processed up to " . end( $chunk ) );
 
 				sleep( 1 );
 			}

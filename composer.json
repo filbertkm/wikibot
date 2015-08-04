@@ -7,7 +7,8 @@
     "silex/silex": "~1.2",
     "knplabs/console-service-provider": "~1.0",
     "deralex/yaml-config-service-provider": "~1.0",
-    "twig/twig": "~1.18"
+    "twig/twig": "~1.18",
+    "monolog/monolog": "^1.15"
   },
   "autoload": {
     "psr-4": {
