@@ -35,8 +35,6 @@ class ApiClient {
 			$this->httpClient->disconnect();
 		}
 
-		var_export( $response );
-
 		return json_decode( $response, true );
 	}
 
@@ -61,8 +59,6 @@ class ApiClient {
 			$this->wiki->getApiPath(),
 			$params
 		);
-
-		var_export( $response );
 
 		return json_decode( $response, true );
 	}
