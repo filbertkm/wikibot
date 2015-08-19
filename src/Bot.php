@@ -13,13 +13,20 @@ use Wikibot\Console\CommandRegistry;
 
 class Bot {
 
+	private $configFile;
+
+	private $logDir;
+
 	private $app;
 
 	private $console;
 
 	private $commandRegistry;
 
-	public function __construct() {
+	public function __construct( $configFile, $logDir ) {
+		$this->configFile = $configFile;
+		$this->logDir = $logDir;
+
 		$this->app = new Application();
 		$this->commandRegistry = new CommandRegistry();
 
@@ -27,7 +34,7 @@ class Bot {
 	}
 
 	public function init() {
-		$this->app->register( new YamlConfigServiceProvider( __DIR__ . '/../config/config.yml' ) );
+		$this->app->register( new YamlConfigServiceProvider( $this->configFile ) );
 
 		$this->app['app-config'] = $this->app->share( function() {
 			return new Config( $this->app['config'] );
@@ -38,7 +45,7 @@ class Bot {
 		) );
 
 		$this->app->register( new MonologServiceProvider(), array(
-			'monolog.logfile' => __DIR__ . '/../log/debug.log'
+			'monolog.logfile' => $this->logDir . '/debug.log'
 		) );
 
 		$this->app->register( new ConsoleServiceProvider(), array(
