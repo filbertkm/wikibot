@@ -14,17 +14,22 @@ class EditPageCommand extends Command {
 
 	protected function configure() {
 		$this->setName( 'edit' )
-			->setDescription( 'Edit pages' );
+			->setDescription( 'Edit pages' )
+            ->addArgument(
+                'wiki',
+                InputArgument::REQUIRED,
+                'Wiki'
+            );
 	}
 
 	protected function execute( InputInterface $input, OutputInterface $output ) {
-		for ( $i = 0; $i < 10; $i++ ) {
-			$this->addPages();
+		for ( $i = 0; $i < 50; $i++ ) {
+			$this->addPagesFromWiki( $input->getArgument( 'wiki' ) );
 			$output->writeln( "added pages up to $i" );
 		}
 	}
 
-	private function addPages() {
+	private function addPagesFromWiki( $wiki ) {
 		$app = $this->getSilexApplication();
 
 		$repoClient = new ApiClient(
@@ -52,13 +57,13 @@ class EditPageCommand extends Command {
 		) );
 
 		foreach( $res['entities'] as $id => $data ) {
-			if ( array_key_exists( 'enwiki', $data['sitelinks'] ) ) {
+			if ( array_key_exists( $wiki, $data['sitelinks'] ) ) {
 				$apiClient = new ApiClient(
 					new HttpClient( 'Wikibot' ),
-					$app['app-config']->getWiki( 'devclient' )
+					$app['app-config']->getWiki( $wiki )
 				);
 
-				$title = $data['sitelinks']['enwiki']['title'];
+				$title = $data['sitelinks'][$wiki]['title'];
 
 				$params = array(
 					'action' => 'edit',
