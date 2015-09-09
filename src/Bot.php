@@ -58,6 +58,10 @@ class Bot {
 		$this->initCommands();
 	}
 
+	public function getApplication() {
+		return $this->app;
+	}
+
 	private function initCommands() {
 		foreach( $this->commandRegistry->getCommands() as $command ) {
 			$this->console->add( $command );
