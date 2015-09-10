@@ -7,6 +7,7 @@ class CommandRegistry {
 	public function getCommands() {
 		$classNames = array(
 			'\Wikibot\Console\Commands\AddStatementCommand',
+			'\Wikibot\Console\Commands\CategoryMembersCommand',
 			'\Wikibot\Console\Commands\EditEntityCommand',
 			'\Wikibot\Console\Commands\EditPageCommand',
 			'\Wikibot\Console\Commands\PurgeCommand',
