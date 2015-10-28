@@ -12,6 +12,8 @@ use Wikibot\Wikibase\ApiEntityLookup;
 
 class PurgeCommand extends Command {
 
+	private $apiClient;
+
 	protected function configure() {
 		$this->setName( 'purge' )
 			->setDescription( 'Purge a page' )
@@ -31,7 +33,7 @@ class PurgeCommand extends Command {
 		$app = $this->getSilexApplication();
 		$wiki = $app['app-config']->getWiki( 'wikidatawiki' );
 
-		$apiClient = new ApiClient(
+		$this->apiClient = new ApiClient(
 			new HttpClient( 'Wikibot' ),
 			$wiki
 		);
@@ -53,11 +55,12 @@ class PurgeCommand extends Command {
 			foreach( $chunks as $chunk ) {
 				$params = array(
 					'action' => 'purge',
-					'titles' => implode( '|', $chunk )
+					'titles' => implode( '|', $chunk ),
+					'forcelinkupdate' => 1
 				);
 
-				$apiClient->login();
-				$response = $apiClient->post( $params );
+				$this->apiClient->login();
+				$response = $this->apiClient->post( $params );
 
 				$output->writeln( "Processed up to " . end( $chunk ) );
 				$app['monolog']->addDebug( "Processed up to " . end( $chunk ) );

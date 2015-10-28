@@ -10,6 +10,7 @@ class CommandRegistry {
 			'\Wikibot\Console\Commands\CategoryMembersCommand',
 			'\Wikibot\Console\Commands\EditEntityCommand',
 			'\Wikibot\Console\Commands\EditPageCommand',
+			'\Wikibot\Console\Commands\PostCommand',
 			'\Wikibot\Console\Commands\PurgeCommand',
 			'\Wikibot\Console\Commands\SetLabelCommand',
 			'\Wikibot\Console\Commands\SetReferenceCommand',

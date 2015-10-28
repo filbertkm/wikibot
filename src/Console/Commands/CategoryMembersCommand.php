@@ -19,7 +19,7 @@ class CategoryMembersCommand extends Command {
 				'wiki',
 				InputArgument::REQUIRED,
 				'Wiki'
-			),
+			)
 			->addArgument(
                 'category',
                 InputArgument::REQUIRED,
@@ -32,22 +32,28 @@ class CategoryMembersCommand extends Command {
 		$app = $this->getSilexApplication();
 		$wiki = $app['app-config']->getWiki( $input->getArgument( 'wiki' ) );
 
-		var_export( $wiki );
-
 		$apiClient = new ApiClient(
 			new HttpClient( 'Wikibot' ),
 			$wiki
 		);
 
+		$apiClient->login();
+
 		$params = array(
 			'action' => 'query',
 			'cmtitle' => 'Category:' . $input->getArgument( 'category' ),
-			'list' => 'categorymembers'
+			'list' => 'categorymembers',
+			'cmlimit' => 500
 		);
 
 		$response = $apiClient->get( $params );
 
-		var_export( $response );
+		$pages = $response['query']['categorymembers'];
+		$pageIds = array();
+
+		foreach( $pages as $page ) {
+			$pageIds[] = $page['pageid'];
+		}
 	}
 
 }
