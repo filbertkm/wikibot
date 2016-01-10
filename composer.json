@@ -3,6 +3,7 @@
   "type": "library",
   "description": "MediaWiki bot library",
   "require": {
+    "benestar/asparagus": "~0.4",
     "symfony/console": "~2.5",
     "silex/silex": "~1.2",
     "knplabs/console-service-provider": "~1.0",

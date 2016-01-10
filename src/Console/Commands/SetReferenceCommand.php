@@ -15,27 +15,64 @@ class SetReferenceCommand extends Command {
 
 	protected function configure() {
 		$this->setName( 'set-reference' )
-			->setDescription( 'Set a reference' );
+			->setDescription( 'Set reference' )
+			->addArgument(
+				'entity-id',
+				InputArgument::REQUIRED,
+				'Entity ID'
+			)
+			->addArgument(
+				'property-id',
+				InputArgument::REQUIRED,
+				'Property ID'
+			);
 	}
 
 	protected function execute( InputInterface $input, OutputInterface $output ) {
 		$app = $this->getSilexApplication();
-		$wiki = $app['app-config']->getWiki( 'devrepo' );
+		$wiki = $app['app-config']->getWiki( 'testwikidatawiki' );
 
 		$apiClient = new ApiClient(
 			new HttpClient( 'Wikibot' ),
 			$wiki
 		);
 
+		$entityId = $input->getArgument( 'entity-id' );
+		$propertyId = $input->getArgument( 'property-id' );
+
 		$wikibaseClient = new WikibaseClient( $apiClient );
+		$data = $wikibaseClient->getClaims( $entityId, $propertyId );
 
-		$statement = 'Q888$fae29d32-47c8-f0ad-da96-32aa7d2fb222';
-		$refSnaks = json_decode( '{"P1089":[{"snaktype":"value","property":"P1089","datavalue":{"type":"wikibase-entityid","value":{"entity-type":"item","numeric-id":15213}}}]}' );
-		$baseRev = 23442;
+		$statements = $data['claims'][$propertyId];
 
-		$response = $wikibaseClient->setReference( $statement, $refSnaks, $baseRev );
+		if ( count( $statements ) !== 1 ) {
+			return;
+		}
 
-		echo "post response\n";
+		$references = $statements[0]['references'];
+		$guid = $statements[0]['id'];
+
+		if ( count( $references ) !== 1 ) {
+			return;
+		}
+
+		$refSnaks = $references[0]['snaks'];
+
+		$snaksOrder = array( 'P486', 'P605' );
+//		$snaksOrder = array( 'P605', 'P486' );
+
+		$referenceHash = $references[0]['hash'];
+
+		$baseRev = 24128;
+
+		$response = $wikibaseClient->setReference(
+			$guid,
+			$refSnaks,
+			$baseRev,
+			$snaksOrder,
+			$referenceHash
+		);
+
 		var_export( $response );
 	}
 

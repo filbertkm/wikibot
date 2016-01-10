@@ -15,20 +15,19 @@ class CategoryMembersCommand extends Command {
 	protected function configure() {
 		$this->setName( 'cat-members' )
 			->setDescription( 'Category members' )
-            ->addArgument(
+			->addArgument(
 				'wiki',
 				InputArgument::REQUIRED,
 				'Wiki'
 			)
 			->addArgument(
-                'category',
-                InputArgument::REQUIRED,
-                'Category'
+				'category',
+				InputArgument::REQUIRED,
+				'Category'
 			);
 	}
 
 	protected function execute( InputInterface $input, OutputInterface $output ) {
-		echo __METHOD__;
 		$app = $this->getSilexApplication();
 		$wiki = $app['app-config']->getWiki( $input->getArgument( 'wiki' ) );
 
@@ -41,19 +40,23 @@ class CategoryMembersCommand extends Command {
 
 		$params = array(
 			'action' => 'query',
-			'cmtitle' => 'Category:' . $input->getArgument( 'category' ),
-			'list' => 'categorymembers',
-			'cmlimit' => 500
+			'gcmtitle' => 'Category:' . $input->getArgument( 'category' ),
+			'gcmlimit' => 500,
+			'generator' => 'categorymembers',
+			'prop' => 'pageprops',
+			'ppprop' => 'wikibase_item'
 		);
 
 		$response = $apiClient->get( $params );
 
-		$pages = $response['query']['categorymembers'];
+		$pages = $response['query']['pages'];
 		$pageIds = array();
 
-		foreach( $pages as $page ) {
+		foreach ( $pages as $page ) {
 			$pageIds[] = $page['pageid'];
 		}
+
+		var_export( $pages );
 	}
 
 }

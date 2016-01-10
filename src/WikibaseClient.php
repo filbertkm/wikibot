@@ -13,6 +13,17 @@ class WikibaseClient {
 		$this->apiClient = $apiClient;
 	}
 
+	public function getClaims( $entityId, $propertyId ) {
+		echo __METHOD__;
+		$params = array(
+			'action' => 'wbgetclaims',
+			'entity' => $entityId,
+			'property' => $propertyId
+		);
+
+		return $this->apiClient->get( $params );
+	}
+
 	public function createClaim( $entityId, $propertyId, $data ) {
 		$params = array(
 			'action' => 'wbcreateclaim',
@@ -35,13 +46,27 @@ class WikibaseClient {
 		return $this->doEdit( $params );
 	}
 
-	public function setReference( $statement, $refSnaks, $baseRev ) {
+	public function setReference(
+		$statement,
+		$refSnaks,
+		$baseRev,
+		$snaksOrder = null,
+		$referenceHash = null
+	) {
 		$params = array(
 			'action' => 'wbsetreference',
 			'statement' => $statement,
 			'snaks' => json_encode( $refSnaks ),
 			'baserevid' => $baseRev
 		);
+
+		if ( $snaksOrder !== null ) {
+			$params['snaks-order'] = json_encode( $snaksOrder );
+		}
+
+		if ( $referenceHash !== null ) {
+			$params['reference'] = $referenceHash;
+		}
 
 		return $this->doEdit( $params );
 	}
