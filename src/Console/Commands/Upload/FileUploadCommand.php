@@ -7,13 +7,18 @@ use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Question\Question;
-use Wikibot\ApiClient;
-use Wikibot\HttpClient;
+use Wikibot\ApiClientFactory;
 use Wikibot\Upload\CommonsUploader;
 use Wikibot\Upload\NARAClintonScraper;
 use Wikibot\Upload\TemplateBuilder;
 
 class FileUploadCommand extends Command {
+
+	private $apiClientFactory;
+
+	public function setServices( ApiClientFactory $apiClientFactory ) {
+		$this->apiClientFactory = $apiClientFactory;
+	}
 
 	protected function configure() {
 		$this->setName( 'file-upload' )
@@ -33,8 +38,6 @@ class FileUploadCommand extends Command {
 
 		$helper = $this->getHelper( 'question' );
 
-		$httpClient = new HttpClient( 'Wikibot' );
-
 		$filename = $input->getArgument( 'file' );
 
 		$data = array(
@@ -53,7 +56,7 @@ class FileUploadCommand extends Command {
 		$question = new Question( 'Provide a description: ' );
 		$data['description'] = $helper->ask( $input, $output, $question );
 
-		foreach( $data as $field => $value ) {
+		foreach ( $data as $field => $value ) {
 			if ( $field === 'Title' ) {
 				$title = str_replace( ' ', '_', $value );
 			} elseif ( $field === 'file' ) {
@@ -79,7 +82,7 @@ class FileUploadCommand extends Command {
 			. "{{self|cc-by-sa-3.0}}";
 			// . "[[Category:One World Observatory]]";
 
-		$apiClient = new ApiClient( $httpClient, $wiki );
+		$apiClient = $this->apiClientFactory->newApiClient( $wiki );
 		$apiClient->login();
 
 		$uploader = new CommonsUploader( $apiClient );

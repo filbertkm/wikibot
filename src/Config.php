@@ -2,6 +2,8 @@
 
 namespace Wikibot;
 
+use Wikimedia\Assert\Assert;
+
 class Config {
 
 	private $settings;
@@ -10,19 +12,19 @@ class Config {
 		$this->settings = $settings;
 	}
 
-	public function getWiki( $wikiId ) {
-		if ( array_key_exists( $wikiId, $this->settings['wikis'] ) ) {
-			$wikiConfig = $this->settings['wikis'][$wikiId];
+	/**
+	 * @param string $settingName
+	 *
+	 * @return mixed
+	 */
+	public function get( $settingName ) {
+		Assert::parameterType( 'string', $settingName, '$settingName' );
 
-			$wiki = new Wiki( $wikiId );
-
-			$user = new User( $wikiConfig['username'], $wikiConfig['password'] );
-			$wiki->setUser( $user );
-
-			$wiki->setApiPath( $wikiConfig['api-path'] );
-
-			return $wiki;
+		if ( !array_key_exists( $settingName, $this->settings ) ) {
+			throw new \InvalidArgumentException( 'Unknown setting: ' . $settingName );
 		}
+
+		return $this->settings[$settingName];
 	}
 
 }

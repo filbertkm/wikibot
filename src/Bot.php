@@ -3,6 +3,7 @@
 namespace Wikibot;
 
 use DerAlex\Silex\YamlConfigServiceProvider;
+use Filbertkm\Http\HttpClient;
 use Knp\Command\Command;
 use Knp\Provider\ConsoleServiceProvider;
 use Silex\Application;
@@ -21,9 +22,16 @@ class Bot {
 
 	public function __construct() {
 		$this->app = new Application();
-		$this->commandRegistry = new CommandRegistry();
+		$this->app['debug'] = true;
 
 		$this->init();
+
+		$this->commandRegistry = new CommandRegistry(
+			new HttpClient( 'Wikibot', 'wikibot' ),
+			$this->app['app-config']
+		);
+
+		$this->initCommands();
 	}
 
 	public function init() {
@@ -48,11 +56,10 @@ class Bot {
 		) );
 
 		$this->console = $this->app['console'];
-		$this->initCommands();
 	}
 
 	private function initCommands() {
-		foreach( $this->commandRegistry->getCommands() as $command ) {
+		foreach ( $this->commandRegistry->getCommands() as $command ) {
 			$this->console->add( $command );
 		}
 	}

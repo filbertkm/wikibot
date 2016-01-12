@@ -6,11 +6,16 @@ use Knp\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use Wikibot\ApiClient;
-use Wikibot\HttpClient;
-use Wikibot\Wikibase\ApiEntityLookup;
+use Wikibot\ApiClientFactory;
+use Wikibot\MediaWiki\Page;
 
 class CategoryMembersCommand extends Command {
+
+	private $apiClientFactory;
+
+	public function setServices( ApiClientFactory $apiClientFactory ) {
+		$this->apiClientFactory = $apiClientFactory;
+	}
 
 	protected function configure() {
 		$this->setName( 'cat-members' )
@@ -28,14 +33,7 @@ class CategoryMembersCommand extends Command {
 	}
 
 	protected function execute( InputInterface $input, OutputInterface $output ) {
-		$app = $this->getSilexApplication();
-		$wiki = $app['app-config']->getWiki( $input->getArgument( 'wiki' ) );
-
-		$apiClient = new ApiClient(
-			new HttpClient( 'Wikibot' ),
-			$wiki
-		);
-
+		$apiClient = $this->apiClientFactory->newApiClient( $input->getArgument( 'wiki' ) );
 		$apiClient->login();
 
 		$params = array(

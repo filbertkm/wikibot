@@ -6,20 +6,30 @@ use Knp\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use Wikibot\ApiClient;
-use Wikibot\HttpClient;
-use Wikibot\Wikibase\ApiEntityLookup;
+use Wikibot\ApiClientFactory;
 
 class EditPageCommand extends Command {
+
+	/**
+	 * @var ApiClientFactory
+	 */
+	private $apiClientFactory;
+
+	/**
+	 * @param ApiClientFactory $apiClientFactory
+	 */
+	public function setServices( ApiClientFactory $apiClientFactory ) {
+		$this->apiClientFactory = $apiClientFactory;
+	}
 
 	protected function configure() {
 		$this->setName( 'edit' )
 			->setDescription( 'Edit pages' )
-            ->addArgument(
-                'wiki',
-                InputArgument::REQUIRED,
-                'Wiki'
-            );
+			->addArgument(
+				'wiki',
+				InputArgument::REQUIRED,
+				'Wiki'
+			);
 	}
 
 	protected function execute( InputInterface $input, OutputInterface $output ) {
@@ -32,8 +42,7 @@ class EditPageCommand extends Command {
 	private function addPagesFromWiki( $wiki ) {
 		$app = $this->getSilexApplication();
 
-		$repoClient = new ApiClient(
-			new HttpClient( 'Wikibot' ),
+		$repoClient = $this->apiClientFactory->newApiClient(
 			$app['app-config']->getWiki( 'devrepo' )
 		);
 
@@ -46,7 +55,7 @@ class EditPageCommand extends Command {
 
 		$items = array();
 
-		foreach( $res['query']['random'] as $page ) {
+		foreach ( $res['query']['random'] as $page ) {
 			$items[] = $page['title'];
 		}
 
@@ -56,10 +65,9 @@ class EditPageCommand extends Command {
 			'props' => 'sitelinks'
 		) );
 
-		foreach( $res['entities'] as $id => $data ) {
+		foreach ( $res['entities'] as $id => $data ) {
 			if ( array_key_exists( $wiki, $data['sitelinks'] ) ) {
-				$apiClient = new ApiClient(
-					new HttpClient( 'Wikibot' ),
+				$apiClient = $this->apiClientFactory->newApiClient(
 					$app['app-config']->getWiki( $wiki )
 				);
 

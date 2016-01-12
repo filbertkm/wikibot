@@ -6,13 +6,18 @@ use Knp\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use Wikibot\ApiClient;
-use Wikibot\HttpClient;
+use Wikibot\ApiClientFactory;
 use Wikibot\Upload\CommonsUploader;
 use Wikibot\Upload\NARAClintonScraper;
 use Wikibot\Upload\TemplateBuilder;
 
 class UploadCommand extends Command {
+
+	private $apiClientFactory;
+
+	public function setServices( ApiClientFactory $apiClientFactory ) {
+		$this->apiClientFactory = $apiClientFactory;
+	}
 
 	protected function configure() {
 		$this->setName( 'upload' )
@@ -22,8 +27,6 @@ class UploadCommand extends Command {
 	protected function execute( InputInterface $input, OutputInterface $output ) {
 		$app = $this->getSilexApplication();
 		$wiki = $app['app-config']->getWiki( 'commonswiki' );
-
-		$httpClient = new HttpClient( 'Wikibot' );
 
 		$baseUrl = 'http://clinton.presidentiallibraries.us/items/show/';
 		$scraper = new NARAClintonScraper( $httpClient, $baseUrl );
@@ -36,7 +39,7 @@ class UploadCommand extends Command {
 		$title = 'Clinton Presidential Library - ';
 		$sourceUrl = $baseUrl . $itemId;
 
-		foreach( $data as $field => $value ) {
+		foreach ( $data as $field => $value ) {
 			if ( $field === 'Title' ) {
 				$title = $value;
 			} elseif ( $field === 'file' ) {
@@ -64,7 +67,7 @@ class UploadCommand extends Command {
 			. "{{PD-USGov}}\n\n"
 			. "[[Category:Buddy (dog)]]";
 
-		$apiClient = new ApiClient( $httpClient, $wiki );
+		$apiClient = $this->apiClientFactory->newApiClient( $wiki );
 		$apiClient->login();
 
 		$uploader = new CommonsUploader( $apiClient );

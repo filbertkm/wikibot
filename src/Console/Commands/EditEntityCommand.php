@@ -3,14 +3,23 @@
 namespace Wikibot\Console\Commands;
 
 use Knp\Command\Command;
-use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use Wikibot\ApiClient;
-use Wikibot\HttpClient;
-use Wikibot\Wikibase\ApiEntityLookup;
+use Wikibot\ApiClientFactory;
 
 class EditEntityCommand extends Command {
+
+	/**
+	 * @var ApiClientFactory
+	 */
+	private $apiClientFactory;
+
+	/**
+	 * @param ApiClientFactory $apiClientFactory
+	 */
+	public function setServices( ApiClientFactory $apiClientFactory ) {
+		$this->apiClientFactory = $apiClientFactory;
+	}
 
 	protected function configure() {
 		$this->setName( 'edit-entity' )
@@ -21,10 +30,7 @@ class EditEntityCommand extends Command {
 		$app = $this->getSilexApplication();
 		$wiki = $app['app-config']->getWiki( 'devrepo' );
 
-		$apiClient = new ApiClient(
-			new HttpClient( 'Wikibot' ),
-			$wiki
-		);
+		$apiClient = $this->apiClientFactory->newApiClient( $wiki );
 
 		$params = array(
 			'action' => 'wbeditentity',

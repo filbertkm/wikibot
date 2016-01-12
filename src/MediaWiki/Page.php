@@ -2,38 +2,22 @@
 
 namespace Wikibot\MediaWiki;
 
-/**
-
-array (
-  'entities' =>
-  array (
-    'Q22' =>
-    array (
-      'pageid' => 203,
-      'ns' => 0,
-      'title' => 'Q22',
-      'lastrevid' => 13598,
-      'modified' => '2015-05-04T17:12:01Z',
-      'id' => 'Q22',
-      'type' => 'item',
-      'aliases' =>
-      array (
-        'en' =>
-        array (
-          0 =>
-          array (
-            'language' => 'en',
-            'value' => 'kitty',
-          ),
-
-*/
-
 class Page {
 
 	/**
-	 * var Revision
+	 * @var string
 	 */
-	private $revision;
+	private $titleText;
+
+	/**
+	 * @var int
+	 */
+	private $namespace;
+
+	/**
+	 * @var string
+	 */
+	private $wikiId;
 
 	/**
 	 * @var int
@@ -41,19 +25,37 @@ class Page {
 	private $pageId;
 
 	/**
-	 * @param Revision $revision
-	 * @param int $pageId
+	 * @param string $titleText
+	 * @param int $namespace
+	 * @param string $wikiId
+	 * @param int $pageId Defaults to 0 (current revision)
 	 */
-	public function __construct( Revision $revision, $pageId ) {
-		$this->revision = $revision;
+	public function __construct( $titleText, $namespace, $wikiId, $pageId = 0 ) {
+		$this->titleText = $titleText;
+		$this->namespace = $namespace;
+		$this->wikiId = $wikiId;
 		$this->pageId = $pageId;
 	}
 
 	/**
-	 * @return Revision
+	 * @return string
 	 */
-	public function getRevision() {
-		return $this->revision;
+	public function getTitleText() {
+		return $this->titleText;
+	}
+
+	/**
+	 * @return int
+	 */
+	public function getNamespace() {
+		return $this->namespace;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getWikiId() {
+		return $this->wikiId;
 	}
 
 	/**

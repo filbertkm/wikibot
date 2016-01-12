@@ -6,11 +6,15 @@ use Knp\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use Wikibot\ApiClient;
-use Wikibot\HttpClient;
-use Wikibot\Wikibase\ApiEntityLookup;
+use Wikibot\ApiClientFactory;
 
 class SetLabelCommand extends Command {
+
+	private $apiClientFactory;
+
+	public function setServices( ApiClientFactory $apiClientFactory ) {
+		$this->apiClientFactory = $apiClientFactory;
+	}
 
 	protected function configure() {
 		$this->setName( 'set-label' )
@@ -21,10 +25,7 @@ class SetLabelCommand extends Command {
 		$app = $this->getSilexApplication();
 		$wiki = $app['app-config']->getWiki( 'wikidatawiki' );
 
-		$apiClient = new ApiClient(
-			new HttpClient( 'Wikibot' ),
-			$wiki
-		);
+		$apiClient = $this->apiClientFactory->newApiClient( $wiki );
 
 		$params = array(
 			'action' => 'wbsetlabel',

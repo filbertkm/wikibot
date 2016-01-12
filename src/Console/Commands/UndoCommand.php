@@ -6,20 +6,24 @@ use Knp\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use Wikibot\ApiClient;
-use Wikibot\HttpClient;
-use Wikibot\Wikibase\ApiEntityLookup;
+use Wikibot\ApiClientFactory;
 
 class UndoCommand extends Command {
+
+	private $apiClientFactory;
+
+	public function setServices( ApiClientFactory $apiClientFactory ) {
+		$this->apiClientFactory = $apiClientFactory;
+	}
 
 	protected function configure() {
 		$this->setName( 'undo' )
 			->setDescription( 'Undo a revision' )
-            ->addArgument(
-                'title',
-                InputArgument::REQUIRED,
-                'Title'
-            )
+			->addArgument(
+				'title',
+				InputArgument::REQUIRED,
+				'Title'
+			)
 			->addArgument(
 				'revision',
 				InputArgument::REQUIRED,
@@ -31,10 +35,7 @@ class UndoCommand extends Command {
 		$app = $this->getSilexApplication();
 		$wiki = $app['app-config']->getWiki( 'devrepo' );
 
-		$apiClient = new ApiClient(
-			new HttpClient( 'Wikibot' ),
-			$wiki
-		);
+		$apiClient = $this->apiClientFactory->newApiClient( $wiki );
 
 		$params = array(
 			'action' => 'edit',

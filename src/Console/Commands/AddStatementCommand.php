@@ -3,15 +3,24 @@
 namespace Wikibot\Console\Commands;
 
 use Knp\Command\Command;
-use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use Wikibot\ApiClient;
-use Wikibot\HttpClient;
+use Wikibot\ApiClientFactory;
 use Wikibot\WikibaseClient;
-use Wikibot\Wikibase\ApiEntityLookup;
 
 class AddStatementCommand extends Command {
+
+	/**
+	 * @var ApiClientFactory
+	 */
+	private $apiClientFactory;
+
+	/**
+	 * @param ApiClientFactory $apiClientFactory
+	 */
+	public function setServices( ApiClientFactory $apiClientFactory ) {
+		$this->apiClientFactory = $apiClientFactory;
+	}
 
 	protected function configure() {
 		$this->setName( 'add-statement' )
@@ -19,14 +28,7 @@ class AddStatementCommand extends Command {
 	}
 
 	protected function execute( InputInterface $input, OutputInterface $output ) {
-		$app = $this->getSilexApplication();
-		$wiki = $app['app-config']->getWiki( 'devrepo' );
-
-		$apiClient = new ApiClient(
-			new HttpClient( 'Wikibot' ),
-			$wiki
-		);
-
+		$apiClient = $this->apiClientFactory->newApiClient( 'devrepo' );
 		$wikibaseClient = new WikibaseClient( $apiClient );
 
 		$entityId = 'Q888';

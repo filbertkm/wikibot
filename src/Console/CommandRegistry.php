@@ -2,15 +2,58 @@
 
 namespace Wikibot\Console;
 
+use Filbertkm\Http\HttpClient;
+use MediaWiki\Sites\Console\Commands\ImportSitesCommand;
+use Wikibot\ApiClientFactory;
+use Wikibot\Config;
+
 class CommandRegistry {
 
+	/**
+	 * @var Config
+	 */
+	private $config;
+
+	public function __construct( HttpClient $httpClient, Config $config ) {
+		$this->httpClient = $httpClient;
+		$this->config = $config;
+	}
+
 	public function getCommands() {
-		$classNames = array(
+		$commands = array(
+			$this->newImportSitesCommand(),
+			$this->newPostCommand()
+		);
+
+		foreach ( $this->getApiCommands() as $apiCommand ) {
+			$commands[] = $apiCommand;
+		}
+
+		return $commands;
+	}
+
+	private function newImportSitesCommand() {
+		$sites = $this->config->get( 'sites' );
+
+		$command = new ImportSitesCommand();
+		$command->setServices(
+			$this->httpClient,
+			$sites['path']
+		);
+
+		return $command;
+	}
+
+	private function newPostCommand() {
+		return new \Wikibot\Console\Commands\PostCommand();
+	}
+
+	private function getApiCommands() {
+		$apiCommandClasses = array(
 			'\Wikibot\Console\Commands\AddStatementCommand',
 			'\Wikibot\Console\Commands\CategoryMembersCommand',
 			'\Wikibot\Console\Commands\EditEntityCommand',
 			'\Wikibot\Console\Commands\EditPageCommand',
-			'\Wikibot\Console\Commands\PostCommand',
 			'\Wikibot\Console\Commands\PurgeCommand',
 			'\Wikibot\Console\Commands\SetLabelCommand',
 			'\Wikibot\Console\Commands\SetReferenceCommand',
@@ -20,17 +63,16 @@ class CommandRegistry {
 			'\Wikibot\Console\Commands\Upload\UploadCommand'
 		);
 
-		foreach( $classNames as $className ) {
-			$commands[] = $this->newCommand( $className );
+		foreach ( $apiCommandClasses as $apiCommandClass ) {
+			$command = new $apiCommandClass();
+			$command->setServices(
+				new ApiClientFactory( $this->httpClient )
+			);
+
+			$commands[] = $command;
 		}
 
 		return $commands;
-	}
-
-	private function newCommand( $class ) {
-		$command = new $class();
-
-		return $command;
 	}
 
 }

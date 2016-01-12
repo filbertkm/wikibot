@@ -2,6 +2,8 @@
 
 namespace Wikibot;
 
+use Filbertkm\Http\HttpClient;
+
 class ApiClient {
 
 	/**

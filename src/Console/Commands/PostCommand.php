@@ -2,11 +2,11 @@
 
 namespace Wikibot\Console\Commands;
 
+use Filbertkm\Http\HttpClient;
 use Knp\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use Wikibot\HttpClient;
 
 class PostCommand extends Command {
 
@@ -21,7 +21,7 @@ class PostCommand extends Command {
 	}
 
 	protected function execute( InputInterface $input, OutputInterface $output ) {
-		$httpClient = new HttpClient( 'Wikibot' );
+		$httpClient = new HttpClient( 'Wikibot', 'wikibot' );
 		$url = $input->getArgument( 'url' );
 
 		$res = $httpClient->post( $url );
