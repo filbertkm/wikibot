@@ -22,10 +22,7 @@ class SetLabelCommand extends Command {
 	}
 
 	protected function execute( InputInterface $input, OutputInterface $output ) {
-		$app = $this->getSilexApplication();
-		$wiki = $app['app-config']->getWiki( 'wikidatawiki' );
-
-		$apiClient = $this->apiClientFactory->newApiClient( $wiki );
+		$apiClient = $this->apiClientFactory->newApiClient( 'devrepo' );
 
 		$params = array(
 			'action' => 'wbsetlabel',

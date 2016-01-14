@@ -33,10 +33,7 @@ class SetReferenceCommand extends Command {
 	}
 
 	protected function execute( InputInterface $input, OutputInterface $output ) {
-		$app = $this->getSilexApplication();
-		$wiki = $app['app-config']->getWiki( 'testwikidatawiki' );
-
-		$apiClient = $this->apiClientFactory->newApiClient( $wiki );
+		$apiClient = $this->apiClientFactory->newApiClient( 'devrepo' );
 
 		$entityId = $input->getArgument( 'entity-id' );
 		$propertyId = $input->getArgument( 'property-id' );

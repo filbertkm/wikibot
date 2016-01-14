@@ -4,8 +4,10 @@ namespace Wikibot\Console;
 
 use Filbertkm\Http\HttpClient;
 use MediaWiki\Sites\Console\Commands\ImportSitesCommand;
+use MediaWiki\Sites\Lookup\JsonSiteLookup;
 use Wikibot\ApiClientFactory;
 use Wikibot\Config;
+use Symfony\Component\Yaml\Yaml;
 
 class CommandRegistry {
 
@@ -63,10 +65,16 @@ class CommandRegistry {
 			'\Wikibot\Console\Commands\Upload\UploadCommand'
 		);
 
+		$usersConfig = $this->config->get( 'users' );
+		$users = Yaml::parse( file_get_contents( $usersConfig['path'] ) );
+
+		$sites = $this->config->get( 'sites' );
+		$siteLookup = new JsonSiteLookup( $sites['path'] );
+
 		foreach ( $apiCommandClasses as $apiCommandClass ) {
 			$command = new $apiCommandClass();
 			$command->setServices(
-				new ApiClientFactory( $this->httpClient )
+				new ApiClientFactory( $this->httpClient, $siteLookup, $users )
 			);
 
 			$commands[] = $command;

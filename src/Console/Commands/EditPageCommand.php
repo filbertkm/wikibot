@@ -40,11 +40,7 @@ class EditPageCommand extends Command {
 	}
 
 	private function addPagesFromWiki( $wiki ) {
-		$app = $this->getSilexApplication();
-
-		$repoClient = $this->apiClientFactory->newApiClient(
-			$app['app-config']->getWiki( 'devrepo' )
-		);
+		$repoClient = $this->apiClientFactory->newApiClient( 'devrepo' );
 
 		$res = $repoClient->get( array(
 			'action' => 'query',
@@ -67,9 +63,7 @@ class EditPageCommand extends Command {
 
 		foreach ( $res['entities'] as $id => $data ) {
 			if ( array_key_exists( $wiki, $data['sitelinks'] ) ) {
-				$apiClient = $this->apiClientFactory->newApiClient(
-					$app['app-config']->getWiki( $wiki )
-				);
+				$apiClient = $this->apiClientFactory->newApiClient( $wiki );
 
 				$title = $data['sitelinks'][$wiki]['title'];
 

@@ -33,9 +33,8 @@ class PurgeCommand extends Command {
 
 	protected function execute( InputInterface $input, OutputInterface $output ) {
 		$app = $this->getSilexApplication();
-		$wiki = $app['app-config']->getWiki( 'wikidatawiki' );
 
-		$apiClient = $this->apiClientFactory->newApiClient( $wiki );
+		$apiClient = $this->apiClientFactory->newApiClient( 'wikidatawiki' );
 
 		$ids = array();
 

@@ -25,9 +25,6 @@ class UploadCommand extends Command {
 	}
 
 	protected function execute( InputInterface $input, OutputInterface $output ) {
-		$app = $this->getSilexApplication();
-		$wiki = $app['app-config']->getWiki( 'commonswiki' );
-
 		$baseUrl = 'http://clinton.presidentiallibraries.us/items/show/';
 		$scraper = new NARAClintonScraper( $httpClient, $baseUrl );
 
@@ -67,7 +64,7 @@ class UploadCommand extends Command {
 			. "{{PD-USGov}}\n\n"
 			. "[[Category:Buddy (dog)]]";
 
-		$apiClient = $this->apiClientFactory->newApiClient( $wiki );
+		$apiClient = $this->apiClientFactory->newApiClient( 'commonswiki' );
 		$apiClient->login();
 
 		$uploader = new CommonsUploader( $apiClient );

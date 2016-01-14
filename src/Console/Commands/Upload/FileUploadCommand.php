@@ -31,11 +31,6 @@ class FileUploadCommand extends Command {
 	}
 
 	protected function execute( InputInterface $input, OutputInterface $output ) {
-		set_time_limit( 0 );
-
-		$app = $this->getSilexApplication();
-		$wiki = $app['app-config']->getWiki( 'commonswiki' );
-
 		$helper = $this->getHelper( 'question' );
 
 		$filename = $input->getArgument( 'file' );
@@ -82,7 +77,7 @@ class FileUploadCommand extends Command {
 			. "{{self|cc-by-sa-3.0}}";
 			// . "[[Category:One World Observatory]]";
 
-		$apiClient = $this->apiClientFactory->newApiClient( $wiki );
+		$apiClient = $this->apiClientFactory->newApiClient( 'commonswiki' );
 		$apiClient->login();
 
 		$uploader = new CommonsUploader( $apiClient );

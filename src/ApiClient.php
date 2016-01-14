@@ -3,6 +3,7 @@
 namespace Wikibot;
 
 use Filbertkm\Http\HttpClient;
+use MediaWiki\Sites\Lookup\SiteLookup;
 
 class ApiClient {
 
@@ -12,9 +13,19 @@ class ApiClient {
 	private $httpClient;
 
 	/**
-	 * @var Wiki
+	 * @var SiteLookup
 	 */
-	private $wiki;
+	private $siteLookup;
+
+	/**
+	 * @var ?
+	 */
+	private $users;
+
+	/**
+	 * @var string
+	 */
+	private $siteId;
 
 	/**
 	 * @var array
@@ -22,15 +33,20 @@ class ApiClient {
 	private $tokens;
 
 	/**
-	 * @param Wiki $wiki
+	 * @param HttpClient $httpClient
+	 * @param SiteLookup $siteLookup
+	 * @param ? $users
+	 * @param string $siteId
 	 */
-	public function __construct( HttpClient $httpClient, Wiki $wiki ) {
+	public function __construct( HttpClient $httpClient, SiteLookup $siteLookup, $users, $siteId ) {
 		$this->httpClient = $httpClient;
-		$this->wiki = $wiki;
+		$this->siteLookup = $siteLookup;
+		$this->users = $users;
+		$this->siteId = $siteId;
 	}
 
 	public function get( array $params ) {
-		$url = $this->wiki->getApiPath() . '?' . $this->makeQueryString( $params );
+		$url = $this->getApiUrl() . '?' . $this->makeQueryString( $params );
 		$response = $this->httpClient->get( $url );
 
 		if ( !isset( $this->tokens ) ) {
@@ -45,8 +61,10 @@ class ApiClient {
 			$params['token'] = $this->tokens['csrftoken'];
 		}
 
+		$site = $this->siteLookup->getSite( $this->siteId );
+
 		$response = $this->httpClient->post(
-			$this->wiki->getApiPath(),
+			$this->getApiUrl(),
 			$this->makeQueryString( $params )
 		);
 
@@ -58,7 +76,7 @@ class ApiClient {
 		$params['format'] = 'json';
 
 		$response = $this->httpClient->multipart(
-			$this->wiki->getApiPath(),
+			$this->getApiUrl(),
 			$params
 		);
 
@@ -70,12 +88,13 @@ class ApiClient {
 			return true;
 		}
 
-		$user = $this->wiki->getUser();
+		$siteId = $this->siteId;
+		$user = $this->users['users'][$siteId];
 
 		$params = array(
 			'action' => 'login',
-			'lgname' => $user->getUserName(),
-			'lgpassword' => $user->getPassword()
+			'lgname' => $user['user'],
+			'lgpassword' => $user['password']
 		);
 
 		if ( $lgToken !== null ) {
@@ -93,6 +112,15 @@ class ApiClient {
 		}
 
 		return false;
+	}
+
+	/**
+	 * @return string
+	 */
+	private function getApiUrl() {
+		$site = $this->siteLookup->getSite( $this->siteId );
+
+		return $site->getApiUrl();
 	}
 
 	private function setTokens() {
@@ -131,7 +159,7 @@ class ApiClient {
 
 		$pairs = array();
 
-		foreach( $params as $key => $value ) {
+		foreach ( $params as $key => $value ) {
 			if ( !is_scalar( $key ) || !is_scalar( $value ) ) {
 				throw new \InvalidArgumentException( 'Query string params must be scalars.' );
 			}

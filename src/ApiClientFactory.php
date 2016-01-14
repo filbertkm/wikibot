@@ -3,6 +3,7 @@
 namespace Wikibot;
 
 use Filbertkm\Http\HttpClient;
+use MediaWiki\Sites\Lookup\SiteLookup;
 use Wikimedia\Assert\Assert;
 
 class ApiClientFactory {
@@ -12,16 +13,30 @@ class ApiClientFactory {
 	 */
 	private $httpClient;
 
-	public function __construct( HttpClient $httpClient ) {
+	/**
+	 * @var SiteLookup
+	 */
+	private $siteLookup;
+
+	/**
+	 * @var ?
+	 */
+	private $users;
+
+	public function __construct( HttpClient $httpClient, SiteLookup $siteLookup, $users ) {
 		$this->httpClient = $httpClient;
+		$this->siteLookup = $siteLookup;
+		$this->users = $users;
 	}
 
-	public function newApiClient( $wikiId ) {
-		Assert::parameterType( 'string', $wikiId, '$wikiId' );
+	public function newApiClient( $siteId ) {
+		Assert::parameterType( 'string', $siteId, '$siteId' );
 
 		return new ApiClient(
 			$this->httpClient,
-			$wikiId
+			$this->siteLookup,
+			$this->users,
+			$siteId
 		);
 	}
 
