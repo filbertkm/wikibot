@@ -114,6 +114,14 @@ class ApiClient {
 		return false;
 	}
 
+	public function logout() {
+		$this->post( array(
+			'action' => 'logout'
+		) );
+
+		$this->httpClient->disconnect();
+	}
+
 	/**
 	 * @return string
 	 */

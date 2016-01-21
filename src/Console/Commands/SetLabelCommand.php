@@ -56,8 +56,8 @@ class SetLabelCommand extends Command {
 
 		$apiClient->login();
 		$response = $apiClient->post( $params );
+		$apiClient->logout();
 
-		echo "post response\n";
 		var_export( $response );
 	}
 
