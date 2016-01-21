@@ -2,13 +2,13 @@
 
 namespace Wikibot;
 
-use DerAlex\Silex\YamlConfigServiceProvider;
 use Filbertkm\Http\HttpClient;
 use Knp\Command\Command;
 use Knp\Provider\ConsoleServiceProvider;
 use Silex\Application;
 use Silex\Provider\MonologServiceProvider;
 use Silex\Provider\TwigServiceProvider;
+use Symfony\Component\Yaml\Yaml;
 use Wikibot\Config;
 use Wikibot\Console\CommandRegistry;
 
@@ -35,10 +35,8 @@ class Bot {
 	}
 
 	public function init() {
-		$this->app->register( new YamlConfigServiceProvider( __DIR__ . '/../config/config.yml' ) );
-
 		$this->app['app-config'] = $this->app->share( function() {
-			return new Config( $this->app['config'] );
+			return new Config( Yaml::parse( file_get_contents( __DIR__ . '/../config/config.yml' ) ) );
 		} );
 
 		$this->app->register( new TwigServiceProvider(), array(
