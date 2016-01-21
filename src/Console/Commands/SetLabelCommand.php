@@ -20,6 +20,11 @@ class SetLabelCommand extends Command {
 		$this->setName( 'set-label' )
 			->setDescription( 'Set a label' )
 			->addArgument(
+				'wiki',
+				InputArgument::REQUIRED,
+				'Wiki ID'
+			)
+			->addArgument(
 				'id',
 				InputArgument::REQUIRED,
 				'Entity ID'
@@ -37,15 +42,16 @@ class SetLabelCommand extends Command {
 	}
 
 	protected function execute( InputInterface $input, OutputInterface $output ) {
-		$apiClient = $this->apiClientFactory->newApiClient( 'testwikidatawiki' );
+		$apiClient = $this->apiClientFactory->newApiClient(
+			$input->getArgument( 'wiki' )
+		);
 
 		$params = array(
 			'action' => 'wbsetlabel',
 			'id' => $input->getArgument( 'id' ),
 			'value' => $input->getArgument( 'label' ),
-			'language' => 'en-ca',
-			'baserevid' => $input->getArgument( 'baserev' ),
-//			'summary' => 'debugging T102148'
+			'language' => 'en',
+			'baserevid' => $input->getArgument( 'baserev' )
 		);
 
 		$apiClient->login();
