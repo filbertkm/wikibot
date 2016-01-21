@@ -1,0 +1,4471 @@
+sites:
+    aawiki:
+        siteid: aawiki
+        name: 'Qafár af'
+        groups: [wiki, wikimedia]
+        apiurl: 'https://aa.wikipedia.org/w/api.php'
+    aawiktionary:
+        siteid: aawiktionary
+        name: 'Qafár af'
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://aa.wiktionary.org/w/api.php'
+    aawikibooks:
+        siteid: aawikibooks
+        name: 'Qafár af'
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://aa.wikibooks.org/w/api.php'
+    abwiki:
+        siteid: abwiki
+        name: Аҧсшәа
+        groups: [wiki, wikimedia]
+        apiurl: 'https://ab.wikipedia.org/w/api.php'
+    abwiktionary:
+        siteid: abwiktionary
+        name: Аҧсшәа
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://ab.wiktionary.org/w/api.php'
+    acewiki:
+        siteid: acewiki
+        name: Acèh
+        groups: [wiki, wikimedia]
+        apiurl: 'https://ace.wikipedia.org/w/api.php'
+    afwiki:
+        siteid: afwiki
+        name: Afrikaans
+        groups: [wiki, wikimedia]
+        apiurl: 'https://af.wikipedia.org/w/api.php'
+    afwiktionary:
+        siteid: afwiktionary
+        name: Afrikaans
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://af.wiktionary.org/w/api.php'
+    afwikibooks:
+        siteid: afwikibooks
+        name: Afrikaans
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://af.wikibooks.org/w/api.php'
+    afwikiquote:
+        siteid: afwikiquote
+        name: Afrikaans
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://af.wikiquote.org/w/api.php'
+    akwiki:
+        siteid: akwiki
+        name: Akan
+        groups: [wiki, wikimedia]
+        apiurl: 'https://ak.wikipedia.org/w/api.php'
+    akwiktionary:
+        siteid: akwiktionary
+        name: Akan
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://ak.wiktionary.org/w/api.php'
+    akwikibooks:
+        siteid: akwikibooks
+        name: Akan
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://ak.wikibooks.org/w/api.php'
+    alswiki:
+        siteid: alswiki
+        name: Alemannisch
+        groups: [wiki, wikimedia]
+        apiurl: 'https://als.wikipedia.org/w/api.php'
+    alswiktionary:
+        siteid: alswiktionary
+        name: Alemannisch
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://als.wiktionary.org/w/api.php'
+    alswikibooks:
+        siteid: alswikibooks
+        name: Alemannisch
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://als.wikibooks.org/w/api.php'
+    alswikiquote:
+        siteid: alswikiquote
+        name: Alemannisch
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://als.wikiquote.org/w/api.php'
+    amwiki:
+        siteid: amwiki
+        name: አማርኛ
+        groups: [wiki, wikimedia]
+        apiurl: 'https://am.wikipedia.org/w/api.php'
+    amwiktionary:
+        siteid: amwiktionary
+        name: አማርኛ
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://am.wiktionary.org/w/api.php'
+    amwikiquote:
+        siteid: amwikiquote
+        name: አማርኛ
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://am.wikiquote.org/w/api.php'
+    anwiki:
+        siteid: anwiki
+        name: aragonés
+        groups: [wiki, wikimedia]
+        apiurl: 'https://an.wikipedia.org/w/api.php'
+    anwiktionary:
+        siteid: anwiktionary
+        name: aragonés
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://an.wiktionary.org/w/api.php'
+    angwiki:
+        siteid: angwiki
+        name: Ænglisc
+        groups: [wiki, wikimedia]
+        apiurl: 'https://ang.wikipedia.org/w/api.php'
+    angwiktionary:
+        siteid: angwiktionary
+        name: Ænglisc
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://ang.wiktionary.org/w/api.php'
+    angwikibooks:
+        siteid: angwikibooks
+        name: Ænglisc
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://ang.wikibooks.org/w/api.php'
+    angwikiquote:
+        siteid: angwikiquote
+        name: Ænglisc
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://ang.wikiquote.org/w/api.php'
+    angwikisource:
+        siteid: angwikisource
+        name: Ænglisc
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://ang.wikisource.org/w/api.php'
+    arwiki:
+        siteid: arwiki
+        name: العربية
+        groups: [wiki, wikimedia]
+        apiurl: 'https://ar.wikipedia.org/w/api.php'
+    arwiktionary:
+        siteid: arwiktionary
+        name: العربية
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://ar.wiktionary.org/w/api.php'
+    arwikibooks:
+        siteid: arwikibooks
+        name: العربية
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://ar.wikibooks.org/w/api.php'
+    arwikinews:
+        siteid: arwikinews
+        name: العربية
+        groups: [wikinews, wikimedia]
+        apiurl: 'https://ar.wikinews.org/w/api.php'
+    arwikiquote:
+        siteid: arwikiquote
+        name: العربية
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://ar.wikiquote.org/w/api.php'
+    arwikisource:
+        siteid: arwikisource
+        name: العربية
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://ar.wikisource.org/w/api.php'
+    arwikiversity:
+        siteid: arwikiversity
+        name: العربية
+        groups: [wikiversity, wikimedia]
+        apiurl: 'https://ar.wikiversity.org/w/api.php'
+    arcwiki:
+        siteid: arcwiki
+        name: ܐܪܡܝܐ
+        groups: [wiki, wikimedia]
+        apiurl: 'https://arc.wikipedia.org/w/api.php'
+    arzwiki:
+        siteid: arzwiki
+        name: مصرى
+        groups: [wiki, wikimedia]
+        apiurl: 'https://arz.wikipedia.org/w/api.php'
+    aswiki:
+        siteid: aswiki
+        name: অসমীয়া
+        groups: [wiki, wikimedia]
+        apiurl: 'https://as.wikipedia.org/w/api.php'
+    aswiktionary:
+        siteid: aswiktionary
+        name: অসমীয়া
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://as.wiktionary.org/w/api.php'
+    aswikibooks:
+        siteid: aswikibooks
+        name: অসমীয়া
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://as.wikibooks.org/w/api.php'
+    aswikisource:
+        siteid: aswikisource
+        name: অসমীয়া
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://as.wikisource.org/w/api.php'
+    astwiki:
+        siteid: astwiki
+        name: asturianu
+        groups: [wiki, wikimedia]
+        apiurl: 'https://ast.wikipedia.org/w/api.php'
+    astwiktionary:
+        siteid: astwiktionary
+        name: asturianu
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://ast.wiktionary.org/w/api.php'
+    astwikibooks:
+        siteid: astwikibooks
+        name: asturianu
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://ast.wikibooks.org/w/api.php'
+    astwikiquote:
+        siteid: astwikiquote
+        name: asturianu
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://ast.wikiquote.org/w/api.php'
+    avwiki:
+        siteid: avwiki
+        name: авар
+        groups: [wiki, wikimedia]
+        apiurl: 'https://av.wikipedia.org/w/api.php'
+    avwiktionary:
+        siteid: avwiktionary
+        name: авар
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://av.wiktionary.org/w/api.php'
+    aywiki:
+        siteid: aywiki
+        name: 'Aymar aru'
+        groups: [wiki, wikimedia]
+        apiurl: 'https://ay.wikipedia.org/w/api.php'
+    aywiktionary:
+        siteid: aywiktionary
+        name: 'Aymar aru'
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://ay.wiktionary.org/w/api.php'
+    aywikibooks:
+        siteid: aywikibooks
+        name: 'Aymar aru'
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://ay.wikibooks.org/w/api.php'
+    azwiki:
+        siteid: azwiki
+        name: azərbaycanca
+        groups: [wiki, wikimedia]
+        apiurl: 'https://az.wikipedia.org/w/api.php'
+    azwiktionary:
+        siteid: azwiktionary
+        name: azərbaycanca
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://az.wiktionary.org/w/api.php'
+    azwikibooks:
+        siteid: azwikibooks
+        name: azərbaycanca
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://az.wikibooks.org/w/api.php'
+    azwikiquote:
+        siteid: azwikiquote
+        name: azərbaycanca
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://az.wikiquote.org/w/api.php'
+    azwikisource:
+        siteid: azwikisource
+        name: azərbaycanca
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://az.wikisource.org/w/api.php'
+    azbwiki:
+        siteid: azbwiki
+        name: تۆرکجه
+        groups: [wiki, wikimedia]
+        apiurl: 'https://azb.wikipedia.org/w/api.php'
+    bawiki:
+        siteid: bawiki
+        name: башҡортса
+        groups: [wiki, wikimedia]
+        apiurl: 'https://ba.wikipedia.org/w/api.php'
+    bawikibooks:
+        siteid: bawikibooks
+        name: башҡортса
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://ba.wikibooks.org/w/api.php'
+    barwiki:
+        siteid: barwiki
+        name: Boarisch
+        groups: [wiki, wikimedia]
+        apiurl: 'https://bar.wikipedia.org/w/api.php'
+    bat_smgwiki:
+        siteid: bat_smgwiki
+        name: žemaitėška
+        groups: [wiki, wikimedia]
+        apiurl: 'https://bat-smg.wikipedia.org/w/api.php'
+    bclwiki:
+        siteid: bclwiki
+        name: 'Bikol Central'
+        groups: [wiki, wikimedia]
+        apiurl: 'https://bcl.wikipedia.org/w/api.php'
+    bewiki:
+        siteid: bewiki
+        name: беларуская
+        groups: [wiki, wikimedia]
+        apiurl: 'https://be.wikipedia.org/w/api.php'
+    bewiktionary:
+        siteid: bewiktionary
+        name: беларуская
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://be.wiktionary.org/w/api.php'
+    bewikibooks:
+        siteid: bewikibooks
+        name: беларуская
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://be.wikibooks.org/w/api.php'
+    bewikiquote:
+        siteid: bewikiquote
+        name: беларуская
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://be.wikiquote.org/w/api.php'
+    bewikisource:
+        siteid: bewikisource
+        name: беларуская
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://be.wikisource.org/w/api.php'
+    be_x_oldwiki:
+        siteid: be_x_oldwiki
+        name: 'беларуская (тарашкевіца)‎'
+        groups: [wiki, wikimedia]
+        apiurl: 'https://be-tarask.wikipedia.org/w/api.php'
+    bgwiki:
+        siteid: bgwiki
+        name: български
+        groups: [wiki, wikimedia]
+        apiurl: 'https://bg.wikipedia.org/w/api.php'
+    bgwiktionary:
+        siteid: bgwiktionary
+        name: български
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://bg.wiktionary.org/w/api.php'
+    bgwikibooks:
+        siteid: bgwikibooks
+        name: български
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://bg.wikibooks.org/w/api.php'
+    bgwikinews:
+        siteid: bgwikinews
+        name: български
+        groups: [wikinews, wikimedia]
+        apiurl: 'https://bg.wikinews.org/w/api.php'
+    bgwikiquote:
+        siteid: bgwikiquote
+        name: български
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://bg.wikiquote.org/w/api.php'
+    bgwikisource:
+        siteid: bgwikisource
+        name: български
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://bg.wikisource.org/w/api.php'
+    bhwiki:
+        siteid: bhwiki
+        name: भोजपुरी
+        groups: [wiki, wikimedia]
+        apiurl: 'https://bh.wikipedia.org/w/api.php'
+    bhwiktionary:
+        siteid: bhwiktionary
+        name: भोजपुरी
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://bh.wiktionary.org/w/api.php'
+    biwiki:
+        siteid: biwiki
+        name: Bislama
+        groups: [wiki, wikimedia]
+        apiurl: 'https://bi.wikipedia.org/w/api.php'
+    biwiktionary:
+        siteid: biwiktionary
+        name: Bislama
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://bi.wiktionary.org/w/api.php'
+    biwikibooks:
+        siteid: biwikibooks
+        name: Bislama
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://bi.wikibooks.org/w/api.php'
+    bjnwiki:
+        siteid: bjnwiki
+        name: 'Bahasa Banjar'
+        groups: [wiki, wikimedia]
+        apiurl: 'https://bjn.wikipedia.org/w/api.php'
+    bmwiki:
+        siteid: bmwiki
+        name: bamanankan
+        groups: [wiki, wikimedia]
+        apiurl: 'https://bm.wikipedia.org/w/api.php'
+    bmwiktionary:
+        siteid: bmwiktionary
+        name: bamanankan
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://bm.wiktionary.org/w/api.php'
+    bmwikibooks:
+        siteid: bmwikibooks
+        name: bamanankan
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://bm.wikibooks.org/w/api.php'
+    bmwikiquote:
+        siteid: bmwikiquote
+        name: bamanankan
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://bm.wikiquote.org/w/api.php'
+    bnwiki:
+        siteid: bnwiki
+        name: বাংলা
+        groups: [wiki, wikimedia]
+        apiurl: 'https://bn.wikipedia.org/w/api.php'
+    bnwiktionary:
+        siteid: bnwiktionary
+        name: বাংলা
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://bn.wiktionary.org/w/api.php'
+    bnwikibooks:
+        siteid: bnwikibooks
+        name: বাংলা
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://bn.wikibooks.org/w/api.php'
+    bnwikisource:
+        siteid: bnwikisource
+        name: বাংলা
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://bn.wikisource.org/w/api.php'
+    bowiki:
+        siteid: bowiki
+        name: བོད་ཡིག
+        groups: [wiki, wikimedia]
+        apiurl: 'https://bo.wikipedia.org/w/api.php'
+    bowiktionary:
+        siteid: bowiktionary
+        name: བོད་ཡིག
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://bo.wiktionary.org/w/api.php'
+    bowikibooks:
+        siteid: bowikibooks
+        name: བོད་ཡིག
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://bo.wikibooks.org/w/api.php'
+    bpywiki:
+        siteid: bpywiki
+        name: 'বিষ্ণুপ্রিয়া মণিপুরী'
+        groups: [wiki, wikimedia]
+        apiurl: 'https://bpy.wikipedia.org/w/api.php'
+    brwiki:
+        siteid: brwiki
+        name: brezhoneg
+        groups: [wiki, wikimedia]
+        apiurl: 'https://br.wikipedia.org/w/api.php'
+    brwiktionary:
+        siteid: brwiktionary
+        name: brezhoneg
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://br.wiktionary.org/w/api.php'
+    brwikiquote:
+        siteid: brwikiquote
+        name: brezhoneg
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://br.wikiquote.org/w/api.php'
+    brwikisource:
+        siteid: brwikisource
+        name: brezhoneg
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://br.wikisource.org/w/api.php'
+    bswiki:
+        siteid: bswiki
+        name: bosanski
+        groups: [wiki, wikimedia]
+        apiurl: 'https://bs.wikipedia.org/w/api.php'
+    bswiktionary:
+        siteid: bswiktionary
+        name: bosanski
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://bs.wiktionary.org/w/api.php'
+    bswikibooks:
+        siteid: bswikibooks
+        name: bosanski
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://bs.wikibooks.org/w/api.php'
+    bswikinews:
+        siteid: bswikinews
+        name: bosanski
+        groups: [wikinews, wikimedia]
+        apiurl: 'https://bs.wikinews.org/w/api.php'
+    bswikiquote:
+        siteid: bswikiquote
+        name: bosanski
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://bs.wikiquote.org/w/api.php'
+    bswikisource:
+        siteid: bswikisource
+        name: bosanski
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://bs.wikisource.org/w/api.php'
+    bugwiki:
+        siteid: bugwiki
+        name: 'ᨅᨔ ᨕᨘᨁᨗ'
+        groups: [wiki, wikimedia]
+        apiurl: 'https://bug.wikipedia.org/w/api.php'
+    bxrwiki:
+        siteid: bxrwiki
+        name: буряад
+        groups: [wiki, wikimedia]
+        apiurl: 'https://bxr.wikipedia.org/w/api.php'
+    cawiki:
+        siteid: cawiki
+        name: català
+        groups: [wiki, wikimedia]
+        apiurl: 'https://ca.wikipedia.org/w/api.php'
+    cawiktionary:
+        siteid: cawiktionary
+        name: català
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://ca.wiktionary.org/w/api.php'
+    cawikibooks:
+        siteid: cawikibooks
+        name: català
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://ca.wikibooks.org/w/api.php'
+    cawikinews:
+        siteid: cawikinews
+        name: català
+        groups: [wikinews, wikimedia]
+        apiurl: 'https://ca.wikinews.org/w/api.php'
+    cawikiquote:
+        siteid: cawikiquote
+        name: català
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://ca.wikiquote.org/w/api.php'
+    cawikisource:
+        siteid: cawikisource
+        name: català
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://ca.wikisource.org/w/api.php'
+    cbk_zamwiki:
+        siteid: cbk_zamwiki
+        name: 'Chavacano de Zamboanga'
+        groups: [wiki, wikimedia]
+        apiurl: 'https://cbk-zam.wikipedia.org/w/api.php'
+    cdowiki:
+        siteid: cdowiki
+        name: Mìng-dĕ̤ng-ngṳ̄
+        groups: [wiki, wikimedia]
+        apiurl: 'https://cdo.wikipedia.org/w/api.php'
+    cewiki:
+        siteid: cewiki
+        name: нохчийн
+        groups: [wiki, wikimedia]
+        apiurl: 'https://ce.wikipedia.org/w/api.php'
+    cebwiki:
+        siteid: cebwiki
+        name: Cebuano
+        groups: [wiki, wikimedia]
+        apiurl: 'https://ceb.wikipedia.org/w/api.php'
+    chwiki:
+        siteid: chwiki
+        name: Chamoru
+        groups: [wiki, wikimedia]
+        apiurl: 'https://ch.wikipedia.org/w/api.php'
+    chwiktionary:
+        siteid: chwiktionary
+        name: Chamoru
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://ch.wiktionary.org/w/api.php'
+    chwikibooks:
+        siteid: chwikibooks
+        name: Chamoru
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://ch.wikibooks.org/w/api.php'
+    chowiki:
+        siteid: chowiki
+        name: Choctaw
+        groups: [wiki, wikimedia]
+        apiurl: 'https://cho.wikipedia.org/w/api.php'
+    chrwiki:
+        siteid: chrwiki
+        name: ᏣᎳᎩ
+        groups: [wiki, wikimedia]
+        apiurl: 'https://chr.wikipedia.org/w/api.php'
+    chrwiktionary:
+        siteid: chrwiktionary
+        name: ᏣᎳᎩ
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://chr.wiktionary.org/w/api.php'
+    chywiki:
+        siteid: chywiki
+        name: Tsetsêhestâhese
+        groups: [wiki, wikimedia]
+        apiurl: 'https://chy.wikipedia.org/w/api.php'
+    ckbwiki:
+        siteid: ckbwiki
+        name: 'کوردیی ناوەندی'
+        groups: [wiki, wikimedia]
+        apiurl: 'https://ckb.wikipedia.org/w/api.php'
+    cowiki:
+        siteid: cowiki
+        name: corsu
+        groups: [wiki, wikimedia]
+        apiurl: 'https://co.wikipedia.org/w/api.php'
+    cowiktionary:
+        siteid: cowiktionary
+        name: corsu
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://co.wiktionary.org/w/api.php'
+    cowikibooks:
+        siteid: cowikibooks
+        name: corsu
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://co.wikibooks.org/w/api.php'
+    cowikiquote:
+        siteid: cowikiquote
+        name: corsu
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://co.wikiquote.org/w/api.php'
+    crwiki:
+        siteid: crwiki
+        name: 'Nēhiyawēwin / ᓀᐦᐃᔭᐍᐏᐣ'
+        groups: [wiki, wikimedia]
+        apiurl: 'https://cr.wikipedia.org/w/api.php'
+    crwiktionary:
+        siteid: crwiktionary
+        name: 'Nēhiyawēwin / ᓀᐦᐃᔭᐍᐏᐣ'
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://cr.wiktionary.org/w/api.php'
+    crwikiquote:
+        siteid: crwikiquote
+        name: 'Nēhiyawēwin / ᓀᐦᐃᔭᐍᐏᐣ'
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://cr.wikiquote.org/w/api.php'
+    crhwiki:
+        siteid: crhwiki
+        name: qırımtatarca
+        groups: [wiki, wikimedia]
+        apiurl: 'https://crh.wikipedia.org/w/api.php'
+    cswiki:
+        siteid: cswiki
+        name: čeština
+        groups: [wiki, wikimedia]
+        apiurl: 'https://cs.wikipedia.org/w/api.php'
+    cswiktionary:
+        siteid: cswiktionary
+        name: čeština
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://cs.wiktionary.org/w/api.php'
+    cswikibooks:
+        siteid: cswikibooks
+        name: čeština
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://cs.wikibooks.org/w/api.php'
+    cswikinews:
+        siteid: cswikinews
+        name: čeština
+        groups: [wikinews, wikimedia]
+        apiurl: 'https://cs.wikinews.org/w/api.php'
+    cswikiquote:
+        siteid: cswikiquote
+        name: čeština
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://cs.wikiquote.org/w/api.php'
+    cswikisource:
+        siteid: cswikisource
+        name: čeština
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://cs.wikisource.org/w/api.php'
+    cswikiversity:
+        siteid: cswikiversity
+        name: čeština
+        groups: [wikiversity, wikimedia]
+        apiurl: 'https://cs.wikiversity.org/w/api.php'
+    csbwiki:
+        siteid: csbwiki
+        name: kaszëbsczi
+        groups: [wiki, wikimedia]
+        apiurl: 'https://csb.wikipedia.org/w/api.php'
+    csbwiktionary:
+        siteid: csbwiktionary
+        name: kaszëbsczi
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://csb.wiktionary.org/w/api.php'
+    cuwiki:
+        siteid: cuwiki
+        name: 'словѣньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ'
+        groups: [wiki, wikimedia]
+        apiurl: 'https://cu.wikipedia.org/w/api.php'
+    cvwiki:
+        siteid: cvwiki
+        name: Чӑвашла
+        groups: [wiki, wikimedia]
+        apiurl: 'https://cv.wikipedia.org/w/api.php'
+    cvwikibooks:
+        siteid: cvwikibooks
+        name: Чӑвашла
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://cv.wikibooks.org/w/api.php'
+    cywiki:
+        siteid: cywiki
+        name: Cymraeg
+        groups: [wiki, wikimedia]
+        apiurl: 'https://cy.wikipedia.org/w/api.php'
+    cywiktionary:
+        siteid: cywiktionary
+        name: Cymraeg
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://cy.wiktionary.org/w/api.php'
+    cywikibooks:
+        siteid: cywikibooks
+        name: Cymraeg
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://cy.wikibooks.org/w/api.php'
+    cywikiquote:
+        siteid: cywikiquote
+        name: Cymraeg
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://cy.wikiquote.org/w/api.php'
+    cywikisource:
+        siteid: cywikisource
+        name: Cymraeg
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://cy.wikisource.org/w/api.php'
+    dawiki:
+        siteid: dawiki
+        name: dansk
+        groups: [wiki, wikimedia]
+        apiurl: 'https://da.wikipedia.org/w/api.php'
+    dawiktionary:
+        siteid: dawiktionary
+        name: dansk
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://da.wiktionary.org/w/api.php'
+    dawikibooks:
+        siteid: dawikibooks
+        name: dansk
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://da.wikibooks.org/w/api.php'
+    dawikiquote:
+        siteid: dawikiquote
+        name: dansk
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://da.wikiquote.org/w/api.php'
+    dawikisource:
+        siteid: dawikisource
+        name: dansk
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://da.wikisource.org/w/api.php'
+    dewiki:
+        siteid: dewiki
+        name: Deutsch
+        groups: [wiki, wikimedia]
+        apiurl: 'https://de.wikipedia.org/w/api.php'
+    dewiktionary:
+        siteid: dewiktionary
+        name: Deutsch
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://de.wiktionary.org/w/api.php'
+    dewikibooks:
+        siteid: dewikibooks
+        name: Deutsch
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://de.wikibooks.org/w/api.php'
+    dewikinews:
+        siteid: dewikinews
+        name: Deutsch
+        groups: [wikinews, wikimedia]
+        apiurl: 'https://de.wikinews.org/w/api.php'
+    dewikiquote:
+        siteid: dewikiquote
+        name: Deutsch
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://de.wikiquote.org/w/api.php'
+    dewikisource:
+        siteid: dewikisource
+        name: Deutsch
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://de.wikisource.org/w/api.php'
+    dewikiversity:
+        siteid: dewikiversity
+        name: Deutsch
+        groups: [wikiversity, wikimedia]
+        apiurl: 'https://de.wikiversity.org/w/api.php'
+    dewikivoyage:
+        siteid: dewikivoyage
+        name: Deutsch
+        groups: [wikivoyage, wikimedia]
+        apiurl: 'https://de.wikivoyage.org/w/api.php'
+    diqwiki:
+        siteid: diqwiki
+        name: Zazaki
+        groups: [wiki, wikimedia]
+        apiurl: 'https://diq.wikipedia.org/w/api.php'
+    dsbwiki:
+        siteid: dsbwiki
+        name: dolnoserbski
+        groups: [wiki, wikimedia]
+        apiurl: 'https://dsb.wikipedia.org/w/api.php'
+    dvwiki:
+        siteid: dvwiki
+        name: ދިވެހިބަސް
+        groups: [wiki, wikimedia]
+        apiurl: 'https://dv.wikipedia.org/w/api.php'
+    dvwiktionary:
+        siteid: dvwiktionary
+        name: ދިވެހިބަސް
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://dv.wiktionary.org/w/api.php'
+    dzwiki:
+        siteid: dzwiki
+        name: ཇོང་ཁ
+        groups: [wiki, wikimedia]
+        apiurl: 'https://dz.wikipedia.org/w/api.php'
+    dzwiktionary:
+        siteid: dzwiktionary
+        name: ཇོང་ཁ
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://dz.wiktionary.org/w/api.php'
+    eewiki:
+        siteid: eewiki
+        name: eʋegbe
+        groups: [wiki, wikimedia]
+        apiurl: 'https://ee.wikipedia.org/w/api.php'
+    elwiki:
+        siteid: elwiki
+        name: Ελληνικά
+        groups: [wiki, wikimedia]
+        apiurl: 'https://el.wikipedia.org/w/api.php'
+    elwiktionary:
+        siteid: elwiktionary
+        name: Ελληνικά
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://el.wiktionary.org/w/api.php'
+    elwikibooks:
+        siteid: elwikibooks
+        name: Ελληνικά
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://el.wikibooks.org/w/api.php'
+    elwikinews:
+        siteid: elwikinews
+        name: Ελληνικά
+        groups: [wikinews, wikimedia]
+        apiurl: 'https://el.wikinews.org/w/api.php'
+    elwikiquote:
+        siteid: elwikiquote
+        name: Ελληνικά
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://el.wikiquote.org/w/api.php'
+    elwikisource:
+        siteid: elwikisource
+        name: Ελληνικά
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://el.wikisource.org/w/api.php'
+    elwikiversity:
+        siteid: elwikiversity
+        name: Ελληνικά
+        groups: [wikiversity, wikimedia]
+        apiurl: 'https://el.wikiversity.org/w/api.php'
+    elwikivoyage:
+        siteid: elwikivoyage
+        name: Ελληνικά
+        groups: [wikivoyage, wikimedia]
+        apiurl: 'https://el.wikivoyage.org/w/api.php'
+    emlwiki:
+        siteid: emlwiki
+        name: 'emiliàn e rumagnòl'
+        groups: [wiki, wikimedia]
+        apiurl: 'https://eml.wikipedia.org/w/api.php'
+    enwiki:
+        siteid: enwiki
+        name: English
+        groups: [wiki, wikimedia]
+        apiurl: 'https://en.wikipedia.org/w/api.php'
+    enwiktionary:
+        siteid: enwiktionary
+        name: English
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://en.wiktionary.org/w/api.php'
+    enwikibooks:
+        siteid: enwikibooks
+        name: English
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://en.wikibooks.org/w/api.php'
+    enwikinews:
+        siteid: enwikinews
+        name: English
+        groups: [wikinews, wikimedia]
+        apiurl: 'https://en.wikinews.org/w/api.php'
+    enwikiquote:
+        siteid: enwikiquote
+        name: English
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://en.wikiquote.org/w/api.php'
+    enwikisource:
+        siteid: enwikisource
+        name: English
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://en.wikisource.org/w/api.php'
+    enwikiversity:
+        siteid: enwikiversity
+        name: English
+        groups: [wikiversity, wikimedia]
+        apiurl: 'https://en.wikiversity.org/w/api.php'
+    enwikivoyage:
+        siteid: enwikivoyage
+        name: English
+        groups: [wikivoyage, wikimedia]
+        apiurl: 'https://en.wikivoyage.org/w/api.php'
+    eowiki:
+        siteid: eowiki
+        name: Esperanto
+        groups: [wiki, wikimedia]
+        apiurl: 'https://eo.wikipedia.org/w/api.php'
+    eowiktionary:
+        siteid: eowiktionary
+        name: Esperanto
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://eo.wiktionary.org/w/api.php'
+    eowikibooks:
+        siteid: eowikibooks
+        name: Esperanto
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://eo.wikibooks.org/w/api.php'
+    eowikinews:
+        siteid: eowikinews
+        name: Esperanto
+        groups: [wikinews, wikimedia]
+        apiurl: 'https://eo.wikinews.org/w/api.php'
+    eowikiquote:
+        siteid: eowikiquote
+        name: Esperanto
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://eo.wikiquote.org/w/api.php'
+    eowikisource:
+        siteid: eowikisource
+        name: Esperanto
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://eo.wikisource.org/w/api.php'
+    eswiki:
+        siteid: eswiki
+        name: español
+        groups: [wiki, wikimedia]
+        apiurl: 'https://es.wikipedia.org/w/api.php'
+    eswiktionary:
+        siteid: eswiktionary
+        name: español
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://es.wiktionary.org/w/api.php'
+    eswikibooks:
+        siteid: eswikibooks
+        name: español
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://es.wikibooks.org/w/api.php'
+    eswikinews:
+        siteid: eswikinews
+        name: español
+        groups: [wikinews, wikimedia]
+        apiurl: 'https://es.wikinews.org/w/api.php'
+    eswikiquote:
+        siteid: eswikiquote
+        name: español
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://es.wikiquote.org/w/api.php'
+    eswikisource:
+        siteid: eswikisource
+        name: español
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://es.wikisource.org/w/api.php'
+    eswikiversity:
+        siteid: eswikiversity
+        name: español
+        groups: [wikiversity, wikimedia]
+        apiurl: 'https://es.wikiversity.org/w/api.php'
+    eswikivoyage:
+        siteid: eswikivoyage
+        name: español
+        groups: [wikivoyage, wikimedia]
+        apiurl: 'https://es.wikivoyage.org/w/api.php'
+    etwiki:
+        siteid: etwiki
+        name: eesti
+        groups: [wiki, wikimedia]
+        apiurl: 'https://et.wikipedia.org/w/api.php'
+    etwiktionary:
+        siteid: etwiktionary
+        name: eesti
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://et.wiktionary.org/w/api.php'
+    etwikibooks:
+        siteid: etwikibooks
+        name: eesti
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://et.wikibooks.org/w/api.php'
+    etwikiquote:
+        siteid: etwikiquote
+        name: eesti
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://et.wikiquote.org/w/api.php'
+    etwikisource:
+        siteid: etwikisource
+        name: eesti
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://et.wikisource.org/w/api.php'
+    euwiki:
+        siteid: euwiki
+        name: euskara
+        groups: [wiki, wikimedia]
+        apiurl: 'https://eu.wikipedia.org/w/api.php'
+    euwiktionary:
+        siteid: euwiktionary
+        name: euskara
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://eu.wiktionary.org/w/api.php'
+    euwikibooks:
+        siteid: euwikibooks
+        name: euskara
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://eu.wikibooks.org/w/api.php'
+    euwikiquote:
+        siteid: euwikiquote
+        name: euskara
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://eu.wikiquote.org/w/api.php'
+    extwiki:
+        siteid: extwiki
+        name: estremeñu
+        groups: [wiki, wikimedia]
+        apiurl: 'https://ext.wikipedia.org/w/api.php'
+    fawiki:
+        siteid: fawiki
+        name: فارسی
+        groups: [wiki, wikimedia]
+        apiurl: 'https://fa.wikipedia.org/w/api.php'
+    fawiktionary:
+        siteid: fawiktionary
+        name: فارسی
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://fa.wiktionary.org/w/api.php'
+    fawikibooks:
+        siteid: fawikibooks
+        name: فارسی
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://fa.wikibooks.org/w/api.php'
+    fawikinews:
+        siteid: fawikinews
+        name: فارسی
+        groups: [wikinews, wikimedia]
+        apiurl: 'https://fa.wikinews.org/w/api.php'
+    fawikiquote:
+        siteid: fawikiquote
+        name: فارسی
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://fa.wikiquote.org/w/api.php'
+    fawikisource:
+        siteid: fawikisource
+        name: فارسی
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://fa.wikisource.org/w/api.php'
+    fawikivoyage:
+        siteid: fawikivoyage
+        name: فارسی
+        groups: [wikivoyage, wikimedia]
+        apiurl: 'https://fa.wikivoyage.org/w/api.php'
+    ffwiki:
+        siteid: ffwiki
+        name: Fulfulde
+        groups: [wiki, wikimedia]
+        apiurl: 'https://ff.wikipedia.org/w/api.php'
+    fiwiki:
+        siteid: fiwiki
+        name: suomi
+        groups: [wiki, wikimedia]
+        apiurl: 'https://fi.wikipedia.org/w/api.php'
+    fiwiktionary:
+        siteid: fiwiktionary
+        name: suomi
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://fi.wiktionary.org/w/api.php'
+    fiwikibooks:
+        siteid: fiwikibooks
+        name: suomi
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://fi.wikibooks.org/w/api.php'
+    fiwikinews:
+        siteid: fiwikinews
+        name: suomi
+        groups: [wikinews, wikimedia]
+        apiurl: 'https://fi.wikinews.org/w/api.php'
+    fiwikiquote:
+        siteid: fiwikiquote
+        name: suomi
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://fi.wikiquote.org/w/api.php'
+    fiwikisource:
+        siteid: fiwikisource
+        name: suomi
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://fi.wikisource.org/w/api.php'
+    fiwikiversity:
+        siteid: fiwikiversity
+        name: suomi
+        groups: [wikiversity, wikimedia]
+        apiurl: 'https://fi.wikiversity.org/w/api.php'
+    fiu_vrowiki:
+        siteid: fiu_vrowiki
+        name: Võro
+        groups: [wiki, wikimedia]
+        apiurl: 'https://fiu-vro.wikipedia.org/w/api.php'
+    fjwiki:
+        siteid: fjwiki
+        name: 'Na Vosa Vakaviti'
+        groups: [wiki, wikimedia]
+        apiurl: 'https://fj.wikipedia.org/w/api.php'
+    fjwiktionary:
+        siteid: fjwiktionary
+        name: 'Na Vosa Vakaviti'
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://fj.wiktionary.org/w/api.php'
+    fowiki:
+        siteid: fowiki
+        name: føroyskt
+        groups: [wiki, wikimedia]
+        apiurl: 'https://fo.wikipedia.org/w/api.php'
+    fowiktionary:
+        siteid: fowiktionary
+        name: føroyskt
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://fo.wiktionary.org/w/api.php'
+    fowikisource:
+        siteid: fowikisource
+        name: føroyskt
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://fo.wikisource.org/w/api.php'
+    frwiki:
+        siteid: frwiki
+        name: français
+        groups: [wiki, wikimedia]
+        apiurl: 'https://fr.wikipedia.org/w/api.php'
+    frwiktionary:
+        siteid: frwiktionary
+        name: français
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://fr.wiktionary.org/w/api.php'
+    frwikibooks:
+        siteid: frwikibooks
+        name: français
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://fr.wikibooks.org/w/api.php'
+    frwikinews:
+        siteid: frwikinews
+        name: français
+        groups: [wikinews, wikimedia]
+        apiurl: 'https://fr.wikinews.org/w/api.php'
+    frwikiquote:
+        siteid: frwikiquote
+        name: français
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://fr.wikiquote.org/w/api.php'
+    frwikisource:
+        siteid: frwikisource
+        name: français
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://fr.wikisource.org/w/api.php'
+    frwikiversity:
+        siteid: frwikiversity
+        name: français
+        groups: [wikiversity, wikimedia]
+        apiurl: 'https://fr.wikiversity.org/w/api.php'
+    frwikivoyage:
+        siteid: frwikivoyage
+        name: français
+        groups: [wikivoyage, wikimedia]
+        apiurl: 'https://fr.wikivoyage.org/w/api.php'
+    frpwiki:
+        siteid: frpwiki
+        name: arpetan
+        groups: [wiki, wikimedia]
+        apiurl: 'https://frp.wikipedia.org/w/api.php'
+    frrwiki:
+        siteid: frrwiki
+        name: Nordfriisk
+        groups: [wiki, wikimedia]
+        apiurl: 'https://frr.wikipedia.org/w/api.php'
+    furwiki:
+        siteid: furwiki
+        name: furlan
+        groups: [wiki, wikimedia]
+        apiurl: 'https://fur.wikipedia.org/w/api.php'
+    fywiki:
+        siteid: fywiki
+        name: Frysk
+        groups: [wiki, wikimedia]
+        apiurl: 'https://fy.wikipedia.org/w/api.php'
+    fywiktionary:
+        siteid: fywiktionary
+        name: Frysk
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://fy.wiktionary.org/w/api.php'
+    fywikibooks:
+        siteid: fywikibooks
+        name: Frysk
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://fy.wikibooks.org/w/api.php'
+    gawiki:
+        siteid: gawiki
+        name: Gaeilge
+        groups: [wiki, wikimedia]
+        apiurl: 'https://ga.wikipedia.org/w/api.php'
+    gawiktionary:
+        siteid: gawiktionary
+        name: Gaeilge
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://ga.wiktionary.org/w/api.php'
+    gawikibooks:
+        siteid: gawikibooks
+        name: Gaeilge
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://ga.wikibooks.org/w/api.php'
+    gawikiquote:
+        siteid: gawikiquote
+        name: Gaeilge
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://ga.wikiquote.org/w/api.php'
+    gagwiki:
+        siteid: gagwiki
+        name: Gagauz
+        groups: [wiki, wikimedia]
+        apiurl: 'https://gag.wikipedia.org/w/api.php'
+    ganwiki:
+        siteid: ganwiki
+        name: 贛語
+        groups: [wiki, wikimedia]
+        apiurl: 'https://gan.wikipedia.org/w/api.php'
+    gdwiki:
+        siteid: gdwiki
+        name: Gàidhlig
+        groups: [wiki, wikimedia]
+        apiurl: 'https://gd.wikipedia.org/w/api.php'
+    gdwiktionary:
+        siteid: gdwiktionary
+        name: Gàidhlig
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://gd.wiktionary.org/w/api.php'
+    glwiki:
+        siteid: glwiki
+        name: galego
+        groups: [wiki, wikimedia]
+        apiurl: 'https://gl.wikipedia.org/w/api.php'
+    glwiktionary:
+        siteid: glwiktionary
+        name: galego
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://gl.wiktionary.org/w/api.php'
+    glwikibooks:
+        siteid: glwikibooks
+        name: galego
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://gl.wikibooks.org/w/api.php'
+    glwikiquote:
+        siteid: glwikiquote
+        name: galego
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://gl.wikiquote.org/w/api.php'
+    glwikisource:
+        siteid: glwikisource
+        name: galego
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://gl.wikisource.org/w/api.php'
+    glkwiki:
+        siteid: glkwiki
+        name: گیلکی
+        groups: [wiki, wikimedia]
+        apiurl: 'https://glk.wikipedia.org/w/api.php'
+    gnwiki:
+        siteid: gnwiki
+        name: 'Avañe''ẽ'
+        groups: [wiki, wikimedia]
+        apiurl: 'https://gn.wikipedia.org/w/api.php'
+    gnwiktionary:
+        siteid: gnwiktionary
+        name: 'Avañe''ẽ'
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://gn.wiktionary.org/w/api.php'
+    gnwikibooks:
+        siteid: gnwikibooks
+        name: 'Avañe''ẽ'
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://gn.wikibooks.org/w/api.php'
+    gomwiki:
+        siteid: gomwiki
+        name: 'गोवा कोंकणी / Gova Konknni'
+        groups: [wiki, wikimedia]
+        apiurl: 'https://gom.wikipedia.org/w/api.php'
+    gotwiki:
+        siteid: gotwiki
+        name: 𐌲𐌿𐍄𐌹𐍃𐌺
+        groups: [wiki, wikimedia]
+        apiurl: 'https://got.wikipedia.org/w/api.php'
+    gotwikibooks:
+        siteid: gotwikibooks
+        name: 𐌲𐌿𐍄𐌹𐍃𐌺
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://got.wikibooks.org/w/api.php'
+    guwiki:
+        siteid: guwiki
+        name: ગુજરાતી
+        groups: [wiki, wikimedia]
+        apiurl: 'https://gu.wikipedia.org/w/api.php'
+    guwiktionary:
+        siteid: guwiktionary
+        name: ગુજરાતી
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://gu.wiktionary.org/w/api.php'
+    guwikibooks:
+        siteid: guwikibooks
+        name: ગુજરાતી
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://gu.wikibooks.org/w/api.php'
+    guwikiquote:
+        siteid: guwikiquote
+        name: ગુજરાતી
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://gu.wikiquote.org/w/api.php'
+    guwikisource:
+        siteid: guwikisource
+        name: ગુજરાતી
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://gu.wikisource.org/w/api.php'
+    gvwiki:
+        siteid: gvwiki
+        name: Gaelg
+        groups: [wiki, wikimedia]
+        apiurl: 'https://gv.wikipedia.org/w/api.php'
+    gvwiktionary:
+        siteid: gvwiktionary
+        name: Gaelg
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://gv.wiktionary.org/w/api.php'
+    hawiki:
+        siteid: hawiki
+        name: Hausa
+        groups: [wiki, wikimedia]
+        apiurl: 'https://ha.wikipedia.org/w/api.php'
+    hawiktionary:
+        siteid: hawiktionary
+        name: Hausa
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://ha.wiktionary.org/w/api.php'
+    hakwiki:
+        siteid: hakwiki
+        name: 客家語/Hak-kâ-ngî
+        groups: [wiki, wikimedia]
+        apiurl: 'https://hak.wikipedia.org/w/api.php'
+    hawwiki:
+        siteid: hawwiki
+        name: Hawai`i
+        groups: [wiki, wikimedia]
+        apiurl: 'https://haw.wikipedia.org/w/api.php'
+    hewiki:
+        siteid: hewiki
+        name: עברית
+        groups: [wiki, wikimedia]
+        apiurl: 'https://he.wikipedia.org/w/api.php'
+    hewiktionary:
+        siteid: hewiktionary
+        name: עברית
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://he.wiktionary.org/w/api.php'
+    hewikibooks:
+        siteid: hewikibooks
+        name: עברית
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://he.wikibooks.org/w/api.php'
+    hewikinews:
+        siteid: hewikinews
+        name: עברית
+        groups: [wikinews, wikimedia]
+        apiurl: 'https://he.wikinews.org/w/api.php'
+    hewikiquote:
+        siteid: hewikiquote
+        name: עברית
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://he.wikiquote.org/w/api.php'
+    hewikisource:
+        siteid: hewikisource
+        name: עברית
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://he.wikisource.org/w/api.php'
+    hewikivoyage:
+        siteid: hewikivoyage
+        name: עברית
+        groups: [wikivoyage, wikimedia]
+        apiurl: 'https://he.wikivoyage.org/w/api.php'
+    hiwiki:
+        siteid: hiwiki
+        name: हिन्दी
+        groups: [wiki, wikimedia]
+        apiurl: 'https://hi.wikipedia.org/w/api.php'
+    hiwiktionary:
+        siteid: hiwiktionary
+        name: हिन्दी
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://hi.wiktionary.org/w/api.php'
+    hiwikibooks:
+        siteid: hiwikibooks
+        name: हिन्दी
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://hi.wikibooks.org/w/api.php'
+    hiwikiquote:
+        siteid: hiwikiquote
+        name: हिन्दी
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://hi.wikiquote.org/w/api.php'
+    hifwiki:
+        siteid: hifwiki
+        name: 'Fiji Hindi'
+        groups: [wiki, wikimedia]
+        apiurl: 'https://hif.wikipedia.org/w/api.php'
+    howiki:
+        siteid: howiki
+        name: 'Hiri Motu'
+        groups: [wiki, wikimedia]
+        apiurl: 'https://ho.wikipedia.org/w/api.php'
+    hrwiki:
+        siteid: hrwiki
+        name: hrvatski
+        groups: [wiki, wikimedia]
+        apiurl: 'https://hr.wikipedia.org/w/api.php'
+    hrwiktionary:
+        siteid: hrwiktionary
+        name: hrvatski
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://hr.wiktionary.org/w/api.php'
+    hrwikibooks:
+        siteid: hrwikibooks
+        name: hrvatski
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://hr.wikibooks.org/w/api.php'
+    hrwikiquote:
+        siteid: hrwikiquote
+        name: hrvatski
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://hr.wikiquote.org/w/api.php'
+    hrwikisource:
+        siteid: hrwikisource
+        name: hrvatski
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://hr.wikisource.org/w/api.php'
+    hsbwiki:
+        siteid: hsbwiki
+        name: hornjoserbsce
+        groups: [wiki, wikimedia]
+        apiurl: 'https://hsb.wikipedia.org/w/api.php'
+    hsbwiktionary:
+        siteid: hsbwiktionary
+        name: hornjoserbsce
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://hsb.wiktionary.org/w/api.php'
+    htwiki:
+        siteid: htwiki
+        name: 'Kreyòl ayisyen'
+        groups: [wiki, wikimedia]
+        apiurl: 'https://ht.wikipedia.org/w/api.php'
+    htwikisource:
+        siteid: htwikisource
+        name: 'Kreyòl ayisyen'
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://ht.wikisource.org/w/api.php'
+    huwiki:
+        siteid: huwiki
+        name: magyar
+        groups: [wiki, wikimedia]
+        apiurl: 'https://hu.wikipedia.org/w/api.php'
+    huwiktionary:
+        siteid: huwiktionary
+        name: magyar
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://hu.wiktionary.org/w/api.php'
+    huwikibooks:
+        siteid: huwikibooks
+        name: magyar
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://hu.wikibooks.org/w/api.php'
+    huwikinews:
+        siteid: huwikinews
+        name: magyar
+        groups: [wikinews, wikimedia]
+        apiurl: 'https://hu.wikinews.org/w/api.php'
+    huwikiquote:
+        siteid: huwikiquote
+        name: magyar
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://hu.wikiquote.org/w/api.php'
+    huwikisource:
+        siteid: huwikisource
+        name: magyar
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://hu.wikisource.org/w/api.php'
+    hywiki:
+        siteid: hywiki
+        name: Հայերեն
+        groups: [wiki, wikimedia]
+        apiurl: 'https://hy.wikipedia.org/w/api.php'
+    hywiktionary:
+        siteid: hywiktionary
+        name: Հայերեն
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://hy.wiktionary.org/w/api.php'
+    hywikibooks:
+        siteid: hywikibooks
+        name: Հայերեն
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://hy.wikibooks.org/w/api.php'
+    hywikiquote:
+        siteid: hywikiquote
+        name: Հայերեն
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://hy.wikiquote.org/w/api.php'
+    hywikisource:
+        siteid: hywikisource
+        name: Հայերեն
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://hy.wikisource.org/w/api.php'
+    hzwiki:
+        siteid: hzwiki
+        name: Otsiherero
+        groups: [wiki, wikimedia]
+        apiurl: 'https://hz.wikipedia.org/w/api.php'
+    iawiki:
+        siteid: iawiki
+        name: interlingua
+        groups: [wiki, wikimedia]
+        apiurl: 'https://ia.wikipedia.org/w/api.php'
+    iawiktionary:
+        siteid: iawiktionary
+        name: interlingua
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://ia.wiktionary.org/w/api.php'
+    iawikibooks:
+        siteid: iawikibooks
+        name: interlingua
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://ia.wikibooks.org/w/api.php'
+    idwiki:
+        siteid: idwiki
+        name: 'Bahasa Indonesia'
+        groups: [wiki, wikimedia]
+        apiurl: 'https://id.wikipedia.org/w/api.php'
+    idwiktionary:
+        siteid: idwiktionary
+        name: 'Bahasa Indonesia'
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://id.wiktionary.org/w/api.php'
+    idwikibooks:
+        siteid: idwikibooks
+        name: 'Bahasa Indonesia'
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://id.wikibooks.org/w/api.php'
+    idwikiquote:
+        siteid: idwikiquote
+        name: 'Bahasa Indonesia'
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://id.wikiquote.org/w/api.php'
+    idwikisource:
+        siteid: idwikisource
+        name: 'Bahasa Indonesia'
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://id.wikisource.org/w/api.php'
+    iewiki:
+        siteid: iewiki
+        name: Interlingue
+        groups: [wiki, wikimedia]
+        apiurl: 'https://ie.wikipedia.org/w/api.php'
+    iewiktionary:
+        siteid: iewiktionary
+        name: Interlingue
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://ie.wiktionary.org/w/api.php'
+    iewikibooks:
+        siteid: iewikibooks
+        name: Interlingue
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://ie.wikibooks.org/w/api.php'
+    igwiki:
+        siteid: igwiki
+        name: Igbo
+        groups: [wiki, wikimedia]
+        apiurl: 'https://ig.wikipedia.org/w/api.php'
+    iiwiki:
+        siteid: iiwiki
+        name: ꆇꉙ
+        groups: [wiki, wikimedia]
+        apiurl: 'https://ii.wikipedia.org/w/api.php'
+    ikwiki:
+        siteid: ikwiki
+        name: Iñupiak
+        groups: [wiki, wikimedia]
+        apiurl: 'https://ik.wikipedia.org/w/api.php'
+    ikwiktionary:
+        siteid: ikwiktionary
+        name: Iñupiak
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://ik.wiktionary.org/w/api.php'
+    ilowiki:
+        siteid: ilowiki
+        name: Ilokano
+        groups: [wiki, wikimedia]
+        apiurl: 'https://ilo.wikipedia.org/w/api.php'
+    iowiki:
+        siteid: iowiki
+        name: Ido
+        groups: [wiki, wikimedia]
+        apiurl: 'https://io.wikipedia.org/w/api.php'
+    iowiktionary:
+        siteid: iowiktionary
+        name: Ido
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://io.wiktionary.org/w/api.php'
+    iswiki:
+        siteid: iswiki
+        name: íslenska
+        groups: [wiki, wikimedia]
+        apiurl: 'https://is.wikipedia.org/w/api.php'
+    iswiktionary:
+        siteid: iswiktionary
+        name: íslenska
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://is.wiktionary.org/w/api.php'
+    iswikibooks:
+        siteid: iswikibooks
+        name: íslenska
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://is.wikibooks.org/w/api.php'
+    iswikiquote:
+        siteid: iswikiquote
+        name: íslenska
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://is.wikiquote.org/w/api.php'
+    iswikisource:
+        siteid: iswikisource
+        name: íslenska
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://is.wikisource.org/w/api.php'
+    itwiki:
+        siteid: itwiki
+        name: italiano
+        groups: [wiki, wikimedia]
+        apiurl: 'https://it.wikipedia.org/w/api.php'
+    itwiktionary:
+        siteid: itwiktionary
+        name: italiano
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://it.wiktionary.org/w/api.php'
+    itwikibooks:
+        siteid: itwikibooks
+        name: italiano
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://it.wikibooks.org/w/api.php'
+    itwikinews:
+        siteid: itwikinews
+        name: italiano
+        groups: [wikinews, wikimedia]
+        apiurl: 'https://it.wikinews.org/w/api.php'
+    itwikiquote:
+        siteid: itwikiquote
+        name: italiano
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://it.wikiquote.org/w/api.php'
+    itwikisource:
+        siteid: itwikisource
+        name: italiano
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://it.wikisource.org/w/api.php'
+    itwikiversity:
+        siteid: itwikiversity
+        name: italiano
+        groups: [wikiversity, wikimedia]
+        apiurl: 'https://it.wikiversity.org/w/api.php'
+    itwikivoyage:
+        siteid: itwikivoyage
+        name: italiano
+        groups: [wikivoyage, wikimedia]
+        apiurl: 'https://it.wikivoyage.org/w/api.php'
+    iuwiki:
+        siteid: iuwiki
+        name: ᐃᓄᒃᑎᑐᑦ/inuktitut
+        groups: [wiki, wikimedia]
+        apiurl: 'https://iu.wikipedia.org/w/api.php'
+    iuwiktionary:
+        siteid: iuwiktionary
+        name: ᐃᓄᒃᑎᑐᑦ/inuktitut
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://iu.wiktionary.org/w/api.php'
+    jawiki:
+        siteid: jawiki
+        name: 日本語
+        groups: [wiki, wikimedia]
+        apiurl: 'https://ja.wikipedia.org/w/api.php'
+    jawiktionary:
+        siteid: jawiktionary
+        name: 日本語
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://ja.wiktionary.org/w/api.php'
+    jawikibooks:
+        siteid: jawikibooks
+        name: 日本語
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://ja.wikibooks.org/w/api.php'
+    jawikinews:
+        siteid: jawikinews
+        name: 日本語
+        groups: [wikinews, wikimedia]
+        apiurl: 'https://ja.wikinews.org/w/api.php'
+    jawikiquote:
+        siteid: jawikiquote
+        name: 日本語
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://ja.wikiquote.org/w/api.php'
+    jawikisource:
+        siteid: jawikisource
+        name: 日本語
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://ja.wikisource.org/w/api.php'
+    jawikiversity:
+        siteid: jawikiversity
+        name: 日本語
+        groups: [wikiversity, wikimedia]
+        apiurl: 'https://ja.wikiversity.org/w/api.php'
+    jbowiki:
+        siteid: jbowiki
+        name: Lojban
+        groups: [wiki, wikimedia]
+        apiurl: 'https://jbo.wikipedia.org/w/api.php'
+    jbowiktionary:
+        siteid: jbowiktionary
+        name: Lojban
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://jbo.wiktionary.org/w/api.php'
+    jvwiki:
+        siteid: jvwiki
+        name: 'Basa Jawa'
+        groups: [wiki, wikimedia]
+        apiurl: 'https://jv.wikipedia.org/w/api.php'
+    jvwiktionary:
+        siteid: jvwiktionary
+        name: 'Basa Jawa'
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://jv.wiktionary.org/w/api.php'
+    kawiki:
+        siteid: kawiki
+        name: ქართული
+        groups: [wiki, wikimedia]
+        apiurl: 'https://ka.wikipedia.org/w/api.php'
+    kawiktionary:
+        siteid: kawiktionary
+        name: ქართული
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://ka.wiktionary.org/w/api.php'
+    kawikibooks:
+        siteid: kawikibooks
+        name: ქართული
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://ka.wikibooks.org/w/api.php'
+    kawikiquote:
+        siteid: kawikiquote
+        name: ქართული
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://ka.wikiquote.org/w/api.php'
+    kaawiki:
+        siteid: kaawiki
+        name: Qaraqalpaqsha
+        groups: [wiki, wikimedia]
+        apiurl: 'https://kaa.wikipedia.org/w/api.php'
+    kabwiki:
+        siteid: kabwiki
+        name: Taqbaylit
+        groups: [wiki, wikimedia]
+        apiurl: 'https://kab.wikipedia.org/w/api.php'
+    kbdwiki:
+        siteid: kbdwiki
+        name: Адыгэбзэ
+        groups: [wiki, wikimedia]
+        apiurl: 'https://kbd.wikipedia.org/w/api.php'
+    kgwiki:
+        siteid: kgwiki
+        name: Kongo
+        groups: [wiki, wikimedia]
+        apiurl: 'https://kg.wikipedia.org/w/api.php'
+    kiwiki:
+        siteid: kiwiki
+        name: Gĩkũyũ
+        groups: [wiki, wikimedia]
+        apiurl: 'https://ki.wikipedia.org/w/api.php'
+    kjwiki:
+        siteid: kjwiki
+        name: Kwanyama
+        groups: [wiki, wikimedia]
+        apiurl: 'https://kj.wikipedia.org/w/api.php'
+    kkwiki:
+        siteid: kkwiki
+        name: қазақша
+        groups: [wiki, wikimedia]
+        apiurl: 'https://kk.wikipedia.org/w/api.php'
+    kkwiktionary:
+        siteid: kkwiktionary
+        name: қазақша
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://kk.wiktionary.org/w/api.php'
+    kkwikibooks:
+        siteid: kkwikibooks
+        name: қазақша
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://kk.wikibooks.org/w/api.php'
+    kkwikiquote:
+        siteid: kkwikiquote
+        name: қазақша
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://kk.wikiquote.org/w/api.php'
+    klwiki:
+        siteid: klwiki
+        name: kalaallisut
+        groups: [wiki, wikimedia]
+        apiurl: 'https://kl.wikipedia.org/w/api.php'
+    klwiktionary:
+        siteid: klwiktionary
+        name: kalaallisut
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://kl.wiktionary.org/w/api.php'
+    kmwiki:
+        siteid: kmwiki
+        name: ភាសាខ្មែរ
+        groups: [wiki, wikimedia]
+        apiurl: 'https://km.wikipedia.org/w/api.php'
+    kmwiktionary:
+        siteid: kmwiktionary
+        name: ភាសាខ្មែរ
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://km.wiktionary.org/w/api.php'
+    kmwikibooks:
+        siteid: kmwikibooks
+        name: ភាសាខ្មែរ
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://km.wikibooks.org/w/api.php'
+    knwiki:
+        siteid: knwiki
+        name: ಕನ್ನಡ
+        groups: [wiki, wikimedia]
+        apiurl: 'https://kn.wikipedia.org/w/api.php'
+    knwiktionary:
+        siteid: knwiktionary
+        name: ಕನ್ನಡ
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://kn.wiktionary.org/w/api.php'
+    knwikibooks:
+        siteid: knwikibooks
+        name: ಕನ್ನಡ
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://kn.wikibooks.org/w/api.php'
+    knwikiquote:
+        siteid: knwikiquote
+        name: ಕನ್ನಡ
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://kn.wikiquote.org/w/api.php'
+    knwikisource:
+        siteid: knwikisource
+        name: ಕನ್ನಡ
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://kn.wikisource.org/w/api.php'
+    kowiki:
+        siteid: kowiki
+        name: 한국어
+        groups: [wiki, wikimedia]
+        apiurl: 'https://ko.wikipedia.org/w/api.php'
+    kowiktionary:
+        siteid: kowiktionary
+        name: 한국어
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://ko.wiktionary.org/w/api.php'
+    kowikibooks:
+        siteid: kowikibooks
+        name: 한국어
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://ko.wikibooks.org/w/api.php'
+    kowikinews:
+        siteid: kowikinews
+        name: 한국어
+        groups: [wikinews, wikimedia]
+        apiurl: 'https://ko.wikinews.org/w/api.php'
+    kowikiquote:
+        siteid: kowikiquote
+        name: 한국어
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://ko.wikiquote.org/w/api.php'
+    kowikisource:
+        siteid: kowikisource
+        name: 한국어
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://ko.wikisource.org/w/api.php'
+    kowikiversity:
+        siteid: kowikiversity
+        name: 한국어
+        groups: [wikiversity, wikimedia]
+        apiurl: 'https://ko.wikiversity.org/w/api.php'
+    koiwiki:
+        siteid: koiwiki
+        name: 'Перем Коми'
+        groups: [wiki, wikimedia]
+        apiurl: 'https://koi.wikipedia.org/w/api.php'
+    krwiki:
+        siteid: krwiki
+        name: Kanuri
+        groups: [wiki, wikimedia]
+        apiurl: 'https://kr.wikipedia.org/w/api.php'
+    krwikiquote:
+        siteid: krwikiquote
+        name: Kanuri
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://kr.wikiquote.org/w/api.php'
+    krcwiki:
+        siteid: krcwiki
+        name: къарачай-малкъар
+        groups: [wiki, wikimedia]
+        apiurl: 'https://krc.wikipedia.org/w/api.php'
+    kswiki:
+        siteid: kswiki
+        name: 'कॉशुर / کٲشُر'
+        groups: [wiki, wikimedia]
+        apiurl: 'https://ks.wikipedia.org/w/api.php'
+    kswiktionary:
+        siteid: kswiktionary
+        name: 'कॉशुर / کٲشُر'
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://ks.wiktionary.org/w/api.php'
+    kswikibooks:
+        siteid: kswikibooks
+        name: 'कॉशुर / کٲشُر'
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://ks.wikibooks.org/w/api.php'
+    kswikiquote:
+        siteid: kswikiquote
+        name: 'कॉशुर / کٲشُر'
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://ks.wikiquote.org/w/api.php'
+    kshwiki:
+        siteid: kshwiki
+        name: Ripoarisch
+        groups: [wiki, wikimedia]
+        apiurl: 'https://ksh.wikipedia.org/w/api.php'
+    kuwiki:
+        siteid: kuwiki
+        name: Kurdî
+        groups: [wiki, wikimedia]
+        apiurl: 'https://ku.wikipedia.org/w/api.php'
+    kuwiktionary:
+        siteid: kuwiktionary
+        name: Kurdî
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://ku.wiktionary.org/w/api.php'
+    kuwikibooks:
+        siteid: kuwikibooks
+        name: Kurdî
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://ku.wikibooks.org/w/api.php'
+    kuwikiquote:
+        siteid: kuwikiquote
+        name: Kurdî
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://ku.wikiquote.org/w/api.php'
+    kvwiki:
+        siteid: kvwiki
+        name: коми
+        groups: [wiki, wikimedia]
+        apiurl: 'https://kv.wikipedia.org/w/api.php'
+    kwwiki:
+        siteid: kwwiki
+        name: kernowek
+        groups: [wiki, wikimedia]
+        apiurl: 'https://kw.wikipedia.org/w/api.php'
+    kwwiktionary:
+        siteid: kwwiktionary
+        name: kernowek
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://kw.wiktionary.org/w/api.php'
+    kwwikiquote:
+        siteid: kwwikiquote
+        name: kernowek
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://kw.wikiquote.org/w/api.php'
+    kywiki:
+        siteid: kywiki
+        name: Кыргызча
+        groups: [wiki, wikimedia]
+        apiurl: 'https://ky.wikipedia.org/w/api.php'
+    kywiktionary:
+        siteid: kywiktionary
+        name: Кыргызча
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://ky.wiktionary.org/w/api.php'
+    kywikibooks:
+        siteid: kywikibooks
+        name: Кыргызча
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://ky.wikibooks.org/w/api.php'
+    kywikiquote:
+        siteid: kywikiquote
+        name: Кыргызча
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://ky.wikiquote.org/w/api.php'
+    lawiki:
+        siteid: lawiki
+        name: Latina
+        groups: [wiki, wikimedia]
+        apiurl: 'https://la.wikipedia.org/w/api.php'
+    lawiktionary:
+        siteid: lawiktionary
+        name: Latina
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://la.wiktionary.org/w/api.php'
+    lawikibooks:
+        siteid: lawikibooks
+        name: Latina
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://la.wikibooks.org/w/api.php'
+    lawikiquote:
+        siteid: lawikiquote
+        name: Latina
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://la.wikiquote.org/w/api.php'
+    lawikisource:
+        siteid: lawikisource
+        name: Latina
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://la.wikisource.org/w/api.php'
+    ladwiki:
+        siteid: ladwiki
+        name: Ladino
+        groups: [wiki, wikimedia]
+        apiurl: 'https://lad.wikipedia.org/w/api.php'
+    lbwiki:
+        siteid: lbwiki
+        name: Lëtzebuergesch
+        groups: [wiki, wikimedia]
+        apiurl: 'https://lb.wikipedia.org/w/api.php'
+    lbwiktionary:
+        siteid: lbwiktionary
+        name: Lëtzebuergesch
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://lb.wiktionary.org/w/api.php'
+    lbwikibooks:
+        siteid: lbwikibooks
+        name: Lëtzebuergesch
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://lb.wikibooks.org/w/api.php'
+    lbwikiquote:
+        siteid: lbwikiquote
+        name: Lëtzebuergesch
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://lb.wikiquote.org/w/api.php'
+    lbewiki:
+        siteid: lbewiki
+        name: лакку
+        groups: [wiki, wikimedia]
+        apiurl: 'https://lbe.wikipedia.org/w/api.php'
+    lezwiki:
+        siteid: lezwiki
+        name: лезги
+        groups: [wiki, wikimedia]
+        apiurl: 'https://lez.wikipedia.org/w/api.php'
+    lgwiki:
+        siteid: lgwiki
+        name: Luganda
+        groups: [wiki, wikimedia]
+        apiurl: 'https://lg.wikipedia.org/w/api.php'
+    liwiki:
+        siteid: liwiki
+        name: Limburgs
+        groups: [wiki, wikimedia]
+        apiurl: 'https://li.wikipedia.org/w/api.php'
+    liwiktionary:
+        siteid: liwiktionary
+        name: Limburgs
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://li.wiktionary.org/w/api.php'
+    liwikibooks:
+        siteid: liwikibooks
+        name: Limburgs
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://li.wikibooks.org/w/api.php'
+    liwikiquote:
+        siteid: liwikiquote
+        name: Limburgs
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://li.wikiquote.org/w/api.php'
+    liwikisource:
+        siteid: liwikisource
+        name: Limburgs
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://li.wikisource.org/w/api.php'
+    lijwiki:
+        siteid: lijwiki
+        name: Ligure
+        groups: [wiki, wikimedia]
+        apiurl: 'https://lij.wikipedia.org/w/api.php'
+    lmowiki:
+        siteid: lmowiki
+        name: lumbaart
+        groups: [wiki, wikimedia]
+        apiurl: 'https://lmo.wikipedia.org/w/api.php'
+    lnwiki:
+        siteid: lnwiki
+        name: lingála
+        groups: [wiki, wikimedia]
+        apiurl: 'https://ln.wikipedia.org/w/api.php'
+    lnwiktionary:
+        siteid: lnwiktionary
+        name: lingála
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://ln.wiktionary.org/w/api.php'
+    lnwikibooks:
+        siteid: lnwikibooks
+        name: lingála
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://ln.wikibooks.org/w/api.php'
+    lowiki:
+        siteid: lowiki
+        name: ລາວ
+        groups: [wiki, wikimedia]
+        apiurl: 'https://lo.wikipedia.org/w/api.php'
+    lowiktionary:
+        siteid: lowiktionary
+        name: ລາວ
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://lo.wiktionary.org/w/api.php'
+    lrcwiki:
+        siteid: lrcwiki
+        name: 'لۊری شومالی'
+        groups: [wiki, wikimedia]
+        apiurl: 'https://lrc.wikipedia.org/w/api.php'
+    ltwiki:
+        siteid: ltwiki
+        name: lietuvių
+        groups: [wiki, wikimedia]
+        apiurl: 'https://lt.wikipedia.org/w/api.php'
+    ltwiktionary:
+        siteid: ltwiktionary
+        name: lietuvių
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://lt.wiktionary.org/w/api.php'
+    ltwikibooks:
+        siteid: ltwikibooks
+        name: lietuvių
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://lt.wikibooks.org/w/api.php'
+    ltwikiquote:
+        siteid: ltwikiquote
+        name: lietuvių
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://lt.wikiquote.org/w/api.php'
+    ltwikisource:
+        siteid: ltwikisource
+        name: lietuvių
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://lt.wikisource.org/w/api.php'
+    ltgwiki:
+        siteid: ltgwiki
+        name: latgaļu
+        groups: [wiki, wikimedia]
+        apiurl: 'https://ltg.wikipedia.org/w/api.php'
+    lvwiki:
+        siteid: lvwiki
+        name: latviešu
+        groups: [wiki, wikimedia]
+        apiurl: 'https://lv.wikipedia.org/w/api.php'
+    lvwiktionary:
+        siteid: lvwiktionary
+        name: latviešu
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://lv.wiktionary.org/w/api.php'
+    lvwikibooks:
+        siteid: lvwikibooks
+        name: latviešu
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://lv.wikibooks.org/w/api.php'
+    maiwiki:
+        siteid: maiwiki
+        name: मैथिली
+        groups: [wiki, wikimedia]
+        apiurl: 'https://mai.wikipedia.org/w/api.php'
+    map_bmswiki:
+        siteid: map_bmswiki
+        name: 'Basa Banyumasan'
+        groups: [wiki, wikimedia]
+        apiurl: 'https://map-bms.wikipedia.org/w/api.php'
+    mdfwiki:
+        siteid: mdfwiki
+        name: мокшень
+        groups: [wiki, wikimedia]
+        apiurl: 'https://mdf.wikipedia.org/w/api.php'
+    mgwiki:
+        siteid: mgwiki
+        name: Malagasy
+        groups: [wiki, wikimedia]
+        apiurl: 'https://mg.wikipedia.org/w/api.php'
+    mgwiktionary:
+        siteid: mgwiktionary
+        name: Malagasy
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://mg.wiktionary.org/w/api.php'
+    mgwikibooks:
+        siteid: mgwikibooks
+        name: Malagasy
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://mg.wikibooks.org/w/api.php'
+    mhwiki:
+        siteid: mhwiki
+        name: Ebon
+        groups: [wiki, wikimedia]
+        apiurl: 'https://mh.wikipedia.org/w/api.php'
+    mhwiktionary:
+        siteid: mhwiktionary
+        name: Ebon
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://mh.wiktionary.org/w/api.php'
+    mhrwiki:
+        siteid: mhrwiki
+        name: 'олык марий'
+        groups: [wiki, wikimedia]
+        apiurl: 'https://mhr.wikipedia.org/w/api.php'
+    miwiki:
+        siteid: miwiki
+        name: Māori
+        groups: [wiki, wikimedia]
+        apiurl: 'https://mi.wikipedia.org/w/api.php'
+    miwiktionary:
+        siteid: miwiktionary
+        name: Māori
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://mi.wiktionary.org/w/api.php'
+    miwikibooks:
+        siteid: miwikibooks
+        name: Māori
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://mi.wikibooks.org/w/api.php'
+    minwiki:
+        siteid: minwiki
+        name: 'Baso Minangkabau'
+        groups: [wiki, wikimedia]
+        apiurl: 'https://min.wikipedia.org/w/api.php'
+    mkwiki:
+        siteid: mkwiki
+        name: македонски
+        groups: [wiki, wikimedia]
+        apiurl: 'https://mk.wikipedia.org/w/api.php'
+    mkwiktionary:
+        siteid: mkwiktionary
+        name: македонски
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://mk.wiktionary.org/w/api.php'
+    mkwikibooks:
+        siteid: mkwikibooks
+        name: македонски
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://mk.wikibooks.org/w/api.php'
+    mkwikisource:
+        siteid: mkwikisource
+        name: македонски
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://mk.wikisource.org/w/api.php'
+    mlwiki:
+        siteid: mlwiki
+        name: മലയാളം
+        groups: [wiki, wikimedia]
+        apiurl: 'https://ml.wikipedia.org/w/api.php'
+    mlwiktionary:
+        siteid: mlwiktionary
+        name: മലയാളം
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://ml.wiktionary.org/w/api.php'
+    mlwikibooks:
+        siteid: mlwikibooks
+        name: മലയാളം
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://ml.wikibooks.org/w/api.php'
+    mlwikiquote:
+        siteid: mlwikiquote
+        name: മലയാളം
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://ml.wikiquote.org/w/api.php'
+    mlwikisource:
+        siteid: mlwikisource
+        name: മലയാളം
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://ml.wikisource.org/w/api.php'
+    mnwiki:
+        siteid: mnwiki
+        name: монгол
+        groups: [wiki, wikimedia]
+        apiurl: 'https://mn.wikipedia.org/w/api.php'
+    mnwiktionary:
+        siteid: mnwiktionary
+        name: монгол
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://mn.wiktionary.org/w/api.php'
+    mnwikibooks:
+        siteid: mnwikibooks
+        name: монгол
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://mn.wikibooks.org/w/api.php'
+    mowiki:
+        siteid: mowiki
+        name: молдовеняскэ
+        groups: [wiki, wikimedia]
+        apiurl: 'https://mo.wikipedia.org/w/api.php'
+    mowiktionary:
+        siteid: mowiktionary
+        name: молдовеняскэ
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://mo.wiktionary.org/w/api.php'
+    mrwiki:
+        siteid: mrwiki
+        name: मराठी
+        groups: [wiki, wikimedia]
+        apiurl: 'https://mr.wikipedia.org/w/api.php'
+    mrwiktionary:
+        siteid: mrwiktionary
+        name: मराठी
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://mr.wiktionary.org/w/api.php'
+    mrwikibooks:
+        siteid: mrwikibooks
+        name: मराठी
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://mr.wikibooks.org/w/api.php'
+    mrwikiquote:
+        siteid: mrwikiquote
+        name: मराठी
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://mr.wikiquote.org/w/api.php'
+    mrwikisource:
+        siteid: mrwikisource
+        name: मराठी
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://mr.wikisource.org/w/api.php'
+    mrjwiki:
+        siteid: mrjwiki
+        name: 'кырык мары'
+        groups: [wiki, wikimedia]
+        apiurl: 'https://mrj.wikipedia.org/w/api.php'
+    mswiki:
+        siteid: mswiki
+        name: 'Bahasa Melayu'
+        groups: [wiki, wikimedia]
+        apiurl: 'https://ms.wikipedia.org/w/api.php'
+    mswiktionary:
+        siteid: mswiktionary
+        name: 'Bahasa Melayu'
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://ms.wiktionary.org/w/api.php'
+    mswikibooks:
+        siteid: mswikibooks
+        name: 'Bahasa Melayu'
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://ms.wikibooks.org/w/api.php'
+    mtwiki:
+        siteid: mtwiki
+        name: Malti
+        groups: [wiki, wikimedia]
+        apiurl: 'https://mt.wikipedia.org/w/api.php'
+    mtwiktionary:
+        siteid: mtwiktionary
+        name: Malti
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://mt.wiktionary.org/w/api.php'
+    muswiki:
+        siteid: muswiki
+        name: Mvskoke
+        groups: [wiki, wikimedia]
+        apiurl: 'https://mus.wikipedia.org/w/api.php'
+    mwlwiki:
+        siteid: mwlwiki
+        name: Mirandés
+        groups: [wiki, wikimedia]
+        apiurl: 'https://mwl.wikipedia.org/w/api.php'
+    mywiki:
+        siteid: mywiki
+        name: မြန်မာဘာသာ
+        groups: [wiki, wikimedia]
+        apiurl: 'https://my.wikipedia.org/w/api.php'
+    mywiktionary:
+        siteid: mywiktionary
+        name: မြန်မာဘာသာ
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://my.wiktionary.org/w/api.php'
+    mywikibooks:
+        siteid: mywikibooks
+        name: မြန်မာဘာသာ
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://my.wikibooks.org/w/api.php'
+    myvwiki:
+        siteid: myvwiki
+        name: эрзянь
+        groups: [wiki, wikimedia]
+        apiurl: 'https://myv.wikipedia.org/w/api.php'
+    mznwiki:
+        siteid: mznwiki
+        name: مازِرونی
+        groups: [wiki, wikimedia]
+        apiurl: 'https://mzn.wikipedia.org/w/api.php'
+    nawiki:
+        siteid: nawiki
+        name: 'Dorerin Naoero'
+        groups: [wiki, wikimedia]
+        apiurl: 'https://na.wikipedia.org/w/api.php'
+    nawiktionary:
+        siteid: nawiktionary
+        name: 'Dorerin Naoero'
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://na.wiktionary.org/w/api.php'
+    nawikibooks:
+        siteid: nawikibooks
+        name: 'Dorerin Naoero'
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://na.wikibooks.org/w/api.php'
+    nawikiquote:
+        siteid: nawikiquote
+        name: 'Dorerin Naoero'
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://na.wikiquote.org/w/api.php'
+    nahwiki:
+        siteid: nahwiki
+        name: Nāhuatl
+        groups: [wiki, wikimedia]
+        apiurl: 'https://nah.wikipedia.org/w/api.php'
+    nahwiktionary:
+        siteid: nahwiktionary
+        name: Nāhuatl
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://nah.wiktionary.org/w/api.php'
+    nahwikibooks:
+        siteid: nahwikibooks
+        name: Nāhuatl
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://nah.wikibooks.org/w/api.php'
+    napwiki:
+        siteid: napwiki
+        name: Napulitano
+        groups: [wiki, wikimedia]
+        apiurl: 'https://nap.wikipedia.org/w/api.php'
+    ndswiki:
+        siteid: ndswiki
+        name: Plattdüütsch
+        groups: [wiki, wikimedia]
+        apiurl: 'https://nds.wikipedia.org/w/api.php'
+    ndswiktionary:
+        siteid: ndswiktionary
+        name: Plattdüütsch
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://nds.wiktionary.org/w/api.php'
+    ndswikibooks:
+        siteid: ndswikibooks
+        name: Plattdüütsch
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://nds.wikibooks.org/w/api.php'
+    ndswikiquote:
+        siteid: ndswikiquote
+        name: Plattdüütsch
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://nds.wikiquote.org/w/api.php'
+    nds_nlwiki:
+        siteid: nds_nlwiki
+        name: Nedersaksies
+        groups: [wiki, wikimedia]
+        apiurl: 'https://nds-nl.wikipedia.org/w/api.php'
+    newiki:
+        siteid: newiki
+        name: नेपाली
+        groups: [wiki, wikimedia]
+        apiurl: 'https://ne.wikipedia.org/w/api.php'
+    newiktionary:
+        siteid: newiktionary
+        name: नेपाली
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://ne.wiktionary.org/w/api.php'
+    newikibooks:
+        siteid: newikibooks
+        name: नेपाली
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://ne.wikibooks.org/w/api.php'
+    newwiki:
+        siteid: newwiki
+        name: 'नेपाल भाषा'
+        groups: [wiki, wikimedia]
+        apiurl: 'https://new.wikipedia.org/w/api.php'
+    ngwiki:
+        siteid: ngwiki
+        name: Oshiwambo
+        groups: [wiki, wikimedia]
+        apiurl: 'https://ng.wikipedia.org/w/api.php'
+    nlwiki:
+        siteid: nlwiki
+        name: Nederlands
+        groups: [wiki, wikimedia]
+        apiurl: 'https://nl.wikipedia.org/w/api.php'
+    nlwiktionary:
+        siteid: nlwiktionary
+        name: Nederlands
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://nl.wiktionary.org/w/api.php'
+    nlwikibooks:
+        siteid: nlwikibooks
+        name: Nederlands
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://nl.wikibooks.org/w/api.php'
+    nlwikinews:
+        siteid: nlwikinews
+        name: Nederlands
+        groups: [wikinews, wikimedia]
+        apiurl: 'https://nl.wikinews.org/w/api.php'
+    nlwikiquote:
+        siteid: nlwikiquote
+        name: Nederlands
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://nl.wikiquote.org/w/api.php'
+    nlwikisource:
+        siteid: nlwikisource
+        name: Nederlands
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://nl.wikisource.org/w/api.php'
+    nlwikivoyage:
+        siteid: nlwikivoyage
+        name: Nederlands
+        groups: [wikivoyage, wikimedia]
+        apiurl: 'https://nl.wikivoyage.org/w/api.php'
+    nnwiki:
+        siteid: nnwiki
+        name: 'norsk nynorsk'
+        groups: [wiki, wikimedia]
+        apiurl: 'https://nn.wikipedia.org/w/api.php'
+    nnwiktionary:
+        siteid: nnwiktionary
+        name: 'norsk nynorsk'
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://nn.wiktionary.org/w/api.php'
+    nnwikiquote:
+        siteid: nnwikiquote
+        name: 'norsk nynorsk'
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://nn.wikiquote.org/w/api.php'
+    nowiki:
+        siteid: nowiki
+        name: 'norsk bokmål'
+        groups: [wiki, wikimedia]
+        apiurl: 'https://no.wikipedia.org/w/api.php'
+    nowiktionary:
+        siteid: nowiktionary
+        name: 'norsk bokmål'
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://no.wiktionary.org/w/api.php'
+    nowikibooks:
+        siteid: nowikibooks
+        name: 'norsk bokmål'
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://no.wikibooks.org/w/api.php'
+    nowikinews:
+        siteid: nowikinews
+        name: 'norsk bokmål'
+        groups: [wikinews, wikimedia]
+        apiurl: 'https://no.wikinews.org/w/api.php'
+    nowikiquote:
+        siteid: nowikiquote
+        name: 'norsk bokmål'
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://no.wikiquote.org/w/api.php'
+    nowikisource:
+        siteid: nowikisource
+        name: 'norsk bokmål'
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://no.wikisource.org/w/api.php'
+    novwiki:
+        siteid: novwiki
+        name: Novial
+        groups: [wiki, wikimedia]
+        apiurl: 'https://nov.wikipedia.org/w/api.php'
+    nrmwiki:
+        siteid: nrmwiki
+        name: Nouormand
+        groups: [wiki, wikimedia]
+        apiurl: 'https://nrm.wikipedia.org/w/api.php'
+    nsowiki:
+        siteid: nsowiki
+        name: 'Sesotho sa Leboa'
+        groups: [wiki, wikimedia]
+        apiurl: 'https://nso.wikipedia.org/w/api.php'
+    nvwiki:
+        siteid: nvwiki
+        name: 'Diné bizaad'
+        groups: [wiki, wikimedia]
+        apiurl: 'https://nv.wikipedia.org/w/api.php'
+    nywiki:
+        siteid: nywiki
+        name: Chi-Chewa
+        groups: [wiki, wikimedia]
+        apiurl: 'https://ny.wikipedia.org/w/api.php'
+    ocwiki:
+        siteid: ocwiki
+        name: occitan
+        groups: [wiki, wikimedia]
+        apiurl: 'https://oc.wikipedia.org/w/api.php'
+    ocwiktionary:
+        siteid: ocwiktionary
+        name: occitan
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://oc.wiktionary.org/w/api.php'
+    ocwikibooks:
+        siteid: ocwikibooks
+        name: occitan
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://oc.wikibooks.org/w/api.php'
+    omwiki:
+        siteid: omwiki
+        name: Oromoo
+        groups: [wiki, wikimedia]
+        apiurl: 'https://om.wikipedia.org/w/api.php'
+    omwiktionary:
+        siteid: omwiktionary
+        name: Oromoo
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://om.wiktionary.org/w/api.php'
+    orwiki:
+        siteid: orwiki
+        name: ଓଡ଼ିଆ
+        groups: [wiki, wikimedia]
+        apiurl: 'https://or.wikipedia.org/w/api.php'
+    orwiktionary:
+        siteid: orwiktionary
+        name: ଓଡ଼ିଆ
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://or.wiktionary.org/w/api.php'
+    orwikisource:
+        siteid: orwikisource
+        name: ଓଡ଼ିଆ
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://or.wikisource.org/w/api.php'
+    oswiki:
+        siteid: oswiki
+        name: Ирон
+        groups: [wiki, wikimedia]
+        apiurl: 'https://os.wikipedia.org/w/api.php'
+    pawiki:
+        siteid: pawiki
+        name: ਪੰਜਾਬੀ
+        groups: [wiki, wikimedia]
+        apiurl: 'https://pa.wikipedia.org/w/api.php'
+    pawiktionary:
+        siteid: pawiktionary
+        name: ਪੰਜਾਬੀ
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://pa.wiktionary.org/w/api.php'
+    pawikibooks:
+        siteid: pawikibooks
+        name: ਪੰਜਾਬੀ
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://pa.wikibooks.org/w/api.php'
+    pagwiki:
+        siteid: pagwiki
+        name: Pangasinan
+        groups: [wiki, wikimedia]
+        apiurl: 'https://pag.wikipedia.org/w/api.php'
+    pamwiki:
+        siteid: pamwiki
+        name: Kapampangan
+        groups: [wiki, wikimedia]
+        apiurl: 'https://pam.wikipedia.org/w/api.php'
+    papwiki:
+        siteid: papwiki
+        name: Papiamentu
+        groups: [wiki, wikimedia]
+        apiurl: 'https://pap.wikipedia.org/w/api.php'
+    pcdwiki:
+        siteid: pcdwiki
+        name: Picard
+        groups: [wiki, wikimedia]
+        apiurl: 'https://pcd.wikipedia.org/w/api.php'
+    pdcwiki:
+        siteid: pdcwiki
+        name: Deitsch
+        groups: [wiki, wikimedia]
+        apiurl: 'https://pdc.wikipedia.org/w/api.php'
+    pflwiki:
+        siteid: pflwiki
+        name: Pälzisch
+        groups: [wiki, wikimedia]
+        apiurl: 'https://pfl.wikipedia.org/w/api.php'
+    piwiki:
+        siteid: piwiki
+        name: पालि
+        groups: [wiki, wikimedia]
+        apiurl: 'https://pi.wikipedia.org/w/api.php'
+    piwiktionary:
+        siteid: piwiktionary
+        name: पालि
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://pi.wiktionary.org/w/api.php'
+    pihwiki:
+        siteid: pihwiki
+        name: 'Norfuk / Pitkern'
+        groups: [wiki, wikimedia]
+        apiurl: 'https://pih.wikipedia.org/w/api.php'
+    plwiki:
+        siteid: plwiki
+        name: polski
+        groups: [wiki, wikimedia]
+        apiurl: 'https://pl.wikipedia.org/w/api.php'
+    plwiktionary:
+        siteid: plwiktionary
+        name: polski
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://pl.wiktionary.org/w/api.php'
+    plwikibooks:
+        siteid: plwikibooks
+        name: polski
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://pl.wikibooks.org/w/api.php'
+    plwikinews:
+        siteid: plwikinews
+        name: polski
+        groups: [wikinews, wikimedia]
+        apiurl: 'https://pl.wikinews.org/w/api.php'
+    plwikiquote:
+        siteid: plwikiquote
+        name: polski
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://pl.wikiquote.org/w/api.php'
+    plwikisource:
+        siteid: plwikisource
+        name: polski
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://pl.wikisource.org/w/api.php'
+    plwikivoyage:
+        siteid: plwikivoyage
+        name: polski
+        groups: [wikivoyage, wikimedia]
+        apiurl: 'https://pl.wikivoyage.org/w/api.php'
+    pmswiki:
+        siteid: pmswiki
+        name: Piemontèis
+        groups: [wiki, wikimedia]
+        apiurl: 'https://pms.wikipedia.org/w/api.php'
+    pnbwiki:
+        siteid: pnbwiki
+        name: پنجابی
+        groups: [wiki, wikimedia]
+        apiurl: 'https://pnb.wikipedia.org/w/api.php'
+    pnbwiktionary:
+        siteid: pnbwiktionary
+        name: پنجابی
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://pnb.wiktionary.org/w/api.php'
+    pntwiki:
+        siteid: pntwiki
+        name: Ποντιακά
+        groups: [wiki, wikimedia]
+        apiurl: 'https://pnt.wikipedia.org/w/api.php'
+    pswiki:
+        siteid: pswiki
+        name: پښتو
+        groups: [wiki, wikimedia]
+        apiurl: 'https://ps.wikipedia.org/w/api.php'
+    pswiktionary:
+        siteid: pswiktionary
+        name: پښتو
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://ps.wiktionary.org/w/api.php'
+    pswikibooks:
+        siteid: pswikibooks
+        name: پښتو
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://ps.wikibooks.org/w/api.php'
+    ptwiki:
+        siteid: ptwiki
+        name: português
+        groups: [wiki, wikimedia]
+        apiurl: 'https://pt.wikipedia.org/w/api.php'
+    ptwiktionary:
+        siteid: ptwiktionary
+        name: português
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://pt.wiktionary.org/w/api.php'
+    ptwikibooks:
+        siteid: ptwikibooks
+        name: português
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://pt.wikibooks.org/w/api.php'
+    ptwikinews:
+        siteid: ptwikinews
+        name: português
+        groups: [wikinews, wikimedia]
+        apiurl: 'https://pt.wikinews.org/w/api.php'
+    ptwikiquote:
+        siteid: ptwikiquote
+        name: português
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://pt.wikiquote.org/w/api.php'
+    ptwikisource:
+        siteid: ptwikisource
+        name: português
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://pt.wikisource.org/w/api.php'
+    ptwikiversity:
+        siteid: ptwikiversity
+        name: português
+        groups: [wikiversity, wikimedia]
+        apiurl: 'https://pt.wikiversity.org/w/api.php'
+    ptwikivoyage:
+        siteid: ptwikivoyage
+        name: português
+        groups: [wikivoyage, wikimedia]
+        apiurl: 'https://pt.wikivoyage.org/w/api.php'
+    quwiki:
+        siteid: quwiki
+        name: 'Runa Simi'
+        groups: [wiki, wikimedia]
+        apiurl: 'https://qu.wikipedia.org/w/api.php'
+    quwiktionary:
+        siteid: quwiktionary
+        name: 'Runa Simi'
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://qu.wiktionary.org/w/api.php'
+    quwikibooks:
+        siteid: quwikibooks
+        name: 'Runa Simi'
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://qu.wikibooks.org/w/api.php'
+    quwikiquote:
+        siteid: quwikiquote
+        name: 'Runa Simi'
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://qu.wikiquote.org/w/api.php'
+    rmwiki:
+        siteid: rmwiki
+        name: rumantsch
+        groups: [wiki, wikimedia]
+        apiurl: 'https://rm.wikipedia.org/w/api.php'
+    rmwiktionary:
+        siteid: rmwiktionary
+        name: rumantsch
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://rm.wiktionary.org/w/api.php'
+    rmwikibooks:
+        siteid: rmwikibooks
+        name: rumantsch
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://rm.wikibooks.org/w/api.php'
+    rmywiki:
+        siteid: rmywiki
+        name: Romani
+        groups: [wiki, wikimedia]
+        apiurl: 'https://rmy.wikipedia.org/w/api.php'
+    rnwiki:
+        siteid: rnwiki
+        name: Kirundi
+        groups: [wiki, wikimedia]
+        apiurl: 'https://rn.wikipedia.org/w/api.php'
+    rnwiktionary:
+        siteid: rnwiktionary
+        name: Kirundi
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://rn.wiktionary.org/w/api.php'
+    rowiki:
+        siteid: rowiki
+        name: română
+        groups: [wiki, wikimedia]
+        apiurl: 'https://ro.wikipedia.org/w/api.php'
+    rowiktionary:
+        siteid: rowiktionary
+        name: română
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://ro.wiktionary.org/w/api.php'
+    rowikibooks:
+        siteid: rowikibooks
+        name: română
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://ro.wikibooks.org/w/api.php'
+    rowikinews:
+        siteid: rowikinews
+        name: română
+        groups: [wikinews, wikimedia]
+        apiurl: 'https://ro.wikinews.org/w/api.php'
+    rowikiquote:
+        siteid: rowikiquote
+        name: română
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://ro.wikiquote.org/w/api.php'
+    rowikisource:
+        siteid: rowikisource
+        name: română
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://ro.wikisource.org/w/api.php'
+    rowikivoyage:
+        siteid: rowikivoyage
+        name: română
+        groups: [wikivoyage, wikimedia]
+        apiurl: 'https://ro.wikivoyage.org/w/api.php'
+    roa_rupwiki:
+        siteid: roa_rupwiki
+        name: armãneashti
+        groups: [wiki, wikimedia]
+        apiurl: 'https://roa-rup.wikipedia.org/w/api.php'
+    roa_rupwiktionary:
+        siteid: roa_rupwiktionary
+        name: armãneashti
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://roa-rup.wiktionary.org/w/api.php'
+    roa_tarawiki:
+        siteid: roa_tarawiki
+        name: tarandíne
+        groups: [wiki, wikimedia]
+        apiurl: 'https://roa-tara.wikipedia.org/w/api.php'
+    ruwiki:
+        siteid: ruwiki
+        name: русский
+        groups: [wiki, wikimedia]
+        apiurl: 'https://ru.wikipedia.org/w/api.php'
+    ruwiktionary:
+        siteid: ruwiktionary
+        name: русский
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://ru.wiktionary.org/w/api.php'
+    ruwikibooks:
+        siteid: ruwikibooks
+        name: русский
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://ru.wikibooks.org/w/api.php'
+    ruwikinews:
+        siteid: ruwikinews
+        name: русский
+        groups: [wikinews, wikimedia]
+        apiurl: 'https://ru.wikinews.org/w/api.php'
+    ruwikiquote:
+        siteid: ruwikiquote
+        name: русский
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://ru.wikiquote.org/w/api.php'
+    ruwikisource:
+        siteid: ruwikisource
+        name: русский
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://ru.wikisource.org/w/api.php'
+    ruwikiversity:
+        siteid: ruwikiversity
+        name: русский
+        groups: [wikiversity, wikimedia]
+        apiurl: 'https://ru.wikiversity.org/w/api.php'
+    ruwikivoyage:
+        siteid: ruwikivoyage
+        name: русский
+        groups: [wikivoyage, wikimedia]
+        apiurl: 'https://ru.wikivoyage.org/w/api.php'
+    ruewiki:
+        siteid: ruewiki
+        name: русиньскый
+        groups: [wiki, wikimedia]
+        apiurl: 'https://rue.wikipedia.org/w/api.php'
+    rwwiki:
+        siteid: rwwiki
+        name: Kinyarwanda
+        groups: [wiki, wikimedia]
+        apiurl: 'https://rw.wikipedia.org/w/api.php'
+    rwwiktionary:
+        siteid: rwwiktionary
+        name: Kinyarwanda
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://rw.wiktionary.org/w/api.php'
+    sawiki:
+        siteid: sawiki
+        name: संस्कृतम्
+        groups: [wiki, wikimedia]
+        apiurl: 'https://sa.wikipedia.org/w/api.php'
+    sawiktionary:
+        siteid: sawiktionary
+        name: संस्कृतम्
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://sa.wiktionary.org/w/api.php'
+    sawikibooks:
+        siteid: sawikibooks
+        name: संस्कृतम्
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://sa.wikibooks.org/w/api.php'
+    sawikiquote:
+        siteid: sawikiquote
+        name: संस्कृतम्
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://sa.wikiquote.org/w/api.php'
+    sawikisource:
+        siteid: sawikisource
+        name: संस्कृतम्
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://sa.wikisource.org/w/api.php'
+    sahwiki:
+        siteid: sahwiki
+        name: 'саха тыла'
+        groups: [wiki, wikimedia]
+        apiurl: 'https://sah.wikipedia.org/w/api.php'
+    sahwikisource:
+        siteid: sahwikisource
+        name: 'саха тыла'
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://sah.wikisource.org/w/api.php'
+    scwiki:
+        siteid: scwiki
+        name: sardu
+        groups: [wiki, wikimedia]
+        apiurl: 'https://sc.wikipedia.org/w/api.php'
+    scwiktionary:
+        siteid: scwiktionary
+        name: sardu
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://sc.wiktionary.org/w/api.php'
+    scnwiki:
+        siteid: scnwiki
+        name: sicilianu
+        groups: [wiki, wikimedia]
+        apiurl: 'https://scn.wikipedia.org/w/api.php'
+    scnwiktionary:
+        siteid: scnwiktionary
+        name: sicilianu
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://scn.wiktionary.org/w/api.php'
+    scowiki:
+        siteid: scowiki
+        name: Scots
+        groups: [wiki, wikimedia]
+        apiurl: 'https://sco.wikipedia.org/w/api.php'
+    sdwiki:
+        siteid: sdwiki
+        name: سنڌي
+        groups: [wiki, wikimedia]
+        apiurl: 'https://sd.wikipedia.org/w/api.php'
+    sdwiktionary:
+        siteid: sdwiktionary
+        name: سنڌي
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://sd.wiktionary.org/w/api.php'
+    sdwikinews:
+        siteid: sdwikinews
+        name: سنڌي
+        groups: [wikinews, wikimedia]
+        apiurl: 'https://sd.wikinews.org/w/api.php'
+    sewiki:
+        siteid: sewiki
+        name: sámegiella
+        groups: [wiki, wikimedia]
+        apiurl: 'https://se.wikipedia.org/w/api.php'
+    sewikibooks:
+        siteid: sewikibooks
+        name: sámegiella
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://se.wikibooks.org/w/api.php'
+    sgwiki:
+        siteid: sgwiki
+        name: Sängö
+        groups: [wiki, wikimedia]
+        apiurl: 'https://sg.wikipedia.org/w/api.php'
+    sgwiktionary:
+        siteid: sgwiktionary
+        name: Sängö
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://sg.wiktionary.org/w/api.php'
+    shwiki:
+        siteid: shwiki
+        name: 'srpskohrvatski / српскохрватски'
+        groups: [wiki, wikimedia]
+        apiurl: 'https://sh.wikipedia.org/w/api.php'
+    shwiktionary:
+        siteid: shwiktionary
+        name: 'srpskohrvatski / српскохрватски'
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://sh.wiktionary.org/w/api.php'
+    siwiki:
+        siteid: siwiki
+        name: සිංහල
+        groups: [wiki, wikimedia]
+        apiurl: 'https://si.wikipedia.org/w/api.php'
+    siwiktionary:
+        siteid: siwiktionary
+        name: සිංහල
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://si.wiktionary.org/w/api.php'
+    siwikibooks:
+        siteid: siwikibooks
+        name: සිංහල
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://si.wikibooks.org/w/api.php'
+    simplewiki:
+        siteid: simplewiki
+        name: 'Simple English'
+        groups: [wiki, wikimedia]
+        apiurl: 'https://simple.wikipedia.org/w/api.php'
+    simplewiktionary:
+        siteid: simplewiktionary
+        name: 'Simple English'
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://simple.wiktionary.org/w/api.php'
+    simplewikibooks:
+        siteid: simplewikibooks
+        name: 'Simple English'
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://simple.wikibooks.org/w/api.php'
+    simplewikiquote:
+        siteid: simplewikiquote
+        name: 'Simple English'
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://simple.wikiquote.org/w/api.php'
+    skwiki:
+        siteid: skwiki
+        name: slovenčina
+        groups: [wiki, wikimedia]
+        apiurl: 'https://sk.wikipedia.org/w/api.php'
+    skwiktionary:
+        siteid: skwiktionary
+        name: slovenčina
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://sk.wiktionary.org/w/api.php'
+    skwikibooks:
+        siteid: skwikibooks
+        name: slovenčina
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://sk.wikibooks.org/w/api.php'
+    skwikiquote:
+        siteid: skwikiquote
+        name: slovenčina
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://sk.wikiquote.org/w/api.php'
+    skwikisource:
+        siteid: skwikisource
+        name: slovenčina
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://sk.wikisource.org/w/api.php'
+    slwiki:
+        siteid: slwiki
+        name: slovenščina
+        groups: [wiki, wikimedia]
+        apiurl: 'https://sl.wikipedia.org/w/api.php'
+    slwiktionary:
+        siteid: slwiktionary
+        name: slovenščina
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://sl.wiktionary.org/w/api.php'
+    slwikibooks:
+        siteid: slwikibooks
+        name: slovenščina
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://sl.wikibooks.org/w/api.php'
+    slwikiquote:
+        siteid: slwikiquote
+        name: slovenščina
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://sl.wikiquote.org/w/api.php'
+    slwikisource:
+        siteid: slwikisource
+        name: slovenščina
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://sl.wikisource.org/w/api.php'
+    slwikiversity:
+        siteid: slwikiversity
+        name: slovenščina
+        groups: [wikiversity, wikimedia]
+        apiurl: 'https://sl.wikiversity.org/w/api.php'
+    smwiki:
+        siteid: smwiki
+        name: 'Gagana Samoa'
+        groups: [wiki, wikimedia]
+        apiurl: 'https://sm.wikipedia.org/w/api.php'
+    smwiktionary:
+        siteid: smwiktionary
+        name: 'Gagana Samoa'
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://sm.wiktionary.org/w/api.php'
+    snwiki:
+        siteid: snwiki
+        name: chiShona
+        groups: [wiki, wikimedia]
+        apiurl: 'https://sn.wikipedia.org/w/api.php'
+    snwiktionary:
+        siteid: snwiktionary
+        name: chiShona
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://sn.wiktionary.org/w/api.php'
+    sowiki:
+        siteid: sowiki
+        name: Soomaaliga
+        groups: [wiki, wikimedia]
+        apiurl: 'https://so.wikipedia.org/w/api.php'
+    sowiktionary:
+        siteid: sowiktionary
+        name: Soomaaliga
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://so.wiktionary.org/w/api.php'
+    sqwiki:
+        siteid: sqwiki
+        name: shqip
+        groups: [wiki, wikimedia]
+        apiurl: 'https://sq.wikipedia.org/w/api.php'
+    sqwiktionary:
+        siteid: sqwiktionary
+        name: shqip
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://sq.wiktionary.org/w/api.php'
+    sqwikibooks:
+        siteid: sqwikibooks
+        name: shqip
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://sq.wikibooks.org/w/api.php'
+    sqwikinews:
+        siteid: sqwikinews
+        name: shqip
+        groups: [wikinews, wikimedia]
+        apiurl: 'https://sq.wikinews.org/w/api.php'
+    sqwikiquote:
+        siteid: sqwikiquote
+        name: shqip
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://sq.wikiquote.org/w/api.php'
+    srwiki:
+        siteid: srwiki
+        name: 'српски / srpski'
+        groups: [wiki, wikimedia]
+        apiurl: 'https://sr.wikipedia.org/w/api.php'
+    srwiktionary:
+        siteid: srwiktionary
+        name: 'српски / srpski'
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://sr.wiktionary.org/w/api.php'
+    srwikibooks:
+        siteid: srwikibooks
+        name: 'српски / srpski'
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://sr.wikibooks.org/w/api.php'
+    srwikinews:
+        siteid: srwikinews
+        name: 'српски / srpski'
+        groups: [wikinews, wikimedia]
+        apiurl: 'https://sr.wikinews.org/w/api.php'
+    srwikiquote:
+        siteid: srwikiquote
+        name: 'српски / srpski'
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://sr.wikiquote.org/w/api.php'
+    srwikisource:
+        siteid: srwikisource
+        name: 'српски / srpski'
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://sr.wikisource.org/w/api.php'
+    srnwiki:
+        siteid: srnwiki
+        name: Sranantongo
+        groups: [wiki, wikimedia]
+        apiurl: 'https://srn.wikipedia.org/w/api.php'
+    sswiki:
+        siteid: sswiki
+        name: SiSwati
+        groups: [wiki, wikimedia]
+        apiurl: 'https://ss.wikipedia.org/w/api.php'
+    sswiktionary:
+        siteid: sswiktionary
+        name: SiSwati
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://ss.wiktionary.org/w/api.php'
+    stwiki:
+        siteid: stwiki
+        name: Sesotho
+        groups: [wiki, wikimedia]
+        apiurl: 'https://st.wikipedia.org/w/api.php'
+    stwiktionary:
+        siteid: stwiktionary
+        name: Sesotho
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://st.wiktionary.org/w/api.php'
+    stqwiki:
+        siteid: stqwiki
+        name: Seeltersk
+        groups: [wiki, wikimedia]
+        apiurl: 'https://stq.wikipedia.org/w/api.php'
+    suwiki:
+        siteid: suwiki
+        name: 'Basa Sunda'
+        groups: [wiki, wikimedia]
+        apiurl: 'https://su.wikipedia.org/w/api.php'
+    suwiktionary:
+        siteid: suwiktionary
+        name: 'Basa Sunda'
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://su.wiktionary.org/w/api.php'
+    suwikibooks:
+        siteid: suwikibooks
+        name: 'Basa Sunda'
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://su.wikibooks.org/w/api.php'
+    suwikiquote:
+        siteid: suwikiquote
+        name: 'Basa Sunda'
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://su.wikiquote.org/w/api.php'
+    svwiki:
+        siteid: svwiki
+        name: svenska
+        groups: [wiki, wikimedia]
+        apiurl: 'https://sv.wikipedia.org/w/api.php'
+    svwiktionary:
+        siteid: svwiktionary
+        name: svenska
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://sv.wiktionary.org/w/api.php'
+    svwikibooks:
+        siteid: svwikibooks
+        name: svenska
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://sv.wikibooks.org/w/api.php'
+    svwikinews:
+        siteid: svwikinews
+        name: svenska
+        groups: [wikinews, wikimedia]
+        apiurl: 'https://sv.wikinews.org/w/api.php'
+    svwikiquote:
+        siteid: svwikiquote
+        name: svenska
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://sv.wikiquote.org/w/api.php'
+    svwikisource:
+        siteid: svwikisource
+        name: svenska
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://sv.wikisource.org/w/api.php'
+    svwikiversity:
+        siteid: svwikiversity
+        name: svenska
+        groups: [wikiversity, wikimedia]
+        apiurl: 'https://sv.wikiversity.org/w/api.php'
+    svwikivoyage:
+        siteid: svwikivoyage
+        name: svenska
+        groups: [wikivoyage, wikimedia]
+        apiurl: 'https://sv.wikivoyage.org/w/api.php'
+    swwiki:
+        siteid: swwiki
+        name: Kiswahili
+        groups: [wiki, wikimedia]
+        apiurl: 'https://sw.wikipedia.org/w/api.php'
+    swwiktionary:
+        siteid: swwiktionary
+        name: Kiswahili
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://sw.wiktionary.org/w/api.php'
+    swwikibooks:
+        siteid: swwikibooks
+        name: Kiswahili
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://sw.wikibooks.org/w/api.php'
+    szlwiki:
+        siteid: szlwiki
+        name: ślůnski
+        groups: [wiki, wikimedia]
+        apiurl: 'https://szl.wikipedia.org/w/api.php'
+    tawiki:
+        siteid: tawiki
+        name: தமிழ்
+        groups: [wiki, wikimedia]
+        apiurl: 'https://ta.wikipedia.org/w/api.php'
+    tawiktionary:
+        siteid: tawiktionary
+        name: தமிழ்
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://ta.wiktionary.org/w/api.php'
+    tawikibooks:
+        siteid: tawikibooks
+        name: தமிழ்
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://ta.wikibooks.org/w/api.php'
+    tawikinews:
+        siteid: tawikinews
+        name: தமிழ்
+        groups: [wikinews, wikimedia]
+        apiurl: 'https://ta.wikinews.org/w/api.php'
+    tawikiquote:
+        siteid: tawikiquote
+        name: தமிழ்
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://ta.wikiquote.org/w/api.php'
+    tawikisource:
+        siteid: tawikisource
+        name: தமிழ்
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://ta.wikisource.org/w/api.php'
+    tewiki:
+        siteid: tewiki
+        name: తెలుగు
+        groups: [wiki, wikimedia]
+        apiurl: 'https://te.wikipedia.org/w/api.php'
+    tewiktionary:
+        siteid: tewiktionary
+        name: తెలుగు
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://te.wiktionary.org/w/api.php'
+    tewikibooks:
+        siteid: tewikibooks
+        name: తెలుగు
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://te.wikibooks.org/w/api.php'
+    tewikiquote:
+        siteid: tewikiquote
+        name: తెలుగు
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://te.wikiquote.org/w/api.php'
+    tewikisource:
+        siteid: tewikisource
+        name: తెలుగు
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://te.wikisource.org/w/api.php'
+    tetwiki:
+        siteid: tetwiki
+        name: tetun
+        groups: [wiki, wikimedia]
+        apiurl: 'https://tet.wikipedia.org/w/api.php'
+    tgwiki:
+        siteid: tgwiki
+        name: тоҷикӣ
+        groups: [wiki, wikimedia]
+        apiurl: 'https://tg.wikipedia.org/w/api.php'
+    tgwiktionary:
+        siteid: tgwiktionary
+        name: тоҷикӣ
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://tg.wiktionary.org/w/api.php'
+    tgwikibooks:
+        siteid: tgwikibooks
+        name: тоҷикӣ
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://tg.wikibooks.org/w/api.php'
+    thwiki:
+        siteid: thwiki
+        name: ไทย
+        groups: [wiki, wikimedia]
+        apiurl: 'https://th.wikipedia.org/w/api.php'
+    thwiktionary:
+        siteid: thwiktionary
+        name: ไทย
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://th.wiktionary.org/w/api.php'
+    thwikibooks:
+        siteid: thwikibooks
+        name: ไทย
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://th.wikibooks.org/w/api.php'
+    thwikinews:
+        siteid: thwikinews
+        name: ไทย
+        groups: [wikinews, wikimedia]
+        apiurl: 'https://th.wikinews.org/w/api.php'
+    thwikiquote:
+        siteid: thwikiquote
+        name: ไทย
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://th.wikiquote.org/w/api.php'
+    thwikisource:
+        siteid: thwikisource
+        name: ไทย
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://th.wikisource.org/w/api.php'
+    tiwiki:
+        siteid: tiwiki
+        name: ትግርኛ
+        groups: [wiki, wikimedia]
+        apiurl: 'https://ti.wikipedia.org/w/api.php'
+    tiwiktionary:
+        siteid: tiwiktionary
+        name: ትግርኛ
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://ti.wiktionary.org/w/api.php'
+    tkwiki:
+        siteid: tkwiki
+        name: Türkmençe
+        groups: [wiki, wikimedia]
+        apiurl: 'https://tk.wikipedia.org/w/api.php'
+    tkwiktionary:
+        siteid: tkwiktionary
+        name: Türkmençe
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://tk.wiktionary.org/w/api.php'
+    tkwikibooks:
+        siteid: tkwikibooks
+        name: Türkmençe
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://tk.wikibooks.org/w/api.php'
+    tkwikiquote:
+        siteid: tkwikiquote
+        name: Türkmençe
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://tk.wikiquote.org/w/api.php'
+    tlwiki:
+        siteid: tlwiki
+        name: Tagalog
+        groups: [wiki, wikimedia]
+        apiurl: 'https://tl.wikipedia.org/w/api.php'
+    tlwiktionary:
+        siteid: tlwiktionary
+        name: Tagalog
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://tl.wiktionary.org/w/api.php'
+    tlwikibooks:
+        siteid: tlwikibooks
+        name: Tagalog
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://tl.wikibooks.org/w/api.php'
+    tnwiki:
+        siteid: tnwiki
+        name: Setswana
+        groups: [wiki, wikimedia]
+        apiurl: 'https://tn.wikipedia.org/w/api.php'
+    tnwiktionary:
+        siteid: tnwiktionary
+        name: Setswana
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://tn.wiktionary.org/w/api.php'
+    towiki:
+        siteid: towiki
+        name: 'lea faka-Tonga'
+        groups: [wiki, wikimedia]
+        apiurl: 'https://to.wikipedia.org/w/api.php'
+    towiktionary:
+        siteid: towiktionary
+        name: 'lea faka-Tonga'
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://to.wiktionary.org/w/api.php'
+    tpiwiki:
+        siteid: tpiwiki
+        name: 'Tok Pisin'
+        groups: [wiki, wikimedia]
+        apiurl: 'https://tpi.wikipedia.org/w/api.php'
+    tpiwiktionary:
+        siteid: tpiwiktionary
+        name: 'Tok Pisin'
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://tpi.wiktionary.org/w/api.php'
+    trwiki:
+        siteid: trwiki
+        name: Türkçe
+        groups: [wiki, wikimedia]
+        apiurl: 'https://tr.wikipedia.org/w/api.php'
+    trwiktionary:
+        siteid: trwiktionary
+        name: Türkçe
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://tr.wiktionary.org/w/api.php'
+    trwikibooks:
+        siteid: trwikibooks
+        name: Türkçe
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://tr.wikibooks.org/w/api.php'
+    trwikinews:
+        siteid: trwikinews
+        name: Türkçe
+        groups: [wikinews, wikimedia]
+        apiurl: 'https://tr.wikinews.org/w/api.php'
+    trwikiquote:
+        siteid: trwikiquote
+        name: Türkçe
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://tr.wikiquote.org/w/api.php'
+    trwikisource:
+        siteid: trwikisource
+        name: Türkçe
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://tr.wikisource.org/w/api.php'
+    tswiki:
+        siteid: tswiki
+        name: Xitsonga
+        groups: [wiki, wikimedia]
+        apiurl: 'https://ts.wikipedia.org/w/api.php'
+    tswiktionary:
+        siteid: tswiktionary
+        name: Xitsonga
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://ts.wiktionary.org/w/api.php'
+    ttwiki:
+        siteid: ttwiki
+        name: татарча/tatarça
+        groups: [wiki, wikimedia]
+        apiurl: 'https://tt.wikipedia.org/w/api.php'
+    ttwiktionary:
+        siteid: ttwiktionary
+        name: татарча/tatarça
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://tt.wiktionary.org/w/api.php'
+    ttwikibooks:
+        siteid: ttwikibooks
+        name: татарча/tatarça
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://tt.wikibooks.org/w/api.php'
+    ttwikiquote:
+        siteid: ttwikiquote
+        name: татарча/tatarça
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://tt.wikiquote.org/w/api.php'
+    tumwiki:
+        siteid: tumwiki
+        name: chiTumbuka
+        groups: [wiki, wikimedia]
+        apiurl: 'https://tum.wikipedia.org/w/api.php'
+    twwiki:
+        siteid: twwiki
+        name: Twi
+        groups: [wiki, wikimedia]
+        apiurl: 'https://tw.wikipedia.org/w/api.php'
+    twwiktionary:
+        siteid: twwiktionary
+        name: Twi
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://tw.wiktionary.org/w/api.php'
+    tywiki:
+        siteid: tywiki
+        name: 'reo tahiti'
+        groups: [wiki, wikimedia]
+        apiurl: 'https://ty.wikipedia.org/w/api.php'
+    tyvwiki:
+        siteid: tyvwiki
+        name: 'тыва дыл'
+        groups: [wiki, wikimedia]
+        apiurl: 'https://tyv.wikipedia.org/w/api.php'
+    udmwiki:
+        siteid: udmwiki
+        name: удмурт
+        groups: [wiki, wikimedia]
+        apiurl: 'https://udm.wikipedia.org/w/api.php'
+    ugwiki:
+        siteid: ugwiki
+        name: 'ئۇيغۇرچە / Uyghurche'
+        groups: [wiki, wikimedia]
+        apiurl: 'https://ug.wikipedia.org/w/api.php'
+    ugwiktionary:
+        siteid: ugwiktionary
+        name: 'ئۇيغۇرچە / Uyghurche'
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://ug.wiktionary.org/w/api.php'
+    ugwikibooks:
+        siteid: ugwikibooks
+        name: 'ئۇيغۇرچە / Uyghurche'
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://ug.wikibooks.org/w/api.php'
+    ugwikiquote:
+        siteid: ugwikiquote
+        name: 'ئۇيغۇرچە / Uyghurche'
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://ug.wikiquote.org/w/api.php'
+    ukwiki:
+        siteid: ukwiki
+        name: українська
+        groups: [wiki, wikimedia]
+        apiurl: 'https://uk.wikipedia.org/w/api.php'
+    ukwiktionary:
+        siteid: ukwiktionary
+        name: українська
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://uk.wiktionary.org/w/api.php'
+    ukwikibooks:
+        siteid: ukwikibooks
+        name: українська
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://uk.wikibooks.org/w/api.php'
+    ukwikinews:
+        siteid: ukwikinews
+        name: українська
+        groups: [wikinews, wikimedia]
+        apiurl: 'https://uk.wikinews.org/w/api.php'
+    ukwikiquote:
+        siteid: ukwikiquote
+        name: українська
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://uk.wikiquote.org/w/api.php'
+    ukwikisource:
+        siteid: ukwikisource
+        name: українська
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://uk.wikisource.org/w/api.php'
+    ukwikivoyage:
+        siteid: ukwikivoyage
+        name: українська
+        groups: [wikivoyage, wikimedia]
+        apiurl: 'https://uk.wikivoyage.org/w/api.php'
+    urwiki:
+        siteid: urwiki
+        name: اردو
+        groups: [wiki, wikimedia]
+        apiurl: 'https://ur.wikipedia.org/w/api.php'
+    urwiktionary:
+        siteid: urwiktionary
+        name: اردو
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://ur.wiktionary.org/w/api.php'
+    urwikibooks:
+        siteid: urwikibooks
+        name: اردو
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://ur.wikibooks.org/w/api.php'
+    urwikiquote:
+        siteid: urwikiquote
+        name: اردو
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://ur.wikiquote.org/w/api.php'
+    uzwiki:
+        siteid: uzwiki
+        name: oʻzbekcha/ўзбекча
+        groups: [wiki, wikimedia]
+        apiurl: 'https://uz.wikipedia.org/w/api.php'
+    uzwiktionary:
+        siteid: uzwiktionary
+        name: oʻzbekcha/ўзбекча
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://uz.wiktionary.org/w/api.php'
+    uzwikibooks:
+        siteid: uzwikibooks
+        name: oʻzbekcha/ўзбекча
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://uz.wikibooks.org/w/api.php'
+    uzwikiquote:
+        siteid: uzwikiquote
+        name: oʻzbekcha/ўзбекча
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://uz.wikiquote.org/w/api.php'
+    vewiki:
+        siteid: vewiki
+        name: Tshivenda
+        groups: [wiki, wikimedia]
+        apiurl: 'https://ve.wikipedia.org/w/api.php'
+    vecwiki:
+        siteid: vecwiki
+        name: vèneto
+        groups: [wiki, wikimedia]
+        apiurl: 'https://vec.wikipedia.org/w/api.php'
+    vecwiktionary:
+        siteid: vecwiktionary
+        name: vèneto
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://vec.wiktionary.org/w/api.php'
+    vecwikisource:
+        siteid: vecwikisource
+        name: vèneto
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://vec.wikisource.org/w/api.php'
+    vepwiki:
+        siteid: vepwiki
+        name: 'vepsän kel’'
+        groups: [wiki, wikimedia]
+        apiurl: 'https://vep.wikipedia.org/w/api.php'
+    viwiki:
+        siteid: viwiki
+        name: 'Tiếng Việt'
+        groups: [wiki, wikimedia]
+        apiurl: 'https://vi.wikipedia.org/w/api.php'
+    viwiktionary:
+        siteid: viwiktionary
+        name: 'Tiếng Việt'
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://vi.wiktionary.org/w/api.php'
+    viwikibooks:
+        siteid: viwikibooks
+        name: 'Tiếng Việt'
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://vi.wikibooks.org/w/api.php'
+    viwikiquote:
+        siteid: viwikiquote
+        name: 'Tiếng Việt'
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://vi.wikiquote.org/w/api.php'
+    viwikisource:
+        siteid: viwikisource
+        name: 'Tiếng Việt'
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://vi.wikisource.org/w/api.php'
+    viwikivoyage:
+        siteid: viwikivoyage
+        name: 'Tiếng Việt'
+        groups: [wikivoyage, wikimedia]
+        apiurl: 'https://vi.wikivoyage.org/w/api.php'
+    vlswiki:
+        siteid: vlswiki
+        name: West-Vlams
+        groups: [wiki, wikimedia]
+        apiurl: 'https://vls.wikipedia.org/w/api.php'
+    vowiki:
+        siteid: vowiki
+        name: Volapük
+        groups: [wiki, wikimedia]
+        apiurl: 'https://vo.wikipedia.org/w/api.php'
+    vowiktionary:
+        siteid: vowiktionary
+        name: Volapük
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://vo.wiktionary.org/w/api.php'
+    vowikibooks:
+        siteid: vowikibooks
+        name: Volapük
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://vo.wikibooks.org/w/api.php'
+    vowikiquote:
+        siteid: vowikiquote
+        name: Volapük
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://vo.wikiquote.org/w/api.php'
+    wawiki:
+        siteid: wawiki
+        name: walon
+        groups: [wiki, wikimedia]
+        apiurl: 'https://wa.wikipedia.org/w/api.php'
+    wawiktionary:
+        siteid: wawiktionary
+        name: walon
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://wa.wiktionary.org/w/api.php'
+    wawikibooks:
+        siteid: wawikibooks
+        name: walon
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://wa.wikibooks.org/w/api.php'
+    warwiki:
+        siteid: warwiki
+        name: Winaray
+        groups: [wiki, wikimedia]
+        apiurl: 'https://war.wikipedia.org/w/api.php'
+    wowiki:
+        siteid: wowiki
+        name: Wolof
+        groups: [wiki, wikimedia]
+        apiurl: 'https://wo.wikipedia.org/w/api.php'
+    wowiktionary:
+        siteid: wowiktionary
+        name: Wolof
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://wo.wiktionary.org/w/api.php'
+    wowikiquote:
+        siteid: wowikiquote
+        name: Wolof
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://wo.wikiquote.org/w/api.php'
+    wuuwiki:
+        siteid: wuuwiki
+        name: 吴语
+        groups: [wiki, wikimedia]
+        apiurl: 'https://wuu.wikipedia.org/w/api.php'
+    xalwiki:
+        siteid: xalwiki
+        name: хальмг
+        groups: [wiki, wikimedia]
+        apiurl: 'https://xal.wikipedia.org/w/api.php'
+    xhwiki:
+        siteid: xhwiki
+        name: isiXhosa
+        groups: [wiki, wikimedia]
+        apiurl: 'https://xh.wikipedia.org/w/api.php'
+    xhwiktionary:
+        siteid: xhwiktionary
+        name: isiXhosa
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://xh.wiktionary.org/w/api.php'
+    xhwikibooks:
+        siteid: xhwikibooks
+        name: isiXhosa
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://xh.wikibooks.org/w/api.php'
+    xmfwiki:
+        siteid: xmfwiki
+        name: მარგალური
+        groups: [wiki, wikimedia]
+        apiurl: 'https://xmf.wikipedia.org/w/api.php'
+    yiwiki:
+        siteid: yiwiki
+        name: ייִדיש
+        groups: [wiki, wikimedia]
+        apiurl: 'https://yi.wikipedia.org/w/api.php'
+    yiwiktionary:
+        siteid: yiwiktionary
+        name: ייִדיש
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://yi.wiktionary.org/w/api.php'
+    yiwikisource:
+        siteid: yiwikisource
+        name: ייִדיש
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://yi.wikisource.org/w/api.php'
+    yowiki:
+        siteid: yowiki
+        name: Yorùbá
+        groups: [wiki, wikimedia]
+        apiurl: 'https://yo.wikipedia.org/w/api.php'
+    yowiktionary:
+        siteid: yowiktionary
+        name: Yorùbá
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://yo.wiktionary.org/w/api.php'
+    yowikibooks:
+        siteid: yowikibooks
+        name: Yorùbá
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://yo.wikibooks.org/w/api.php'
+    zawiki:
+        siteid: zawiki
+        name: Vahcuengh
+        groups: [wiki, wikimedia]
+        apiurl: 'https://za.wikipedia.org/w/api.php'
+    zawiktionary:
+        siteid: zawiktionary
+        name: Vahcuengh
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://za.wiktionary.org/w/api.php'
+    zawikibooks:
+        siteid: zawikibooks
+        name: Vahcuengh
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://za.wikibooks.org/w/api.php'
+    zawikiquote:
+        siteid: zawikiquote
+        name: Vahcuengh
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://za.wikiquote.org/w/api.php'
+    zeawiki:
+        siteid: zeawiki
+        name: Zeêuws
+        groups: [wiki, wikimedia]
+        apiurl: 'https://zea.wikipedia.org/w/api.php'
+    zhwiki:
+        siteid: zhwiki
+        name: 中文
+        groups: [wiki, wikimedia]
+        apiurl: 'https://zh.wikipedia.org/w/api.php'
+    zhwiktionary:
+        siteid: zhwiktionary
+        name: 中文
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://zh.wiktionary.org/w/api.php'
+    zhwikibooks:
+        siteid: zhwikibooks
+        name: 中文
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://zh.wikibooks.org/w/api.php'
+    zhwikinews:
+        siteid: zhwikinews
+        name: 中文
+        groups: [wikinews, wikimedia]
+        apiurl: 'https://zh.wikinews.org/w/api.php'
+    zhwikiquote:
+        siteid: zhwikiquote
+        name: 中文
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://zh.wikiquote.org/w/api.php'
+    zhwikisource:
+        siteid: zhwikisource
+        name: 中文
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://zh.wikisource.org/w/api.php'
+    zhwikivoyage:
+        siteid: zhwikivoyage
+        name: 中文
+        groups: [wikivoyage, wikimedia]
+        apiurl: 'https://zh.wikivoyage.org/w/api.php'
+    zh_classicalwiki:
+        siteid: zh_classicalwiki
+        name: 文言
+        groups: [wiki, wikimedia]
+        apiurl: 'https://zh-classical.wikipedia.org/w/api.php'
+    zh_min_nanwiki:
+        siteid: zh_min_nanwiki
+        name: Bân-lâm-gú
+        groups: [wiki, wikimedia]
+        apiurl: 'https://zh-min-nan.wikipedia.org/w/api.php'
+    zh_min_nanwiktionary:
+        siteid: zh_min_nanwiktionary
+        name: Bân-lâm-gú
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://zh-min-nan.wiktionary.org/w/api.php'
+    zh_min_nanwikibooks:
+        siteid: zh_min_nanwikibooks
+        name: Bân-lâm-gú
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://zh-min-nan.wikibooks.org/w/api.php'
+    zh_min_nanwikiquote:
+        siteid: zh_min_nanwikiquote
+        name: Bân-lâm-gú
+        groups: [wikiquote, wikimedia]
+        apiurl: 'https://zh-min-nan.wikiquote.org/w/api.php'
+    zh_min_nanwikisource:
+        siteid: zh_min_nanwikisource
+        name: Bân-lâm-gú
+        groups: [wikisource, wikimedia]
+        apiurl: 'https://zh-min-nan.wikisource.org/w/api.php'
+    zh_yuewiki:
+        siteid: zh_yuewiki
+        name: 粵語
+        groups: [wiki, wikimedia]
+        apiurl: 'https://zh-yue.wikipedia.org/w/api.php'
+    zuwiki:
+        siteid: zuwiki
+        name: isiZulu
+        groups: [wiki, wikimedia]
+        apiurl: 'https://zu.wikipedia.org/w/api.php'
+    zuwiktionary:
+        siteid: zuwiktionary
+        name: isiZulu
+        groups: [wiktionary, wikimedia]
+        apiurl: 'https://zu.wiktionary.org/w/api.php'
+    zuwikibooks:
+        siteid: zuwikibooks
+        name: isiZulu
+        groups: [wikibooks, wikimedia]
+        apiurl: 'https://zu.wikibooks.org/w/api.php'
+    advisorywiki:
+        siteid: advisorywiki
+        name: 'Advisory Board'
+        groups: [special, wikimedia]
+        apiurl: 'https://advisory.wikimedia.org/w/api.php'
+    arwikimedia:
+        siteid: arwikimedia
+        name: 'Wikimedia Argentina'
+        groups: [special, wikimedia]
+        apiurl: 'https://ar.wikimedia.org/w/api.php'
+    arbcom_dewiki:
+        siteid: arbcom_dewiki
+        name: 'Arbitration Committee'
+        groups: [special, wikimedia]
+        apiurl: 'https://arbcom-de.wikipedia.org/w/api.php'
+    arbcom_enwiki:
+        siteid: arbcom_enwiki
+        name: 'Arbitration Committee'
+        groups: [special, wikimedia]
+        apiurl: 'https://arbcom-en.wikipedia.org/w/api.php'
+    arbcom_fiwiki:
+        siteid: arbcom_fiwiki
+        name: 'Arbitration Committee'
+        groups: [special, wikimedia]
+        apiurl: 'https://arbcom-fi.wikipedia.org/w/api.php'
+    arbcom_nlwiki:
+        siteid: arbcom_nlwiki
+        name: 'Arbitration Committee'
+        groups: [special, wikimedia]
+        apiurl: 'https://arbcom-nl.wikipedia.org/w/api.php'
+    auditcomwiki:
+        siteid: auditcomwiki
+        name: 'Audit Committee'
+        groups: [special, wikimedia]
+        apiurl: 'https://auditcom.wikimedia.org/w/api.php'
+    bdwikimedia:
+        siteid: bdwikimedia
+        name: 'উইকিমিডিয়া বাংলাদেশ'
+        groups: [special, wikimedia]
+        apiurl: 'https://bd.wikimedia.org/w/api.php'
+    bewikimedia:
+        siteid: bewikimedia
+        name: 'Wikimedia Belgium'
+        groups: [special, wikimedia]
+        apiurl: 'https://be.wikimedia.org/w/api.php'
+    betawikiversity:
+        siteid: betawikiversity
+        name: Wikiversity
+        groups: [special, wikimedia]
+        apiurl: 'https://beta.wikiversity.org/w/api.php'
+    boardwiki:
+        siteid: boardwiki
+        name: Board
+        groups: [special, wikimedia]
+        apiurl: 'https://board.wikimedia.org/w/api.php'
+    boardgovcomwiki:
+        siteid: boardgovcomwiki
+        name: 'Board Governance Committee'
+        groups: [special, wikimedia]
+        apiurl: 'https://boardgovcom.wikimedia.org/w/api.php'
+    brwikimedia:
+        siteid: brwikimedia
+        name: 'Wikimedia Brasil'
+        groups: [special, wikimedia]
+        apiurl: 'https://br.wikimedia.org/w/api.php'
+    cawikimedia:
+        siteid: cawikimedia
+        name: 'Wikimedia Canada'
+        groups: [special, wikimedia]
+        apiurl: 'https://ca.wikimedia.org/w/api.php'
+    chairwiki:
+        siteid: chairwiki
+        name: 'Wikimedia Board Chair'
+        groups: [special, wikimedia]
+        apiurl: 'https://chair.wikimedia.org/w/api.php'
+    chapcomwiki:
+        siteid: chapcomwiki
+        name: Affcom
+        groups: [special, wikimedia]
+        apiurl: 'https://affcom.wikimedia.org/w/api.php'
+    checkuserwiki:
+        siteid: checkuserwiki
+        name: 'CheckUser Wiki'
+        groups: [special, wikimedia]
+        apiurl: 'https://checkuser.wikimedia.org/w/api.php'
+    cnwikimedia:
+        siteid: cnwikimedia
+        name: 中国维基媒体用户组
+        groups: [special, wikimedia]
+        apiurl: 'https://cn.wikimedia.org/w/api.php'
+    cowikimedia:
+        siteid: cowikimedia
+        name: 'Wikimedia Colombia'
+        groups: [special, wikimedia]
+        apiurl: 'https://co.wikimedia.org/w/api.php'
+    collabwiki:
+        siteid: collabwiki
+        name: Collab
+        groups: [special, wikimedia]
+        apiurl: 'https://collab.wikimedia.org/w/api.php'
+    commonswiki:
+        siteid: commonswiki
+        name: 'Wikimedia Commons'
+        groups: [special, wikimedia]
+        apiurl: 'https://commons.wikimedia.org/w/api.php'
+    dkwikimedia:
+        siteid: dkwikimedia
+        name: 'Wikimedia Danmark'
+        groups: [special, wikimedia]
+        apiurl: 'https://dk.wikimedia.org/w/api.php'
+    donatewiki:
+        siteid: donatewiki
+        name: Donate
+        groups: [special, wikimedia]
+        apiurl: 'https://donate.wikimedia.org/w/api.php'
+    etwikimedia:
+        siteid: etwikimedia
+        name: 'Wikimedia Eesti'
+        groups: [special, wikimedia]
+        apiurl: 'https://ee.wikimedia.org/w/api.php'
+    execwiki:
+        siteid: execwiki
+        name: 'Wikimedia Executive'
+        groups: [special, wikimedia]
+        apiurl: 'https://exec.wikimedia.org/w/api.php'
+    fdcwiki:
+        siteid: fdcwiki
+        name: 'Wikimedia FDC'
+        groups: [special, wikimedia]
+        apiurl: 'https://fdc.wikimedia.org/w/api.php'
+    fiwikimedia:
+        siteid: fiwikimedia
+        name: 'Wikimedia Suomi'
+        groups: [special, wikimedia]
+        apiurl: 'https://fi.wikimedia.org/w/api.php'
+    foundationwiki:
+        siteid: foundationwiki
+        name: 'Wikimedia Foundation'
+        groups: [special, wikimedia]
+        apiurl: 'https://wikimediafoundation.org/w/api.php'
+    grantswiki:
+        siteid: grantswiki
+        name: 'Wikimedia Foundation Grants Discussion'
+        groups: [special, wikimedia]
+        apiurl: 'https://grants.wikimedia.org/w/api.php'
+    iegcomwiki:
+        siteid: iegcomwiki
+        name: 'Individual Engagement Grants Committee Wiki'
+        groups: [special, wikimedia]
+        apiurl: 'https://iegcom.wikimedia.org/w/api.php'
+    ilwikimedia:
+        siteid: ilwikimedia
+        name: ויקימדיה
+        groups: [special, wikimedia]
+        apiurl: 'https://il.wikimedia.org/w/api.php'
+    incubatorwiki:
+        siteid: incubatorwiki
+        name: 'Wikimedia Incubator'
+        groups: [special, wikimedia]
+        apiurl: 'https://incubator.wikimedia.org/w/api.php'
+    internalwiki:
+        siteid: internalwiki
+        name: Internal
+        groups: [special, wikimedia]
+        apiurl: 'https://internal.wikimedia.org/w/api.php'
+    labswiki:
+        siteid: labswiki
+        name: Wikipedia
+        groups: [special, wikimedia]
+        apiurl: 'https://wikitech.wikimedia.org/w/api.php'
+    labtestwiki:
+        siteid: labtestwiki
+        name: Wikipedia
+        groups: [special, wikimedia]
+        apiurl: 'https://labtestwikitech.wikimedia.org/w/api.php'
+    legalteamwiki:
+        siteid: legalteamwiki
+        name: 'Legal Team Wiki'
+        groups: [special, wikimedia]
+        apiurl: 'https://legalteam.wikimedia.org/w/api.php'
+    loginwiki:
+        siteid: loginwiki
+        name: 'Wikimedia Login Wiki'
+        groups: [special, wikimedia]
+        apiurl: 'https://login.wikimedia.org/w/api.php'
+    mediawikiwiki:
+        siteid: mediawikiwiki
+        name: MediaWiki
+        groups: [special, wikimedia]
+        apiurl: 'https://www.mediawiki.org/w/api.php'
+    metawiki:
+        siteid: metawiki
+        name: Meta
+        groups: [special, wikimedia]
+        apiurl: 'https://meta.wikimedia.org/w/api.php'
+    mkwikimedia:
+        siteid: mkwikimedia
+        name: 'Викимедија Македонија'
+        groups: [special, wikimedia]
+        apiurl: 'https://mk.wikimedia.org/w/api.php'
+    movementroleswiki:
+        siteid: movementroleswiki
+        name: 'Movement Roles'
+        groups: [special, wikimedia]
+        apiurl: 'https://movementroles.wikimedia.org/w/api.php'
+    mxwikimedia:
+        siteid: mxwikimedia
+        name: 'Wikimedia México'
+        groups: [special, wikimedia]
+        apiurl: 'https://mx.wikimedia.org/w/api.php'
+    nlwikimedia:
+        siteid: nlwikimedia
+        name: Wikimedia
+        groups: [special, wikimedia]
+        apiurl: 'https://nl.wikimedia.org/w/api.php'
+    nowikimedia:
+        siteid: nowikimedia
+        name: 'Wikimedia Norge'
+        groups: [special, wikimedia]
+        apiurl: 'https://no.wikimedia.org/w/api.php'
+    noboard_chapterswikimedia:
+        siteid: noboard_chapterswikimedia
+        name: 'Wikimedia Norway Internal Board'
+        groups: [special, wikimedia]
+        apiurl: 'https://noboard-chapters.wikimedia.org/w/api.php'
+    nostalgiawiki:
+        siteid: nostalgiawiki
+        name: Wikipedia
+        groups: [special, wikimedia]
+        apiurl: 'https://nostalgia.wikipedia.org/w/api.php'
+    nycwikimedia:
+        siteid: nycwikimedia
+        name: 'Wikimedia New York City'
+        groups: [special, wikimedia]
+        apiurl: 'https://nyc.wikimedia.org/w/api.php'
+    nzwikimedia:
+        siteid: nzwikimedia
+        name: Wikimedia
+        groups: [special, wikimedia]
+        apiurl: 'https://nz.wikimedia.org/w/api.php'
+    officewiki:
+        siteid: officewiki
+        name: 'Wikimedia Office'
+        groups: [special, wikimedia]
+        apiurl: 'https://office.wikimedia.org/w/api.php'
+    ombudsmenwiki:
+        siteid: ombudsmenwiki
+        name: 'Ombudsmen Wiki'
+        groups: [special, wikimedia]
+        apiurl: 'https://ombudsmen.wikimedia.org/w/api.php'
+    otrs_wikiwiki:
+        siteid: otrs_wikiwiki
+        name: 'OTRS Wiki'
+        groups: [special, wikimedia]
+        apiurl: 'https://otrs-wiki.wikimedia.org/w/api.php'
+    outreachwiki:
+        siteid: outreachwiki
+        name: 'Outreach Wiki'
+        groups: [special, wikimedia]
+        apiurl: 'https://outreach.wikimedia.org/w/api.php'
+    pa_uswikimedia:
+        siteid: pa_uswikimedia
+        name: 'Wikimedia Pennsylvania'
+        groups: [special, wikimedia]
+        apiurl: 'https://pa-us.wikimedia.org/w/api.php'
+    plwikimedia:
+        siteid: plwikimedia
+        name: Wikimedia
+        groups: [special, wikimedia]
+        apiurl: 'https://pl.wikimedia.org/w/api.php'
+    qualitywiki:
+        siteid: qualitywiki
+        name: 'Wikimedia Quality'
+        groups: [special, wikimedia]
+        apiurl: 'https://quality.wikimedia.org/w/api.php'
+    rswikimedia:
+        siteid: rswikimedia
+        name: Викимедија
+        groups: [special, wikimedia]
+        apiurl: 'https://rs.wikimedia.org/w/api.php'
+    ruwikimedia:
+        siteid: ruwikimedia
+        name: Викимедиа
+        groups: [special, wikimedia]
+        apiurl: 'https://ru.wikimedia.org/w/api.php'
+    sewikimedia:
+        siteid: sewikimedia
+        name: Wikimedia
+        groups: [special, wikimedia]
+        apiurl: 'https://se.wikimedia.org/w/api.php'
+    searchcomwiki:
+        siteid: searchcomwiki
+        name: 'Search Committee'
+        groups: [special, wikimedia]
+        apiurl: 'https://searchcom.wikimedia.org/w/api.php'
+    sourceswiki:
+        siteid: sourceswiki
+        name: Wikisource
+        groups: [special, wikimedia]
+        apiurl: 'https://wikisource.org/w/api.php'
+    spcomwiki:
+        siteid: spcomwiki
+        name: Spcom
+        groups: [special, wikimedia]
+        apiurl: 'https://spcom.wikimedia.org/w/api.php'
+    specieswiki:
+        siteid: specieswiki
+        name: Wikispecies
+        groups: [special, wikimedia]
+        apiurl: 'https://species.wikimedia.org/w/api.php'
+    stewardwiki:
+        siteid: stewardwiki
+        name: 'Steward Wiki'
+        groups: [special, wikimedia]
+        apiurl: 'https://steward.wikimedia.org/w/api.php'
+    strategywiki:
+        siteid: strategywiki
+        name: 'Strategic Planning'
+        groups: [special, wikimedia]
+        apiurl: 'https://strategy.wikimedia.org/w/api.php'
+    tenwiki:
+        siteid: tenwiki
+        name: 'Wikipedia 10'
+        groups: [special, wikimedia]
+        apiurl: 'https://ten.wikipedia.org/w/api.php'
+    testwiki:
+        siteid: testwiki
+        name: Wikipedia
+        groups: [special, wikimedia]
+        apiurl: 'https://test.wikipedia.org/w/api.php'
+    test2wiki:
+        siteid: test2wiki
+        name: Wikipedia
+        groups: [special, wikimedia]
+        apiurl: 'https://test2.wikipedia.org/w/api.php'
+    testwikidatawiki:
+        siteid: testwikidatawiki
+        name: Wikipedia
+        groups: [special, wikimedia]
+        apiurl: 'https://test.wikidata.org/w/api.php'
+    trwikimedia:
+        siteid: trwikimedia
+        name: 'Wikimedia Türkiye'
+        groups: [special, wikimedia]
+        apiurl: 'https://tr.wikimedia.org/w/api.php'
+    transitionteamwiki:
+        siteid: transitionteamwiki
+        name: 'Transition Team Wiki'
+        groups: [special, wikimedia]
+        apiurl: 'https://transitionteam.wikimedia.org/w/api.php'
+    uawikimedia:
+        siteid: uawikimedia
+        name: 'Вікімедіа Україна'
+        groups: [special, wikimedia]
+        apiurl: 'https://ua.wikimedia.org/w/api.php'
+    ukwikimedia:
+        siteid: ukwikimedia
+        name: 'Wikimedia UK'
+        groups: [special, wikimedia]
+        apiurl: 'https://uk.wikimedia.org/w/api.php'
+    usabilitywiki:
+        siteid: usabilitywiki
+        name: 'Wikimedia Usability Initiative'
+        groups: [special, wikimedia]
+        apiurl: 'https://usability.wikimedia.org/w/api.php'
+    votewiki:
+        siteid: votewiki
+        name: 'Wikimedia Vote Wiki'
+        groups: [special, wikimedia]
+        apiurl: 'https://vote.wikimedia.org/w/api.php'
+    wg_enwiki:
+        siteid: wg_enwiki
+        name: 'Wikipedia Working Group'
+        groups: [special, wikimedia]
+        apiurl: 'https://wg-en.wikipedia.org/w/api.php'
+    wikidatawiki:
+        siteid: wikidatawiki
+        name: Wikipedia
+        groups: [special, wikimedia]
+        apiurl: 'https://www.wikidata.org/w/api.php'
+    wikimania2005wiki:
+        siteid: wikimania2005wiki
+        name: Wikipedia
+        groups: [special, wikimedia]
+        apiurl: 'https://wikimania2005.wikimedia.org/w/api.php'
+    wikimania2006wiki:
+        siteid: wikimania2006wiki
+        name: Wikipedia
+        groups: [special, wikimedia]
+        apiurl: 'https://wikimania2006.wikimedia.org/w/api.php'
+    wikimania2007wiki:
+        siteid: wikimania2007wiki
+        name: Wikipedia
+        groups: [special, wikimedia]
+        apiurl: 'https://wikimania2007.wikimedia.org/w/api.php'
+    wikimania2008wiki:
+        siteid: wikimania2008wiki
+        name: Wikipedia
+        groups: [special, wikimedia]
+        apiurl: 'https://wikimania2008.wikimedia.org/w/api.php'
+    wikimania2009wiki:
+        siteid: wikimania2009wiki
+        name: Wikipedia
+        groups: [special, wikimedia]
+        apiurl: 'https://wikimania2009.wikimedia.org/w/api.php'
+    wikimania2010wiki:
+        siteid: wikimania2010wiki
+        name: Wikipedia
+        groups: [special, wikimedia]
+        apiurl: 'https://wikimania2010.wikimedia.org/w/api.php'
+    wikimania2011wiki:
+        siteid: wikimania2011wiki
+        name: Wikipedia
+        groups: [special, wikimedia]
+        apiurl: 'https://wikimania2011.wikimedia.org/w/api.php'
+    wikimania2012wiki:
+        siteid: wikimania2012wiki
+        name: Wikipedia
+        groups: [special, wikimedia]
+        apiurl: 'https://wikimania2012.wikimedia.org/w/api.php'
+    wikimania2013wiki:
+        siteid: wikimania2013wiki
+        name: Wikipedia
+        groups: [special, wikimedia]
+        apiurl: 'https://wikimania2013.wikimedia.org/w/api.php'
+    wikimania2014wiki:
+        siteid: wikimania2014wiki
+        name: Wikipedia
+        groups: [special, wikimedia]
+        apiurl: 'https://wikimania2014.wikimedia.org/w/api.php'
+    wikimania2015wiki:
+        siteid: wikimania2015wiki
+        name: Wikipedia
+        groups: [special, wikimedia]
+        apiurl: 'https://wikimania2015.wikimedia.org/w/api.php'
+    wikimania2016wiki:
+        siteid: wikimania2016wiki
+        name: Wikipedia
+        groups: [special, wikimedia]
+        apiurl: 'https://wikimania2016.wikimedia.org/w/api.php'
+    wikimania2017wiki:
+        siteid: wikimania2017wiki
+        name: Wikipedia
+        groups: [special, wikimedia]
+        apiurl: 'https://wikimania2017.wikimedia.org/w/api.php'
+    wikimaniateamwiki:
+        siteid: wikimaniateamwiki
+        name: WikimaniaTeam
+        groups: [special, wikimedia]
+        apiurl: 'https://wikimaniateam.wikimedia.org/w/api.php'
+    zerowiki:
+        siteid: zerowiki
+        name: Wikipedia
+        groups: [special, wikimedia]
+        apiurl: 'https://zero.wikimedia.org/w/api.php'

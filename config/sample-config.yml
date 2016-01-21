@@ -1,5 +1,4 @@
-wikis:
-  wikidatawiki:
-    api-path: 'https://www.wikidata.org/w/api.php'
-    username: 'user'
-    password: 'pass'
+sites:
+  path: '/home/user/sites.yaml'
+users:
+  path: '/home/user/wikibot-users.yaml'
