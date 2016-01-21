@@ -18,9 +18,9 @@
     "mediawiki/sites": "dev-master",
     "symfony/console": "~2.5",
     "symfony/debug": "~2.5",
+    "symfony/yaml": "~2.5",
     "silex/silex": "~1.2",
     "knplabs/console-service-provider": "~1.0",
-    "deralex/yaml-config-service-provider": "~1.0",
     "twig/twig": "~1.18",
     "monolog/monolog": "^1.15"
   },

@@ -4,7 +4,7 @@ namespace Wikibot\Console;
 
 use Filbertkm\Http\HttpClient;
 use MediaWiki\Sites\Console\Commands\ImportSitesCommand;
-use MediaWiki\Sites\Lookup\JsonSiteLookup;
+use MediaWiki\Sites\Lookup\YamlSiteLookup;
 use Wikibot\ApiClientFactory;
 use Wikibot\Config;
 use Symfony\Component\Yaml\Yaml;
@@ -40,6 +40,7 @@ class CommandRegistry {
 		$command = new ImportSitesCommand();
 		$command->setServices(
 			$this->httpClient,
+			'https://meta.wikimedia.org/w/api.php',
 			$sites['path']
 		);
 
@@ -69,7 +70,7 @@ class CommandRegistry {
 		$users = Yaml::parse( file_get_contents( $usersConfig['path'] ) );
 
 		$sites = $this->config->get( 'sites' );
-		$siteLookup = new JsonSiteLookup( $sites['path'] );
+		$siteLookup = new YamlSiteLookup( $sites['path'] );
 
 		foreach ( $apiCommandClasses as $apiCommandClass ) {
 			$command = new $apiCommandClass();
