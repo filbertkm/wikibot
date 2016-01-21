@@ -24,11 +24,19 @@ class AddStatementCommand extends Command {
 
 	protected function configure() {
 		$this->setName( 'add-statement' )
-			->setDescription( 'Add a statement' );
+			->setDescription( 'Add a statement' )
+			->addArgument(
+				'wiki',
+				InputArgument::REQUIRED,
+				'Wiki ID'
+			);
 	}
 
 	protected function execute( InputInterface $input, OutputInterface $output ) {
-		$apiClient = $this->apiClientFactory->newApiClient( 'devrepo' );
+		$apiClient = $this->apiClientFactory->newApiClient(
+			$input->getArgument( 'wiki' )
+		);
+
 		$wikibaseClient = new WikibaseClient( $apiClient );
 
 		$entityId = 'Q888';
