@@ -18,19 +18,34 @@ class SetLabelCommand extends Command {
 
 	protected function configure() {
 		$this->setName( 'set-label' )
-			->setDescription( 'Set a label' );
+			->setDescription( 'Set a label' )
+			->addArgument(
+				'id',
+				InputArgument::REQUIRED,
+				'Entity ID'
+			)
+			->addArgument(
+				'label',
+				InputArgument::REQUIRED,
+				'Label'
+			)
+			->addArgument(
+				'baserev',
+				InputArgument::REQUIRED,
+				'Baserev'
+			);
 	}
 
 	protected function execute( InputInterface $input, OutputInterface $output ) {
-		$apiClient = $this->apiClientFactory->newApiClient( 'devrepo' );
+		$apiClient = $this->apiClientFactory->newApiClient( 'testwikidatawiki' );
 
 		$params = array(
 			'action' => 'wbsetlabel',
-			'id' => 'P357',
-			'value' => 'título',
-			'language' => 'es',
-			'baserevid' => 222076986,
-			'summary' => 'debugging T102148'
+			'id' => $input->getArgument( 'id' ),
+			'value' => $input->getArgument( 'label' ),
+			'language' => 'en-ca',
+			'baserevid' => $input->getArgument( 'baserev' ),
+//			'summary' => 'debugging T102148'
 		);
 
 		$apiClient->login();
