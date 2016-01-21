@@ -30,14 +30,14 @@ class SetLabelCommand extends Command {
 				'Entity ID'
 			)
 			->addArgument(
+				'lang',
+				InputArgument::REQUIRED,
+				'Language code'
+			)
+			->addArgument(
 				'label',
 				InputArgument::REQUIRED,
 				'Label'
-			)
-			->addArgument(
-				'baserev',
-				InputArgument::REQUIRED,
-				'Baserev'
 			);
 	}
 
@@ -46,16 +46,34 @@ class SetLabelCommand extends Command {
 			$input->getArgument( 'wiki' )
 		);
 
+		$apiClient->login();
+
+		$id = $input->getArgument( 'id' );
+
 		$params = array(
-			'action' => 'wbsetlabel',
-			'id' => $input->getArgument( 'id' ),
-			'value' => $input->getArgument( 'label' ),
-			'language' => 'en',
-			'baserevid' => $input->getArgument( 'baserev' )
+			'action' => 'wbgetentities',
+			'ids' => $id
 		);
 
-		$apiClient->login();
+		$response = $apiClient->get( $params );
+
+		if ( !isset( $response['entities'][$id]['lastrevid'] ) ) {
+			$output->writeln( 'ERROR: Entity not found' );
+			$apiClient->logout();
+
+			return;
+		}
+
+		$params = array(
+			'action' => 'wbsetlabel',
+			'id' => $id,
+			'value' => $input->getArgument( 'label' ),
+			'language' => $input->getArgument( 'lang' ),
+			'baserevid' => $response['entities'][$id]['lastrevid']
+		);
+
 		$response = $apiClient->post( $params );
+
 		$apiClient->logout();
 
 		var_export( $response );
