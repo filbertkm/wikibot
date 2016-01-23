@@ -33,7 +33,9 @@ class CategoryMembersCommand extends Command {
 	}
 
 	protected function execute( InputInterface $input, OutputInterface $output ) {
-		$apiClient = $this->apiClientFactory->newApiClient( $input->getArgument( 'wiki' ) );
+		$wikiId = $input->getArgument( 'wiki' );
+
+		$apiClient = $this->apiClientFactory->newApiClient( $wikiId );
 		$apiClient->login();
 
 		$params = array(
@@ -50,8 +52,14 @@ class CategoryMembersCommand extends Command {
 		$pages = $response['query']['pages'];
 		$pageIds = array();
 
-		foreach ( $pages as $page ) {
-			$pageIds[] = $page['pageid'];
+		foreach ( $pages as $pageData ) {
+			$page = new Page( $pageData['title'], $pageData['ns'], $wikiId, $pageData['pageid'] );
+
+			if ( isset( $pageData['pageprops']['wikibase_item'] ) ) {
+				$page->setItemId( $pageData['pageprops']['wikibase_item'] );
+			}
+
+			$pages[] = $page;
 		}
 
 		var_export( $pages );

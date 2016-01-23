@@ -25,6 +25,11 @@ class Page {
 	private $pageId;
 
 	/**
+	 * @var string|null
+	 */
+	private $itemId = null;
+
+	/**
 	 * @param string $titleText
 	 * @param int $namespace
 	 * @param string $wikiId
@@ -63,6 +68,20 @@ class Page {
 	 */
 	public function getPageId() {
 		return $this->pageId;
+	}
+
+	/**
+	 * @param string
+	 */
+	public function setItemId( $itemId ) {
+		$this->itemId = $itemId;
+	}
+
+	/**
+	 * @return string|null
+	 */
+	public function getItemId() {
+		return $this->itemId;
 	}
 
 }
