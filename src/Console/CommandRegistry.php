@@ -5,18 +5,31 @@ namespace Wikibot\Console;
 use Filbertkm\Http\HttpClient;
 use MediaWiki\Sites\Console\Commands\ImportSitesCommand;
 use MediaWiki\Sites\Lookup\YamlSiteLookup;
-use Wikibot\ApiClientFactory;
-use Wikibot\Config;
+use Silex\Application;
 use Symfony\Component\Yaml\Yaml;
+use Wikibot\ApiClientFactory;
+use Wikibot\Console\Commands\QueryCommand;
+use Wikibot\Config;
 
 class CommandRegistry {
+
+	/**
+	 * @var Application
+	 */
+	private $app;
+
+	/**
+	 * @var HttpClient
+	 */
+	private $httpClient;
 
 	/**
 	 * @var Config
 	 */
 	private $config;
 
-	public function __construct( HttpClient $httpClient, Config $config ) {
+	public function __construct( Application $app, HttpClient $httpClient, Config $config ) {
+		$this->app = $app;
 		$this->httpClient = $httpClient;
 		$this->config = $config;
 	}
@@ -24,7 +37,8 @@ class CommandRegistry {
 	public function getCommands() {
 		$commands = array(
 			$this->newImportSitesCommand(),
-			$this->newPostCommand()
+			$this->newPostCommand(),
+			$this->newQueryCommand()
 		);
 
 		foreach ( $this->getApiCommands() as $apiCommand ) {
@@ -42,6 +56,15 @@ class CommandRegistry {
 			$this->httpClient,
 			'https://meta.wikimedia.org/w/api.php',
 			$sites['path']
+		);
+
+		return $command;
+	}
+
+	private function newQueryCommand() {
+		$command = new QueryCommand();
+		$command->setServices(
+			$this->app['query-runner']
 		);
 
 		return $command;

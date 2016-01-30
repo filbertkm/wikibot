@@ -11,6 +11,7 @@ use Silex\Provider\TwigServiceProvider;
 use Symfony\Component\Yaml\Yaml;
 use Wikibot\Config;
 use Wikibot\Console\CommandRegistry;
+use Wikibot\Query\QueryServiceProvider;
 
 class Bot {
 
@@ -27,6 +28,7 @@ class Bot {
 		$this->init();
 
 		$this->commandRegistry = new CommandRegistry(
+			$this->app,
 			new HttpClient( 'Wikibot', 'wikibot' ),
 			$this->app['app-config']
 		);
@@ -38,6 +40,16 @@ class Bot {
 		$this->app['app-config'] = $this->app->share( function() {
 			return new Config( Yaml::parse( file_get_contents( __DIR__ . '/../config/config.yml' ) ) );
 		} );
+
+		$this->app->register( new QueryServiceProvider(), array(
+			'query.url' => 'https://query.wikidata.org/bigdata/namespace/wdq/sparql',
+			'query.prefixes' => array(
+				'wikibase' => 'http://wikiba.se/ontology#',
+				'wd' => 'http://www.wikidata.org/entity/',
+				'wdt' => 'http://www.wikidata.org/prop/direct/',
+				'rdfs' => 'http://www.w3.org/2000/01/rdf-schema#'
+			)
+		) );
 
 		$this->app->register( new TwigServiceProvider(), array(
 			'twig.path' => __DIR__ . '/../templates',

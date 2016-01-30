@@ -1,6 +1,9 @@
 <?php
 
-namespace Wikibot;
+namespace Wikibot\Query;
+
+use Asparagus\QueryBuilder;
+use Asparagus\QueryExecuter;
 
 class QueryRunner {
 
@@ -17,8 +20,7 @@ class QueryRunner {
 		$this->queryBuilder->select( '?id' )
 			->where( "?id", "wdt:$propertyId", "wd:$valueId" );
 
-		$queryExecuter = new QueryExecuter( $this->queryUrl );
-		$results = $queryExecuter->execute( $queryBuilder->getSPARQL() );
+		$results = $this->queryExecuter->execute( $this->queryBuilder->getSPARQL() );
 
 		return $this->parseResults( $results );
 	}
