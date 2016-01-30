@@ -28,9 +28,8 @@ class QueryCommand extends Command {
 	}
 
 	protected function execute( InputInterface $input, OutputInterface $output ) {
-		list( $propertyId, $valueId ) = explode( ':', $input->getArgument( 'params' ) );
-
-		$ids = $this->queryRunner->getPropertyEntityIdValueMatches( $propertyId, $valueId );
+		$pairs = explode( ',', $input->getArgument( 'params' ) );
+		$ids = $this->queryRunner->getPropertyEntityIdValueMultiMatches( $pairs );
 
 		var_export( $ids );
 	}
