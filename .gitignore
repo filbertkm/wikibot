@@ -1,5 +1,6 @@
 composer.lock
 /config/config.yml
 /config/wikibot-users.yml
+/data/*
 /log/*
 /vendor

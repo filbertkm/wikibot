@@ -4,24 +4,42 @@ namespace Wikibot\Query;
 
 use Asparagus\QueryBuilder;
 use Asparagus\QueryExecuter;
+use Wikibase\DataModel\Entity\ItemId;
 
 class QueryRunner {
 
-	private $queryBuilder;
-
+	/**
+	 * @var QueryExecuter
+	 */
 	private $queryExecuter;
 
-	public function __construct( array $queryPrefixes, $queryUrl ) {
+	/**
+	 * @var QueryBuilder
+	 */
+	private $queryBuilder;
+
+	public function __construct( QueryExecuter $queryExecuter, array $queryPrefixes ) {
+		$this->queryExecuter = $queryExecuter;
 		$this->queryBuilder = new QueryBuilder( $queryPrefixes );
-		$this->queryExecuter = new QueryExecuter( $queryUrl );
 	}
 
+	/**
+	 * @param string $propertyId
+	 * @param string $valueId
+	 *
+	 * @return ItemId[]
+	 */
 	public function getPropertyEntityIdValueMatches( $propertyId, $valueId ) {
 		$this->selectPair( $propertyId, $valueId );
 
 		return $this->doQuery();
 	}
 
+	/**
+	 * @param string[] $pairs colon separated property-value pairs (e.g. 'P31:Q5')
+	 *
+	 * @return ItemId[]
+	 */
 	public function getPropertyEntityIdValueMultiMatches( array $pairs ) {
 		$length = count( $pairs );
 
@@ -57,11 +75,11 @@ class QueryRunner {
 			preg_match( $pattern, $result['id']['value'], $matches );
 
 			if ( isset( $matches[1] ) ) {
-				$ids[] = $matches[1];
+				$ids[] = new ItemId( $matches[1] );
 			}
 		}
 
-		return $ids;
+		return new QueryResult( $ids );
 	}
 
 }

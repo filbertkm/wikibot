@@ -2,6 +2,7 @@
 
 namespace Wikibot\Query;
 
+use Asparagus\QueryExecuter;
 use Silex\Application;
 use Silex\ServiceProviderInterface;
 
@@ -10,8 +11,8 @@ class QueryServiceProvider implements ServiceProviderInterface {
 	public function register( Application $app ) {
 		$app['query-runner'] = $app->share( function() use ( $app ) {
 			return new QueryRunner(
-				$app['query.prefixes'],
-				$app['query.url']
+				new QueryExecuter( $app['query.url'] ),
+				$app['query.prefixes']
 			);
 		} );
 	}

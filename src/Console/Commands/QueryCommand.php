@@ -5,8 +5,10 @@ namespace Wikibot\Console\Commands;
 use Knp\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use Wikibot\MediaWiki\Page;
+use Wikibot\Query\QueryCsvPrinter;
 use Wikibot\Query\QueryRunner;
 
 class QueryCommand extends Command {
@@ -20,6 +22,12 @@ class QueryCommand extends Command {
 				'params',
 				InputArgument::REQUIRED,
 				'Params'
+			)
+			->addOption(
+				'output',
+				null,
+				InputOption::VALUE_REQUIRED,
+				'Output file'
 			);
 	}
 
@@ -29,9 +37,13 @@ class QueryCommand extends Command {
 
 	protected function execute( InputInterface $input, OutputInterface $output ) {
 		$pairs = explode( ',', $input->getArgument( 'params' ) );
-		$ids = $this->queryRunner->getPropertyEntityIdValueMultiMatches( $pairs );
+		$result = $this->queryRunner->getPropertyEntityIdValueMultiMatches( $pairs );
 
-		var_export( $ids );
+		if ( $outfile = $input->getOption( 'output' ) ) {
+			$queryPrinter = new QueryCsvPrinter( $outfile );
+			$queryPrinter->output( $result );
+		}
+
 	}
 
 }

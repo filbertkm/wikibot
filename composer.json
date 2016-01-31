@@ -15,14 +15,15 @@
   "require": {
     "benestar/asparagus": "~0.4",
     "filbertkm/httplib": "dev-master",
+    "knplabs/console-service-provider": "~1.0",
     "mediawiki/sites": "dev-master",
+    "monolog/monolog": "^1.15",
+    "silex/silex": "~1.2",
     "symfony/console": "~2.5",
     "symfony/debug": "~2.5",
     "symfony/yaml": "~2.5",
-    "silex/silex": "~1.2",
-    "knplabs/console-service-provider": "~1.0",
     "twig/twig": "~1.18",
-    "monolog/monolog": "^1.15"
+    "wikibase/data-model": "~4.4"
   },
   "minimum-stability": "dev",
   "autoload": {
