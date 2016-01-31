@@ -28,6 +28,11 @@ class CommandRegistry {
 	 */
 	private $config;
 
+	/**
+	 * @var ApiClientFactory|null
+	 */
+	private $apiClientFactory = null;
+
 	public function __construct( Application $app, HttpClient $httpClient, Config $config ) {
 		$this->app = $app;
 		$this->httpClient = $httpClient;
@@ -78,24 +83,45 @@ class CommandRegistry {
 		$apiCommandClasses = array(
 			'\Wikibot\Console\Commands\CategoryMembersCommand',
 			'\Wikibot\Console\Commands\SetLabelCommand',
+			'\Wikibot\Console\Commands\ViewEntityCommand'
 		);
 
+		foreach ( $apiCommandClasses as $apiCommandClass ) {
+			$command = new $apiCommandClass();
+			$command->setServices( $this->getApiClientFactory() );
+
+			$commands[] = $command;
+		}
+
+		return $commands;
+	}
+
+	/**
+	 * @return ApiClientFactory
+	 */
+	private function getApiClientFactory() {
+		if ( $this->apiClientFactory === null ) {
+			$this->apiClientFactory = $this->newApiClientFactory();
+		}
+
+		return $this->apiClientFactory;
+	}
+
+	/**
+	 * @return ApiClientFactory
+	 */
+	private function newApiClientFactory() {
 		$usersConfig = $this->config->get( 'users' );
 		$users = Yaml::parse( file_get_contents( $usersConfig['path'] ) );
 
 		$sites = $this->config->get( 'sites' );
 		$siteLookup = new YamlSiteLookup( $sites['path'] );
 
-		foreach ( $apiCommandClasses as $apiCommandClass ) {
-			$command = new $apiCommandClass();
-			$command->setServices(
-				new ApiClientFactory( $this->httpClient, $siteLookup, $users )
-			);
-
-			$commands[] = $command;
-		}
-
-		return $commands;
+		return new ApiClientFactory(
+			$this->httpClient,
+			new YamlSiteLookup( $sites['path'] ),
+			$users
+		);
 	}
 
 }

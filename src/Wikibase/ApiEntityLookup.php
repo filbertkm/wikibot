@@ -2,6 +2,9 @@
 
 namespace Wikibot\Wikibase;
 
+use Wikibot\ApiClient;
+use Wikibot\Wikibase\DataModel\Item;
+
 class ApiEntityLookup {
 
 	/**
@@ -32,7 +35,6 @@ class ApiEntityLookup {
 				return Item::newFromArray( $value );
 			}
 		}
-
 	}
 
 }
