@@ -23,6 +23,11 @@ class ApiClient {
 	private $users;
 
 	/**
+	 * @var array
+	 */
+	private $user;
+
+	/**
 	 * @var string
 	 */
 	private $siteId;
@@ -89,12 +94,12 @@ class ApiClient {
 		}
 
 		$siteId = $this->siteId;
-		$user = $this->users['users'][$siteId];
+		$this->user = $this->users['users'][$siteId];
 
 		$params = array(
 			'action' => 'login',
-			'lgname' => $user['user'],
-			'lgpassword' => $user['password']
+			'lgname' => $this->user['user'],
+			'lgpassword' => $this->user['password']
 		);
 
 		if ( $lgToken !== null ) {
@@ -152,9 +157,15 @@ class ApiClient {
 	 * @return string[]
 	 */
 	private function getDefaultParams() {
-		return array(
+		$params = array(
 			'format' => 'json'
 		);
+
+		if ( isset( $this->user ) && $this->user['bot'] === true ) {
+			$params['bot'] = 1;
+		}
+
+		return $params;
 	}
 
 	/**

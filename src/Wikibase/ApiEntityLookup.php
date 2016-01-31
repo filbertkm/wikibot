@@ -2,6 +2,9 @@
 
 namespace Wikibot\Wikibase;
 
+use Wikibot\ApiClient;
+use Wikibot\Wikibase\DataModel\Item;
+
 class ApiEntityLookup {
 
 	/**
@@ -29,10 +32,11 @@ class ApiEntityLookup {
 
 		foreach( $data['entities'] as $key => $value ) {
 			if ( $key === $entityId ) {
-				return Item::newFromArray( $value );
+				$item = Item::newFromArray( $value );
+
+				return new EntityRevision( $item, $value['lastrevid'] );
 			}
 		}
-
 	}
 
 }
