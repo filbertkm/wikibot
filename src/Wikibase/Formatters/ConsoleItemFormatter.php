@@ -22,7 +22,7 @@ class ConsoleItemFormatter implements ItemFormatter {
 		$lines = array();
 
 		if ( $item->hasId() ) {
-			$lines[] = $item->getId() . ":\n";
+			$lines[] = $item->getId() . ":";
 		}
 
 		$lines['label'] = $this->formatTermList( $item->getLabels(), 'label', $langCode );

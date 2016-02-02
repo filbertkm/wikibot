@@ -25,6 +25,11 @@ class FixP131Command extends Command {
 				'Item list file'
 			)
 			->addArgument(
+				'to-remove',
+				InputArgument::REQUIRED,
+				'Value to remove'
+			)
+			->addArgument(
 				'wiki',
 				InputArgument::OPTIONAL,
 				'Wiki id',
@@ -68,7 +73,7 @@ class FixP131Command extends Command {
 			foreach ( $statements as $statement ) {
 				$valueId = $statement->getMainSnak()->getDataValue()->getEntityId();
 
-				if ( $valueId === 'Q1384' ) {
+				if ( $valueId === $input->getArgument( 'to-remove' ) ) {
 					$statementGuid = $statement->getGuid();
 				}
 
@@ -76,20 +81,18 @@ class FixP131Command extends Command {
 			}
 
 			if ( isset( $statementGuid ) ) {
-				$output->writeln( $text );
-				$output->writeln( "\nP131:\n" );
-				$output->writeln( implode( "\n", $values ) . "\n" );
-
+				$output->writeln( "\n$text" );
+/*
 				$helper = $this->getHelper( 'question' );
-				$question = new ConfirmationQuestion( '<question>Remove Q1384 value?</question> ', false );
+				$question = new ConfirmationQuestion( '<question>Remove value?</question> ', false );
 
 				if ( !$helper->ask( $input, $output, $question ) ) {
-					return;
+					continue;
 				}
-
+*/
 				$res = $statementRemover->remove( $statementGuid, $entityRevision->getRevisionId() );
 
-				var_export( $res );
+				sleep( 2 );
 			}
 		}
 	}

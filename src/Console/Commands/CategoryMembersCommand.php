@@ -21,6 +21,11 @@ class CategoryMembersCommand extends Command {
 		$this->setName( 'cat-members' )
 			->setDescription( 'Category members' )
 			->addArgument(
+				'output',
+				InputArgument::REQUIRED,
+				'Output file'
+			)
+			->addArgument(
 				'wiki',
 				InputArgument::REQUIRED,
 				'Wiki'
@@ -51,18 +56,20 @@ class CategoryMembersCommand extends Command {
 
 		$pages = $response['query']['pages'];
 		$pageIds = array();
+		$itemIds = array();
 
 		foreach ( $pages as $pageData ) {
 			$page = new Page( $pageData['title'], $pageData['ns'], $wikiId, $pageData['pageid'] );
 
 			if ( isset( $pageData['pageprops']['wikibase_item'] ) ) {
 				$page->setItemId( $pageData['pageprops']['wikibase_item'] );
+				$itemIds[] = $pageData['pageprops']['wikibase_item'];
 			}
 
 			$pages[] = $page;
 		}
 
-		var_export( $pages );
+		file_put_contents( $input->getArgument( 'output' ), implode( "\n", $itemIds ) );
 	}
 
 }

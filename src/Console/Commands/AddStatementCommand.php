@@ -3,10 +3,12 @@
 namespace Wikibot\Console\Commands;
 
 use Knp\Command\Command;
+use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Wikibot\ApiClientFactory;
-use Wikibot\WikibaseClient;
+use Wikibot\Wikibase\ApiEntityLookup;
+use Wikibot\Wikibase\StatementCreator;
 
 class AddStatementCommand extends Command {
 
@@ -29,6 +31,21 @@ class AddStatementCommand extends Command {
 				'wiki',
 				InputArgument::REQUIRED,
 				'Wiki ID'
+			)
+			->addArgument(
+				'item',
+				InputArgument::REQUIRED,
+				'Item ID'
+			)
+			->addArgument(
+				'year',
+				InputArgument::REQUIRED,
+				'Year'
+			)
+			->addArgument(
+				'shadow',
+				InputArgument::REQUIRED,
+				'saw shadow?'
 			);
 	}
 
@@ -37,15 +54,26 @@ class AddStatementCommand extends Command {
 			$input->getArgument( 'wiki' )
 		);
 
-		$wikibaseClient = new WikibaseClient( $apiClient );
+		$apiEntityLookup = new ApiEntityLookup( $apiClient );
 
-		$entityId = 'Q888';
-		$propertyId = 'P853';
-		$value = json_decode( '{"entity-type":"item","numeric-id":4903}' );
+		$itemId = $input->getArgument( 'item' );
+		$entityRevision = $apiEntityLookup->getEntity( $itemId );
 
-		$response = $wikibaseClient->createClaim( $entityId, $propertyId, $value );
+		$apiClient->login();
+		$statementCreator = new StatementCreator( $apiClient );
 
-		echo "post response\n";
+		$valueId = $input->getArgument( 'shadow' ) === 'no' ? 'Q22443758' : 'Q22443759';
+		$propertyId = 'P793';
+		$year = $input->getArgument( 'year' );
+
+		$response = $statementCreator->create(
+			$itemId,
+			$propertyId,
+			$valueId,
+			$year,
+			$entityRevision->getRevisionId()
+		);
+
 		var_export( $response );
 	}
 
