@@ -66,11 +66,13 @@ class BatchAddStatementCommand extends Command {
 		$itemIds = array_map( 'trim', file( $input->getArgument( 'file' ) ) );
 
 		foreach ( $itemIds as $itemId ) {
-			$this->addStatement(
+			$response = $this->addStatement(
 				$itemId,
 				$input->getArgument( 'property' ),
 				$input->getArgument( 'value' )
 			);
+
+			$this->report( $output, $response, $itemId );
 
 			sleep( 2 );
 		}
@@ -91,11 +93,17 @@ class BatchAddStatementCommand extends Command {
 			'P143' => array( $snakBuilder->getEntityIdValueSnak( 'P143', 'Q328' ) )
 		) );
 
-		$response = $statementCreator->create(
+		return $statementCreator->create(
 			$entityRevision->getRevisionId()
 		);
+	}
 
-		var_export( $response );
+	private function report( $output, $response, $itemId ) {
+		if ( isset( $response['success' ] ) ) {
+			$output->writeln( "Added statement to $itemId" );
+		} else {
+			$output->writeln( "Failed to add statement to $itemId" );
+		}
 	}
 
 }

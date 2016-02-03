@@ -79,7 +79,11 @@ class AddStatementCommand extends Command {
 			$entityRevision->getRevisionId()
 		);
 
-		var_export( $response );
+		if ( isset( $response['success' ] ) ) {
+			$output->writeln( "Added statement to $itemId" );
+		} else {
+			$output->writeln( "Failed to add statement to $itemId" );
+		}
 	}
 
 }
