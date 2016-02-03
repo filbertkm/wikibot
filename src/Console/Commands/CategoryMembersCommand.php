@@ -46,7 +46,9 @@ class CategoryMembersCommand extends Command {
 		$params = array(
 			'action' => 'query',
 			'gcmtitle' => 'Category:' . $input->getArgument( 'category' ),
+			'gcmnamespace' => 0,
 			'gcmlimit' => 500,
+			'gcmtype' => 'page',
 			'generator' => 'categorymembers',
 			'prop' => 'pageprops',
 			'ppprop' => 'wikibase_item'
