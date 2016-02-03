@@ -6,17 +6,23 @@ use Knp\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
+use Wikibot\ApiClient;
 use Wikibot\ApiClientFactory;
 use Wikibot\Wikibase\ApiEntityLookup;
 use Wikibot\Wikibase\SnakBuilder;
 use Wikibot\Wikibase\StatementCreator;
 
-class AddStatementCommand extends Command {
+class BatchAddStatementCommand extends Command {
 
 	/**
 	 * @var ApiClientFactory
 	 */
 	private $apiClientFactory;
+
+	/**
+	 * @var ApiClient
+	 */
+	private $apiClient;
 
 	/**
 	 * @param ApiClientFactory $apiClientFactory
@@ -26,7 +32,7 @@ class AddStatementCommand extends Command {
 	}
 
 	protected function configure() {
-		$this->setName( 'add-statement' )
+		$this->setName( 'batch-add-statement' )
 			->setDescription( 'Add a statement' )
 			->addArgument(
 				'wiki',
@@ -34,9 +40,9 @@ class AddStatementCommand extends Command {
 				'Wiki ID'
 			)
 			->addArgument(
-				'item',
+				'file',
 				InputArgument::REQUIRED,
-				'Item ID'
+				'File'
 			)
 			->addArgument(
 				'property',
@@ -51,25 +57,35 @@ class AddStatementCommand extends Command {
 	}
 
 	protected function execute( InputInterface $input, OutputInterface $output ) {
-		$apiClient = $this->apiClientFactory->newApiClient(
+		$this->apiClient = $this->apiClientFactory->newApiClient(
 			$input->getArgument( 'wiki' )
 		);
 
-		$apiEntityLookup = new ApiEntityLookup( $apiClient );
+		$this->apiClient->login();
 
-		$itemId = $input->getArgument( 'item' );
+		$itemIds = array_map( 'trim', file( $input->getArgument( 'file' ) ) );
+
+		foreach ( $itemIds as $itemId ) {
+			$this->addStatement(
+				$itemId,
+				$input->getArgument( 'property' ),
+				$input->getArgument( 'value' )
+			);
+
+			sleep( 2 );
+		}
+
+		$this->apiClient->logout();
+	}
+
+	private function addStatement( $itemId, $propertyId, $value ) {
+		$apiEntityLookup = new ApiEntityLookup( $this->apiClient );
 		$entityRevision = $apiEntityLookup->getEntity( $itemId );
 
-		$apiClient->login();
-
 		$snakBuilder = new SnakBuilder();
-		$statementCreator = new StatementCreator( $apiClient );
+		$statementCreator = new StatementCreator( $this->apiClient );
 
-		$statementCreator->newStatement(
-			$input->getArgument( 'item' ),
-			$input->getArgument( 'property' ),
-			$input->getArgument( 'value' )
-		);
+		$statementCreator->newStatement( $itemId, $propertyId, $value );
 
 		$statementCreator->addReference( array(
 			'P143' => array( $snakBuilder->getEntityIdValueSnak( 'P143', 'Q328' ) )

@@ -12,131 +12,60 @@ class StatementCreator {
 	private $apiClient;
 
 	/**
+	 * @var SnakBuilder
+	 */
+	private $snakBuilder;
+
+	/**
+	 * @var array
+	 */
+	private $data = array();
+
+	/**
 	 * @param ApiClient $apiClient
 	 */
 	public function __construct( ApiClient $apiClient ) {
 		$this->apiClient = $apiClient;
+		$this->snakBuilder = new SnakBuilder();
 	}
 
 	/**
 	 * @param string $entityId
 	 * @param string $propertyId
 	 * @param string $valueId
-	 * @param int $year
-	 * @param int $baseRevId
 	 */
-	public function create( $entityId, $propertyId, $valueId, $year, $baseRevId ) {
-		$json = json_encode( $this->buildData( $entityId, $propertyId, $valueId, $year ) );
+	public function newStatement( $entityId, $propertyId, $valueId ) {
+		$this->data = array(
+			'id' => GuidGenerator::newStatmentGuid( $entityId ),
+			'type' => 'statement',
+			'mainsnak' => $this->snakBuilder->getEntityIdValueSnak( $propertyId, $valueId ),
+			'qualifiers' => array(),
+			'references' => array()
+		);
+	}
 
+	public function addQualifier( $propertyId, $snakArray ) {
+		$this->data['qualifiers'][$propertyId][] = $snakArray;
+	}
+
+	public function addReference( array $snaksArray ) {
+		$this->data['references'][] = array(
+			'snaks' => $snaksArray
+		);
+	}
+
+	public function create( $baseRevId ) {
 		$params = array(
 			'action' => 'wbsetclaim',
-			'claim' => $json,
+			'claim' => json_encode( $this->data ),
 			'baserevid' => $baseRevId
 		);
 
 		return $this->apiClient->post( $params );
 	}
 
-	private function buildData( $entityId, $propertyId, $valueId, $year ) {
-		return array(
-			'id' => GuidGenerator::newStatmentGuid( $entityId ),
-			'type' => 'statement',
-			'mainsnak' => array(
-				'snaktype' => 'value',
-				'property' => $propertyId,
-				'datavalue' => array(
-					'value' => array(
-						'entity-type' => 'item',
-						'numeric-id' => ltrim( $valueId, 'Q' )
-					),
-					'type' => 'wikibase-entityid'
-				)
-			),
-			'qualifiers' => array(
-				'P585' => array(
-					array(
-						'snaktype' => 'value',
-						'property' => 'P585',
-						'datavalue' => array(
-							'value' => array(
-								'time' => "+$year-02-02T00:00:00Z",
-								'timezone' => 0,
-								'before' => 0,
-								'after' => 0,
-								'precision' => 11,
-								'calendarmodel' => 'http://www.wikidata.org/entity/Q1985727'
-							),
-							'type' => 'time'
-						),
-						'datatype' => 'time'
-					)
-				)
-			),
-			'references' => array(
-				array(
-					'snaks' => array(
-						'P1476' => array(
-							array(
-								'snaktype' => 'value',
-								'property' => 'P1476',
-								'datavalue' => array(
-									'value' => array(
-										'text' => 'Groundhog Day',
-										'language' => 'en'
-									),
-									'type' => 'monolingualtext'
-								),
-								'datatype' => 'monolingualtext'
-							)
-						),
-						'P123' => array(
-							array(
-								'snaktype' => 'value',
-								'property' => 'P123',
-								'datavalue' => array(
-									'value' => array(
-										'entity-type' => 'item',
-										'numeric-id' => 21015842
-									),
-									'type' => 'wikibase-entityid'
-								),
-								'datatype' => 'wikibase-item'
-							)
-						),
-						'P854' => array(
-							array(
-								'snaktype' => 'value',
-								'property' => 'P854',
-								'datavalue' => array(
-									'value' => 'https://www.ncdc.noaa.gov/customer-support/education-resources/groundhog-day',
-									'type' => 'string'
-								),
-								'datatype' => 'url'
-							)
-						),
-						'P813' => array(
-							array(
-								'snaktype' => 'value',
-								'property' => 'P813',
-								'datavalue' => array(
-									'value' => array(
-										'time' => '+2016-02-02T00:00:00Z',
-										'timezone' => 0,
-										'before' => 0,
-										'after' => 0,
-										'precision' => 11,
-										'calendarmodel' => 'http://www.wikidata.org/entity/Q1985727'
-									),
-									'type' => 'time'
-								),
-								'datatype' => 'time'
-							)
-						)
-					)
-				),
-			),
-			'rank' => 'normal'
-		);
+	public function getData() {
+		return $this->data;
 	}
 
 }

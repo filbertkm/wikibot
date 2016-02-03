@@ -81,7 +81,8 @@ class CommandRegistry {
 
 	private function getApiCommands() {
 		$apiCommandClasses = array(
-//			'\Wikibot\Console\Commands\AddStatementCommand',
+			'\Wikibot\Console\Commands\AddStatementCommand',
+			'\Wikibot\Console\Commands\BatchAddStatementCommand',
 			'\Wikibot\Console\Commands\CategoryMembersCommand',
 			'\Wikibot\Console\Commands\FixP131Command',
 			'\Wikibot\Console\Commands\SetLabelCommand',

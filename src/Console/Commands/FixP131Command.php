@@ -67,7 +67,21 @@ class FixP131Command extends Command {
 				array( 'label', 'description' )
 			);
 
-			$statements = $item->getStatementGroupList()->getStatementGroup( 'P131' );
+			try {
+				$statements = $item->getStatementGroupList()->getStatementGroup( 'P131' );
+			} catch ( \Exception $ex ) {
+				$error = "No P131 statements found on $id";
+				$labels = $item->getLabels();
+
+				if ( $labels->hasTerm( 'en' ) ) {
+					$error .= " (" . $labels->getTerm( 'en' ) . ")";
+				}
+
+				$output->writeln( $error );
+
+				continue;
+			}
+
 			$values = array();
 
 			foreach ( $statements as $statement ) {
