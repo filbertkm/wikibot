@@ -86,6 +86,7 @@ class CommandRegistry {
 			'\Wikibot\Console\Commands\CategoryMembersCommand',
 			'\Wikibot\Console\Commands\FixP131Command',
 			'\Wikibot\Console\Commands\SetLabelCommand',
+			'\Wikibot\Console\Commands\ValueFinderCommand',
 			'\Wikibot\Console\Commands\ViewEntityCommand'
 		);
 
