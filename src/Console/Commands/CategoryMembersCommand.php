@@ -7,11 +7,12 @@ use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Wikibot\ApiClientFactory;
-use Wikibot\MediaWiki\Page;
 
 class CategoryMembersCommand extends Command {
 
 	private $apiClientFactory;
+
+	private $depth = 0;
 
 	public function setServices( ApiClientFactory $apiClientFactory ) {
 		$this->apiClientFactory = $apiClientFactory;
@@ -48,30 +49,29 @@ class CategoryMembersCommand extends Command {
 			'gcmtitle' => 'Category:' . $input->getArgument( 'category' ),
 			'gcmnamespace' => 0,
 			'gcmlimit' => 500,
-			'gcmtype' => 'page',
+			'gcmtype' => 'page|subcat',
 			'generator' => 'categorymembers',
 			'prop' => 'pageprops',
 			'ppprop' => 'wikibase_item'
 		);
 
 		$response = $apiClient->get( $params );
-
 		$pages = $response['query']['pages'];
-		$pageIds = array();
+
 		$itemIds = array();
+		$subcats = array();
 
 		foreach ( $pages as $pageData ) {
-			$page = new Page( $pageData['title'], $pageData['ns'], $wikiId, $pageData['pageid'] );
-
-			if ( isset( $pageData['pageprops']['wikibase_item'] ) ) {
-				$page->setItemId( $pageData['pageprops']['wikibase_item'] );
+			if ( $pageData['ns'] === 14 ) {
+				$subcats[] = $pageData['title'];
+			} else if ( isset( $pageData['pageprops']['wikibase_item'] ) ) {
 				$itemIds[] = $pageData['pageprops']['wikibase_item'];
 			}
-
-			$pages[] = $page;
 		}
 
 		file_put_contents( $input->getArgument( 'output' ), implode( "\n", $itemIds ) );
 	}
+
+
 
 }

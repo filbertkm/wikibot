@@ -6,7 +6,6 @@ use Knp\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use Symfony\Component\Console\Question\ConfirmationQuestion;
 use Wikibot\ApiClientFactory;
 use Wikibot\Wikibase\ApiEntityLookup;
 use Wikibot\Wikibase\Formatters\ConsoleItemFormatter;
@@ -60,13 +59,6 @@ class FixP131Command extends Command {
 			$entityRevision = $apiEntityLookup->getEntity( $id );
 			$item = $entityRevision->getItem();
 
-			$itemFormatter = new ConsoleItemFormatter();
-			$text = $itemFormatter->format(
-				$item,
-				$input->getArgument( 'lang' ),
-				array( 'label', 'description' )
-			);
-
 			try {
 				$statements = $item->getStatementGroupList()->getStatementGroup( 'P131' );
 			} catch ( \Exception $ex ) {
@@ -95,17 +87,14 @@ class FixP131Command extends Command {
 			}
 
 			if ( isset( $statementGuid ) ) {
-				$output->writeln( "\n$text" );
-/*
-				$helper = $this->getHelper( 'question' );
-				$question = new ConfirmationQuestion( '<question>Remove value?</question> ', false );
-
-				if ( !$helper->ask( $input, $output, $question ) ) {
-					continue;
-				}
-*/
 				$res = $statementRemover->remove( $statementGuid, $entityRevision->getRevisionId() );
+				$text = "Removed statement from $id";
 
+				if ( $item->getLabels()->hasTerm( 'en' ) ) {
+					$text .= " (" . $item->getLabels()->getTerm( 'en' ) . ")";
+				}
+
+				$output->writeln( $text );
 				sleep( 2 );
 			}
 		}

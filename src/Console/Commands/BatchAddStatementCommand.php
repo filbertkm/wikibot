@@ -62,14 +62,26 @@ class BatchAddStatementCommand extends Command {
 		);
 
 		$this->apiClient->login();
+		$apiEntityLookup = new ApiEntityLookup( $this->apiClient );
 
 		$itemIds = array_map( 'trim', file( $input->getArgument( 'file' ) ) );
 
 		foreach ( $itemIds as $itemId ) {
+			$propertyId = $input->getArgument( 'property' );
+
+			$entityRevision = $apiEntityLookup->getEntity( $itemId );
+			$item = $entityRevision->getItem();
+
+			if ( $item->getStatementGroupList()->hasStatementGroup( $propertyId ) ) {
+				$output->writeln( "$itemId already has statement(s) for $propertyId" );
+				continue;
+			}
+
 			$response = $this->addStatement(
 				$itemId,
-				$input->getArgument( 'property' ),
-				$input->getArgument( 'value' )
+				$propertyId,
+				$input->getArgument( 'value' ),
+				$entityRevision->getRevisionId()
 			);
 
 			$this->report( $output, $response, $itemId );
@@ -80,7 +92,7 @@ class BatchAddStatementCommand extends Command {
 		$this->apiClient->logout();
 	}
 
-	private function addStatement( $itemId, $propertyId, $value ) {
+	private function addStatement( $itemId, $propertyId, $value, $revisionId ) {
 		$apiEntityLookup = new ApiEntityLookup( $this->apiClient );
 		$entityRevision = $apiEntityLookup->getEntity( $itemId );
 
@@ -93,9 +105,7 @@ class BatchAddStatementCommand extends Command {
 			'P143' => array( $snakBuilder->getEntityIdValueSnak( 'P143', 'Q328' ) )
 		) );
 
-		return $statementCreator->create(
-			$entityRevision->getRevisionId()
-		);
+		return $statementCreator->create( $revisionId );
 	}
 
 	private function report( $output, $response, $itemId ) {
