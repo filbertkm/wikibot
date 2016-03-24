@@ -2,6 +2,7 @@
 
 namespace Wikibot\Console\Commands;
 
+use Asparagus\QueryBuilder;
 use Knp\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
@@ -9,8 +10,11 @@ use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use Wikibot\Query\QueryCsvPrinter;
 use Wikibot\Query\QueryRunner;
+use Wikibot\Query\SparqlBuilder;
 
 class QueryCommand extends Command {
+
+	private $queryBuilder;
 
 	private $queryRunner;
 
@@ -30,13 +34,17 @@ class QueryCommand extends Command {
 			);
 	}
 
-	public function setServices( QueryRunner $queryRunner ) {
+	public function setServices( QueryBuilder $queryBuilder, QueryRunner $queryRunner ) {
+		$this->queryBuilder = $queryBuilder;
 		$this->queryRunner = $queryRunner;
 	}
 
 	protected function execute( InputInterface $input, OutputInterface $output ) {
 		$pairs = explode( ',', $input->getArgument( 'params' ) );
-		$result = $this->queryRunner->getPropertyEntityIdValueMultiMatches( $pairs );
+
+		$sparqlBuilder = new SparqlBuilder( $this->queryBuilder );
+		$query = $sparqlBuilder->getPropertyEntityIdValueMultiMatches( $pairs );
+		$result = $this->queryRunner->doQuery( $query );
 
 		$queryPrinter = new QueryCsvPrinter();
 		$results = $queryPrinter->output( $result );

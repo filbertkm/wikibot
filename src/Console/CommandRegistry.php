@@ -69,6 +69,7 @@ class CommandRegistry {
 	private function newQueryCommand() {
 		$command = new QueryCommand();
 		$command->setServices(
+			$this->app['query-builder'],
 			$this->app['query-runner']
 		);
 
