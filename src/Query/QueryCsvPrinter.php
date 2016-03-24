@@ -6,12 +6,6 @@ use Wikibase\DataModel\Entity\ItemId;
 
 class QueryCsvPrinter {
 
-	private $outfile;
-
-	public function __construct( $outfile ) {
-		$this->outfile = $outfile;
-	}
-
 	public function output( QueryResult $queryResult ) {
 		$itemIds = $queryResult->getItemIds();
 
@@ -21,7 +15,7 @@ class QueryCsvPrinter {
 			$lines[] = $itemId->getSerialization();
 		}
 
-		file_put_contents( $this->outfile, implode( "\n", $lines ) );
+		return implode( "\n", $lines );
 	}
 
 }

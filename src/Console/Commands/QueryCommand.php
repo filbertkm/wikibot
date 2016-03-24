@@ -7,7 +7,6 @@ use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
-use Wikibot\MediaWiki\Page;
 use Wikibot\Query\QueryCsvPrinter;
 use Wikibot\Query\QueryRunner;
 
@@ -39,9 +38,13 @@ class QueryCommand extends Command {
 		$pairs = explode( ',', $input->getArgument( 'params' ) );
 		$result = $this->queryRunner->getPropertyEntityIdValueMultiMatches( $pairs );
 
+		$queryPrinter = new QueryCsvPrinter();
+		$results = $queryPrinter->output( $result );
+
 		if ( $outfile = $input->getOption( 'output' ) ) {
-			$queryPrinter = new QueryCsvPrinter( $outfile );
-			$queryPrinter->output( $result );
+			file_put_contents( $outfile, $results );
+		} else {
+			echo $results . "\n";
 		}
 
 	}
