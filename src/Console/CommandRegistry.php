@@ -8,6 +8,7 @@ use MediaWiki\Sites\Lookup\YamlSiteLookup;
 use Silex\Application;
 use Symfony\Component\Yaml\Yaml;
 use Wikibot\ApiClientFactory;
+use Wikibot\Console\Commands\FlipCoordinatesCommand;
 use Wikibot\Console\Commands\QueryCommand;
 use Wikibot\Config;
 
@@ -41,6 +42,7 @@ class CommandRegistry {
 
 	public function getCommands() {
 		$commands = array(
+			$this->newFlipCoordinatesCommand(),
 			$this->newImportSitesCommand(),
 			$this->newPostCommand(),
 			$this->newQueryCommand()
@@ -69,6 +71,17 @@ class CommandRegistry {
 	private function newQueryCommand() {
 		$command = new QueryCommand();
 		$command->setServices(
+			$this->app['query-builder'],
+			$this->app['query-runner']
+		);
+
+		return $command;
+	}
+
+	private function newFlipCoordinatesCommand() {
+		$command = new FlipCoordinatesCommand();
+		$command->setServices(
+			$this->getApiClientFactory(),
 			$this->app['query-builder'],
 			$this->app['query-runner']
 		);

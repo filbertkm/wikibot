@@ -16,21 +16,14 @@ class SparqlBuilder {
 	}
 
 	/**
-	 * @param string $propertyId
-	 * @param string $valueId
-	 *
 	 * @return QueryBuilder
 	 */
-	public function getPropertyEntityIdValueMatches( $propertyId, $valueId ) {
-		$this->selectPair( $propertyId, $valueId );
-
+	public function getQuery() {
 		return $this->queryBuilder;
 	}
 
 	/**
 	 * @param string[] $pairs colon separated property-value pairs (e.g. 'P31:Q5')
-	 *
-	 * @return QueryBuilder
 	 */
 	public function getPropertyEntityIdValueMultiMatches( array $pairs ) {
 		$length = count( $pairs );
@@ -41,16 +34,23 @@ class SparqlBuilder {
 			if ( $i === 0 ) {
 				$this->selectPair( $propertyId, $valueId );
 			} else {
-				$this->queryBuilder->also( "?id", "wdt:$propertyId", "wd:$valueId" );
+				$this->queryBuilder->also( "?item", "wdt:$propertyId", "wd:$valueId" );
 			}
 		}
+	}
 
-		return $this->queryBuilder;
+	public function setMinLon( $lon ) {
+		$this->queryBuilder->also( "?item", "wdt:P625", "?coord" );
+		$this->queryBuilder->also( "?item", "p:P625", "?coordinate" );
+		$this->queryBuilder->also( "?coordinate", "psv:P625", "?coordinate_node" );
+		$this->queryBuilder->also( "?coordinate_node", "wikibase:geoLongitude", "?lon" );
+
+		$this->queryBuilder->filter( "?lon > $lon" );
 	}
 
 	private function selectPair( $propertyId, $valueId ) {
-		$this->queryBuilder->select( '?id' )
-			->where( "?id", "wdt:$propertyId", "wd:$valueId" );
+		$this->queryBuilder->select( '?item' )
+			->where( "?item", "wdt:$propertyId", "wd:$valueId" );
 	}
 
 }

@@ -43,8 +43,8 @@ class QueryCommand extends Command {
 		$pairs = explode( ',', $input->getArgument( 'params' ) );
 
 		$sparqlBuilder = new SparqlBuilder( $this->queryBuilder );
-		$query = $sparqlBuilder->getPropertyEntityIdValueMultiMatches( $pairs );
-		$result = $this->queryRunner->doQuery( $query );
+		$sparqlBuilder->getPropertyEntityIdValueMultiMatches( $pairs );
+		$result = $this->queryRunner->doQuery( $sparqlBuilder->getQuery() );
 
 		$queryPrinter = new QueryCsvPrinter();
 		$results = $queryPrinter->output( $result );

@@ -34,7 +34,7 @@ class QueryRunner {
 		$ids = array();
 
 		foreach ( $results['bindings'] as $result ) {
-			preg_match( $pattern, $result['id']['value'], $matches );
+			preg_match( $pattern, $result['item']['value'], $matches );
 
 			if ( isset( $matches[1] ) ) {
 				$ids[] = new ItemId( $matches[1] );

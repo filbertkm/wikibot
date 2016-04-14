@@ -21,6 +21,14 @@ class PropertyValueSnak {
 		return $this->dataValueFactory->newDataValue( $this->data['datavalue'] );
 	}
 
+	public function getValue() {
+		return $this->data['datavalue']['value'];
+	}
+
+	public function getValueType() {
+		return $this->data['datavalue']['type'];
+	}
+
 	public function getSnakType() {
 		return 'value';
 	}
