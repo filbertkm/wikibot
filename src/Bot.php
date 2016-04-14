@@ -47,6 +47,8 @@ class Bot {
 				'wikibase' => 'http://wikiba.se/ontology#',
 				'wd' => 'http://www.wikidata.org/entity/',
 				'wdt' => 'http://www.wikidata.org/prop/direct/',
+				'p' => 'http://www.wikidata.org/prop/',
+				'psv' => 'http://www.wikidata.org/prop/statement/value/',
 				'rdfs' => 'http://www.w3.org/2000/01/rdf-schema#'
 			)
 		) );
