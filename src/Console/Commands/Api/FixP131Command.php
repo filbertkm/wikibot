@@ -1,6 +1,6 @@
 <?php
 
-namespace Wikibot\Console\Commands;
+namespace Wikibot\Console\Commands\Api;
 
 use Knp\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
@@ -8,7 +8,6 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Wikibot\ApiClientFactory;
 use Wikibot\Wikibase\ApiEntityLookup;
-use Wikibot\Wikibase\Formatters\ConsoleItemFormatter;
 use Wikibot\Wikibase\StatementRemover;
 
 class FixP131Command extends Command {

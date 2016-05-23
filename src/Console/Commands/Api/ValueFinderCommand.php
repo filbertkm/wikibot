@@ -1,6 +1,6 @@
 <?php
 
-namespace Wikibot\Console\Commands;
+namespace Wikibot\Console\Commands\Api;
 
 use Knp\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
@@ -9,10 +9,8 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Wikibot\ApiClient;
 use Wikibot\ApiClientFactory;
 use Wikibot\Wikibase\ApiEntityLookup;
-use Wikibot\Wikibase\SnakBuilder;
-use Wikibot\Wikibase\StatementCreator;
 
-class BatchAddStatementCommand extends Command {
+class ValueFinderCommand extends Command {
 
 	/**
 	 * @var ApiClientFactory
@@ -32,8 +30,8 @@ class BatchAddStatementCommand extends Command {
 	}
 
 	protected function configure() {
-		$this->setName( 'batch-add-statement' )
-			->setDescription( 'Add a statement' )
+		$this->setName( 'value-finder' )
+			->setDescription( 'Find items with property value' )
 			->addArgument(
 				'wiki',
 				InputArgument::REQUIRED,
@@ -73,47 +71,23 @@ class BatchAddStatementCommand extends Command {
 			$item = $entityRevision->getItem();
 
 			if ( $item->getStatementGroupList()->hasStatementGroup( $propertyId ) ) {
-				$output->writeln( "$itemId already has statement(s) for $propertyId" );
-				continue;
+				$statements = $item->getStatementGroupList()->getStatementGroup( $propertyId );
+
+				foreach ( $statements as $statement ) {
+					if ( $this->statementHasValue( $statement, $input->getArgument( 'value' ) ) ) {
+						$output->writeln( "$itemId has statement(s) for $propertyId" );
+					}
+				}
 			}
-
-			$response = $this->addStatement(
-				$itemId,
-				$propertyId,
-				$input->getArgument( 'value' ),
-				$entityRevision->getRevisionId()
-			);
-
-			$this->report( $output, $response, $itemId );
-
-			sleep( 2 );
 		}
 
 		$this->apiClient->logout();
 	}
 
-	private function addStatement( $itemId, $propertyId, $value, $revisionId ) {
-		$apiEntityLookup = new ApiEntityLookup( $this->apiClient );
-		$entityRevision = $apiEntityLookup->getEntity( $itemId );
+	private function statementHasValue( $statement, $value ) {
+		$statementValue = $statement->getMainSnak()->getDataValue()->getEntityId();
 
-		$snakBuilder = new SnakBuilder();
-		$statementCreator = new StatementCreator( $this->apiClient );
-
-		$statementCreator->newStatement( $itemId, $propertyId, $value );
-
-		$statementCreator->addReference( array(
-			'P143' => array( $snakBuilder->getEntityIdValueSnak( 'P143', 'Q328' ) )
-		) );
-
-		return $statementCreator->create( $revisionId );
-	}
-
-	private function report( $output, $response, $itemId ) {
-		if ( isset( $response['success' ] ) ) {
-			$output->writeln( "Added statement to $itemId" );
-		} else {
-			$output->writeln( "Failed to add statement to $itemId" );
-		}
+		return $statementValue === $value;
 	}
 
 }

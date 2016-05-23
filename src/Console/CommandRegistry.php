@@ -43,6 +43,7 @@ class CommandRegistry {
 	public function getCommands() {
 		$commands = array(
 			$this->newFlipCoordinatesCommand(),
+			$this->newGetCommand(),
 			$this->newImportSitesCommand(),
 			$this->newPostCommand(),
 			$this->newQueryCommand()
@@ -89,19 +90,23 @@ class CommandRegistry {
 		return $command;
 	}
 
+	private function newGetCommand() {
+		return new \Wikibot\Console\Commands\GetCommand();
+	}
+
 	private function newPostCommand() {
 		return new \Wikibot\Console\Commands\PostCommand();
 	}
 
 	private function getApiCommands() {
 		$apiCommandClasses = array(
-			'\Wikibot\Console\Commands\AddStatementCommand',
-			'\Wikibot\Console\Commands\BatchAddStatementCommand',
-			'\Wikibot\Console\Commands\CategoryMembersCommand',
-			'\Wikibot\Console\Commands\FixP131Command',
-			'\Wikibot\Console\Commands\SetLabelCommand',
-			'\Wikibot\Console\Commands\ValueFinderCommand',
-			'\Wikibot\Console\Commands\ViewEntityCommand'
+			'\Wikibot\Console\Commands\Api\AddStatementCommand',
+			'\Wikibot\Console\Commands\Api\BatchAddStatementCommand',
+			'\Wikibot\Console\Commands\Api\CategoryMembersCommand',
+			'\Wikibot\Console\Commands\Api\FixP131Command',
+			'\Wikibot\Console\Commands\Api\SetLabelCommand',
+			'\Wikibot\Console\Commands\Api\ValueFinderCommand',
+			'\Wikibot\Console\Commands\Api\ViewEntityCommand'
 		);
 
 		foreach ( $apiCommandClasses as $apiCommandClass ) {
