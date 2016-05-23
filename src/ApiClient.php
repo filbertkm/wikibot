@@ -4,6 +4,7 @@ namespace Wikibot;
 
 use Filbertkm\Http\HttpClient;
 use MediaWiki\Sites\Lookup\SiteLookup;
+use Wikibot\Api\LoginFailedException;
 
 class ApiClient {
 
@@ -88,6 +89,9 @@ class ApiClient {
 		return json_decode( $response, true );
 	}
 
+	/**
+	 * @throws LoginFailedException
+	 */
 	public function login( $lgToken = null ) {
 		if ( isset( $this->tokens ) ) {
 			return true;
@@ -110,6 +114,8 @@ class ApiClient {
 
 		if ( $response['login']['result'] === 'NeedToken' ) {
 			return $this->login( $response['login']['token'] );
+		} elseif ( $response['login']['result'] === 'Failed' ) {
+			throw new LoginFailedException( $response['login']['reason'] );
 		} elseif ( $response['login']['result'] === 'Success' ) {
 			$this->setTokens();
 
@@ -149,21 +155,19 @@ class ApiClient {
 		}
 	}
 
-	public function doEdit( array $params ) {
+	public function doEdit( array $params, $isBot = true ) {
+		$params['bot'] = $isBot;
 
+		return $this->post( $params );
 	}
 
 	/**
 	 * @return string[]
 	 */
 	private function getDefaultParams() {
-		$params = array(
+		$params = [
 			'format' => 'json'
-		);
-
-		if ( isset( $this->user ) && $this->user['bot'] === true ) {
-			$params['bot'] = 1;
-		}
+		];
 
 		return $params;
 	}
