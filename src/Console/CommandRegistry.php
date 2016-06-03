@@ -140,7 +140,6 @@ class CommandRegistry {
 		$users = Yaml::parse( file_get_contents( $usersConfig['path'] ) );
 
 		$sites = $this->config->get( 'sites' );
-		$siteLookup = new YamlSiteLookup( $sites['path'] );
 
 		return new ApiClientFactory(
 			$this->httpClient,
