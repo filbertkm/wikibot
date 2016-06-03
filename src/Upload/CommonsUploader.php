@@ -12,12 +12,17 @@ class CommonsUploader {
 		$this->apiClient = $apiClient;
 	}
 
-	public function upload( $title, $file, $text ) {
+	/**
+	 * @param string $fileTitle Title of the file page
+	 * @param string $filePath Path to the file
+	 * @param string $filePageText Text for the file page
+	 */
+	public function upload( $fileTitle, $filePath, $filePageText ) {
 		$params = array(
 			'action' => 'upload',
-			'file' => "@$file",
-			'text' => $text,
-			'filename' => "$title.jpg"
+			'file' => "@$filePath",
+			'text' => $filePageText,
+			'filename' => $fileTitle
 		);
 
 		return $this->apiClient->upload( $params );
