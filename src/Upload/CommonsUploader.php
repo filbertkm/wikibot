@@ -17,7 +17,8 @@ class CommonsUploader {
 			'action' => 'upload',
 			'file' => "@$file",
 			'text' => $text,
-			'filename' => "$title.jpg"
+			'filename' => $title,
+			'ignorewarnings' => true
 		);
 
 		return $this->apiClient->upload( $params );
