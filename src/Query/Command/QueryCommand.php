@@ -1,6 +1,6 @@
 <?php
 
-namespace Wikibot\Console\Commands;
+namespace Wikibot\Query\Command;
 
 use Asparagus\QueryBuilder;
 use Knp\Command\Command;

@@ -8,9 +8,9 @@ use MediaWiki\Sites\Lookup\YamlSiteLookup;
 use Silex\Application;
 use Symfony\Component\Yaml\Yaml;
 use Wikibot\ApiClientFactory;
-use Wikibot\Console\Commands\FlipCoordinatesCommand;
-use Wikibot\Console\Commands\QueryCommand;
 use Wikibot\Config;
+use Wikibot\Query\Command\QueryCommand;
+use Wikibot\Wikibase\Command\FlipCoordinatesCommand;
 
 class CommandRegistry {
 
