@@ -104,11 +104,11 @@ class CommandRegistry {
 			'\Wikibot\Console\Commands\Api\BatchAddStatementCommand',
 			'\Wikibot\Console\Commands\Api\CategoryMembersCommand',
 			'\Wikibot\Console\Commands\Api\CreateEntityCommand',
-			'\Wikibot\Console\Commands\Api\CreatePageCommand',
 			'\Wikibot\Console\Commands\Api\FixP131Command',
 			'\Wikibot\Console\Commands\Api\SetLabelCommand',
 			'\Wikibot\Console\Commands\Api\ValueFinderCommand',
-			'\Wikibot\Console\Commands\Api\ViewEntityCommand'
+			'\Wikibot\Console\Commands\Api\ViewEntityCommand',
+			'\Wikibot\MediaWiki\Command\CreatePageCommand'
 		);
 
 		foreach ( $apiCommandClasses as $apiCommandClass ) {

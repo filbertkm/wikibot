@@ -1,6 +1,6 @@
 <?php
 
-namespace Wikibot\Console\Commands\Api;
+namespace Wikibot\MediaWiki\Command;
 
 use Knp\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
@@ -17,14 +17,14 @@ class CreatePageCommand extends Command {
 		$this->setName( 'create-page' )
 			->setDescription( 'Create a new page' )
 			->addArgument(
+				'wiki',
+				InputArgument::REQUIRED,
+				'Wiki id'
+			)
+			->addArgument(
 				'title',
 				InputArgument::REQUIRED,
 				'Title'
-			)
-			->addArgument(
-				'wiki',
-				InputArgument::OPTIONAL,
-				'Wiki id'
 			);
 	}
 
