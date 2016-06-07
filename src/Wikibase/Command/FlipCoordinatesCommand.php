@@ -9,12 +9,12 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Question\Question;
 use Wikibot\ApiClientFactory;
-use Wikibot\Query\SparqlBuilder;
-use Wikibot\Query\QueryRunner;
-use Wikibot\Services;
+use Wikibot\Wikibase\ApiEntityLookup;
 use Wikibot\Wikibase\DataModel\PropertyValueSnak;
 use Wikibot\Wikibase\DataModel\StatementGroupList;
-use Wikibot\Wikibase\ApiEntityLookup;
+use Wikibot\Wikibase\Query\QueryRunner;
+use Wikibot\Wikibase\Query\SparqlBuilder;
+use Wikibot\Wikibase\WikibaseServices;
 
 class FlipCoordinatesCommand extends Command {
 
@@ -45,7 +45,7 @@ class FlipCoordinatesCommand extends Command {
 		$this->queryBuilder = $queryBuilder;
 		$this->queryRunner = $queryRunner;
 
-		$services = new Services();
+		$services = new WikibaseServices();
 		$this->statementListDeserializer = $services
 			->newDeserializerFactory()
 			->newStatementListDeserializer();

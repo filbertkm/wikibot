@@ -9,7 +9,7 @@ use Silex\Application;
 use Symfony\Component\Yaml\Yaml;
 use Wikibot\ApiClientFactory;
 use Wikibot\Config;
-use Wikibot\Query\Command\QueryCommand;
+use Wikibot\Wikibase\Query\Command\QueryCommand;
 use Wikibot\Wikibase\Command\FlipCoordinatesCommand;
 
 class CommandRegistry {

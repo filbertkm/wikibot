@@ -1,6 +1,6 @@
 <?php
 
-namespace Wikibot\Query\Command;
+namespace Wikibot\Wikibase\Query\Command;
 
 use Asparagus\QueryBuilder;
 use Knp\Command\Command;
@@ -8,9 +8,9 @@ use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
-use Wikibot\Query\QueryCsvPrinter;
-use Wikibot\Query\QueryRunner;
-use Wikibot\Query\SparqlBuilder;
+use Wikibot\Wikibase\Query\QueryCsvPrinter;
+use Wikibot\Wikibase\Query\QueryRunner;
+use Wikibot\Wikibase\Query\SparqlBuilder;
 
 class QueryCommand extends Command {
 

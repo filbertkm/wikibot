@@ -1,6 +1,6 @@
 <?php
 
-namespace Wikibot\Query;
+namespace Wikibot\Wikibase\Query;
 
 use Wikibase\DataModel\Entity\ItemId;
 

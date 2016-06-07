@@ -11,7 +11,7 @@ use Silex\Provider\TwigServiceProvider;
 use Symfony\Component\Yaml\Yaml;
 use Wikibot\Config;
 use Wikibot\Console\CommandRegistry;
-use Wikibot\Query\QueryServiceProvider;
+use Wikibot\Wikibase\Query\QueryServiceProvider;
 
 class Bot {
 

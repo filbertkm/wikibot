@@ -1,6 +1,6 @@
 <?php
 
-namespace Wikibot\Query;
+namespace Wikibot\Wikibase\Query;
 
 use Asparagus\QueryBuilder;
 use Asparagus\QueryExecuter;

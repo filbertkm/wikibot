@@ -1,6 +1,6 @@
 <?php
 
-namespace Wikibot;
+namespace Wikibot\Wikibase;
 
 use DataValues\Deserializers\DataValueDeserializer;
 use DataValues\Geo\Values\GlobeCoordinateValue;
@@ -15,7 +15,7 @@ use Wikibase\DataModel\Entity\BasicEntityIdParser;
 use Wikibase\DataModel\Entity\DispatchingEntityIdParser;
 use Wikibase\DataModel\Entity\EntityIdValue;
 
-class Services {
+class WikibaseServices {
 
 	public function newEntityDeserializer() {
 		return $this->newDeserializerFactory()->newEntityDeserializer();
