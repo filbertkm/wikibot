@@ -1,6 +1,6 @@
 <?php
 
-namespace Wikibot\Console\Commands\Api;
+namespace Wikibot\Wikibase\Command;
 
 use Knp\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;

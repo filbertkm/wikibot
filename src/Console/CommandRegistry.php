@@ -100,15 +100,15 @@ class CommandRegistry {
 
 	private function getApiCommands() {
 		$apiCommandClasses = array(
-			'\Wikibot\Console\Commands\Api\AddStatementCommand',
-			'\Wikibot\Console\Commands\Api\BatchAddStatementCommand',
-			'\Wikibot\Console\Commands\Api\CategoryMembersCommand',
-			'\Wikibot\Console\Commands\Api\CreateEntityCommand',
-			'\Wikibot\Console\Commands\Api\FixP131Command',
-			'\Wikibot\Console\Commands\Api\SetLabelCommand',
-			'\Wikibot\Console\Commands\Api\ValueFinderCommand',
-			'\Wikibot\Console\Commands\Api\ViewEntityCommand',
-			'\Wikibot\MediaWiki\Command\CreatePageCommand'
+			'\Wikibot\MediaWiki\Command\CategoryMembersCommand',
+			'\Wikibot\MediaWiki\Command\CreatePageCommand',
+			'\Wikibot\Wikibase\Command\AddStatementCommand',
+			'\Wikibot\Wikibase\Command\BatchAddStatementCommand',
+			'\Wikibot\Wikibase\Command\CreateEntityCommand',
+			'\Wikibot\Wikibase\Command\FixP131Command',
+			'\Wikibot\Wikibase\Command\SetLabelCommand',
+			'\Wikibot\Wikibase\Command\ValueFinderCommand',
+			'\Wikibot\Wikibase\Command\ViewEntityCommand'
 		);
 
 		foreach ( $apiCommandClasses as $apiCommandClass ) {
