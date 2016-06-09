@@ -31,6 +31,10 @@ class CommonsUploader {
 
 		$res = $this->apiClient->upload( $params );
 
+		if ( !is_array( $res ) ) {
+			throw new UploadException( 'bad-response', 'Bad response from during upload' );
+		}
+
 		return $this->handleResponse( $res );
 	}
 
