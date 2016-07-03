@@ -78,6 +78,8 @@ class ApiClient {
 	}
 
 	public function upload( array $params ) {
+		$this->login();
+
 		$params['token'] = $this->tokens['csrftoken'];
 		$params['format'] = 'json';
 
@@ -156,6 +158,8 @@ class ApiClient {
 	}
 
 	public function doEdit( array $params, $isBot = true ) {
+		$this->login();
+
 		$params['bot'] = $isBot;
 
 		return $this->post( $params );

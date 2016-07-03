@@ -29,6 +29,10 @@ class PageExistsLookup {
 
 		$info = $this->apiClient->get( $params );
 
+		if ( !isset( $info['query'] ) || !isset( $info['query']['pages'] ) ) {
+			return false;
+		}
+
 		foreach ( $info['query']['pages'] as $page ) {
 			return $page['title'] === $title && isset( $page['lastrevid'] );
 		}
