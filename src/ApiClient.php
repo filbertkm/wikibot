@@ -158,11 +158,20 @@ class ApiClient {
 	}
 
 	public function doEdit( array $params, $isBot = true ) {
-		$this->login();
+		if ( !isset( $this->tokens ) ) {
+			$this->login();
+		}
 
 		$params['bot'] = $isBot;
 
 		return $this->post( $params );
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getSiteId() {
+		return $this->siteId;
 	}
 
 	/**
