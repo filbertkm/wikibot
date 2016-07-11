@@ -20,9 +20,9 @@ class Page {
 	private $wikiId;
 
 	/**
-	 * @var int
+	 * @var string|null
 	 */
-	private $pageId;
+	private $content = null;
 
 	/**
 	 * @var string|null
@@ -33,13 +33,11 @@ class Page {
 	 * @param string $titleText
 	 * @param int $namespace
 	 * @param string $wikiId
-	 * @param int $pageId Defaults to 0 (current revision)
 	 */
-	public function __construct( $titleText, $namespace, $wikiId, $pageId = 0 ) {
+	public function __construct( $titleText, $namespace, $wikiId ) {
 		$this->titleText = $titleText;
 		$this->namespace = $namespace;
 		$this->wikiId = $wikiId;
-		$this->pageId = $pageId;
 	}
 
 	/**
@@ -64,13 +62,6 @@ class Page {
 	}
 
 	/**
-	 * @return int
-	 */
-	public function getPageId() {
-		return $this->pageId;
-	}
-
-	/**
 	 * @param string
 	 */
 	public function setItemId( $itemId ) {
@@ -82,6 +73,20 @@ class Page {
 	 */
 	public function getItemId() {
 		return $this->itemId;
+	}
+
+	/**
+	 * @param string
+	 */
+	public function setContent( $content ) {
+		$this->content = $content;
+	}
+
+	/**
+	 * @return string|null
+	 */
+	public function getContent() {
+		return $this->content;
 	}
 
 }
