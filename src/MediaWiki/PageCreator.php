@@ -13,12 +13,12 @@ class PageCreator {
 		$this->apiClient = $apiClient;
 	}
 
-	public function create( $title, $text ) {
+	public function create( $title, $text, $summary ) {
 		$params = array(
 			'action' => 'edit',
 			'title' => $title,
 			'text' => $text,
-			'summary' => 'Import page'
+			'summary' => $summary
 		);
 
 		return $this->apiClient->doEdit( $params );

@@ -21,6 +21,8 @@ class PageEditor {
 			'summary' => $summary
 		);
 
+		$this->apiClient->login();
+
 		return $this->apiClient->doEdit( $params );
 	}
 
